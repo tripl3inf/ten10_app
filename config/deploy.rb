@@ -1,5 +1,5 @@
 set :application, 'ten10'
-set :repo_url, 'git@github.com:tripl3inf/ten10.git'
+set :repo_url, 'git@github.com:tripl3inf/ten10_app.git'
 
 # Branch options
 # Prompts for the branch name (defaults to current branch)
@@ -19,7 +19,7 @@ set :pty, true
 
 set :linked_files, %w{.env}
 set :linked_dirs, %w{web/app/uploads}
-#set :theme_path, "#{release_path}/app/themes/ten10_theme"
+set :theme_path, "#{release_path}/app/themes/ten10_theme"
 
 namespace :deploy do
   desc 'Restart application'
