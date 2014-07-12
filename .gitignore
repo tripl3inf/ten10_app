@@ -1,7 +1,7 @@
 # Idea IDE files
 .idea*
 ten10.iml
-
+COMPS
 # WordPress
 web/wp
 web/.htaccess
