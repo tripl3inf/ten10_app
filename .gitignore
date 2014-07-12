@@ -6,6 +6,10 @@ COMPS
 web/wp
 web/.htaccess
 
+# Capistrano
+Capfile
+vvv-*
+
 # WP-CLI
 db-sync
 sql-dump-*.sql
