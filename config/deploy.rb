@@ -19,7 +19,7 @@ set :pty, true
 
 set :linked_files, %w{.env}
 set :linked_dirs, %w{web/app/uploads}
-set :theme_path, "#{release_path}/app/themes/ten10_theme"
+#set :theme_path, "#{release_path}/app/themes/ten10_theme"
 
 namespace :deploy do
   desc 'Restart application'
