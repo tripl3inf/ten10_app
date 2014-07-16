@@ -17,13 +17,14 @@ module.exports = {
 		// Browser live reloading
 		// https://github.comcd /gruntjs/grunt-contrib-watch#live-reloading
 		options: {
-			livereload: false
-		},
+			livereload: true,
+		    hostname: '*'
+        },
 		files: [
-			'assets/css/main.css',
-			'assets/js/scripts.js',
-			'templates/*.php',
-			'*.php'
+            'assets/less/**/*.less',
+			'assets/js/scripts.js'
+//			'templates/*.php',
+//			'*.php'
 		]
 	}
 }
