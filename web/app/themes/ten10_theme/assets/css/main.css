@@ -6245,9 +6245,10 @@ header.main .navbar ul li:last-child a {
 }
 header.main .navbar ul li a {
   color: #FFF;
-  padding: 0 14px 4px;
-  font-size: 13px;
+  padding: 0 14px;
+  font-size: 14px;
   border-right: 1px solid #fff;
+  line-height: 1em;
 }
 header.main .navbar ul li a:hover {
   background: none;
@@ -6258,7 +6259,7 @@ header.main .navbar ul li a:hover:after {
   position: absolute;
   margin: 0 0 0 50%;
   left: -16px;
-  top: 24px;
+  top: 20px;
   width: 0;
   height: 0;
   border-left: 16px solid transparent;
