@@ -6216,10 +6216,6 @@ figure.alignnone {
     margin-left: 10px;
   }
 }
-h1 {
-  font-weight: bold;
-  font-size: 80px;
-}
 body {
   background: #ccc;
 }
@@ -6247,23 +6243,26 @@ header.main .navbar {
 header.main .navbar ul li:last-child a {
   border: none;
 }
-header.main .navbar li a {
+header.main .navbar ul li a {
   color: #FFF;
-  padding-top: 0;
-  padding-bottom: 6px;
+  padding: 0 14px 4px;
+  font-size: 13px;
   border-right: 1px solid #fff;
 }
-header.main .navbar li a:hover {
+header.main .navbar ul li a:hover {
   background: none;
-  text-decoration: underline;
 }
-header.main .navbar li a:after {
+header.main .navbar ul li a:hover:after {
   content: '';
   display: block;
+  position: absolute;
+  margin: 0 0 0 50%;
+  left: -16px;
+  top: 24px;
   width: 0;
   height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 22px solid #fff;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 18px solid #fff;
 }
 /*# sourceMappingURL=main.css.map */

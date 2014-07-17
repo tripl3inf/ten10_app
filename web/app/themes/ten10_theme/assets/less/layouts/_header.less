@@ -19,8 +19,9 @@ header.main {
       font-weight: bold;
       color: #FFF;
       font-size: 64px;
-      
+
     }
+
 
     .navbar {
       margin: 0;
@@ -29,21 +30,31 @@ header.main {
         ul li:last-child a {
           border: none;
         }
+      ul {
         li a {
           color: #FFF;
-          padding-top: 0;
-          padding-bottom: 6px;
+          padding: 0 14px 4px;
+          font-size: 13px;
           border-right: 1px solid #fff;
         }
         li a:hover {
           background: none;
-          text-decoration: underline;
+          //text-decoration: underline;
         }
-        li a:after {
+        li a:hover:after {
           content: '';
           display: block;
-
-          width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-top: 22px solid #fff; }
+          position: absolute;
+          margin: 0 0 0 50%;
+          left: -16px;
+          top: 24px;
+          width: 0;
+          height: 0;
+          border-left: 16px solid transparent;
+          border-right: 16px solid transparent;
+          border-top: 18px solid #fff;
+        }
+      }
 
     }
   }

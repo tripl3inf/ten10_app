@@ -30,9 +30,8 @@ web/app/uploads/*
 !web/app/mu-plugins/register-theme-directory.php
 
 # Vendor (e.g. Composer)
-vendor/*
+**/vendor/**
 !vendor/.gitkeep
-
 # Node Package Manager
 node_modules
 
