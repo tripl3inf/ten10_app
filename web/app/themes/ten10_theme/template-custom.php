@@ -43,7 +43,7 @@ while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
                    //echo $image_url[0];  ?>">
                    <?php //the_post_thumbnail('album-grid'); //display custom thumbnail size ?>
                 </a> -->
-                <?php the_post_thumbnail('album-grid'); //display custom thumbnail size ?>
+                <?php //the_post_thumbnail('album-grid'); //display custom thumbnail size ?>
             </li>
         <!--end li-->
 

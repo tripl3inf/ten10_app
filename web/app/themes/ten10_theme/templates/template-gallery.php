@@ -16,30 +16,25 @@ $wp_query = new WP_Query(
 while (have_posts()) : the_post(); ?>
 
 
-
 <div class="content">
     <ul class="photogal">
         <li>
-<!--            <li class="element --><?php //if (function_exists('jss_taxonomy_name')) {
-//                jss_taxonomy_name();
-//            } ?><!--">-->
-                <!--
+            <li class="element --><?php //if (function_exists('jss_taxonomy_name')) {
+            // jss_taxonomy_name();
+            } ?>
                 <a class="fancybox" rel="<?php //if (function_exists('jss_taxonomy_name')) { jss_taxonomy_name(); } ?>" href="<?php
                    //get post thumbnail id
-                   //$image_id = get_post_thumbnail_id();
+                   $image_id = get_post_thumbnail_id();
                    //go get image attributes [0] => url, [1] => width, [2] => height
-                   //$image_url = wp_get_attachment_image_src($image_id, '', true);
+                   $image_url = wp_get_attachment_image_src($image_id, '', true);
                    //echo out the url
-                   //echo $image_url[0];  ?>">
+                   echo $image_url[0];  ?>">
                    <?php //the_post_thumbnail('album-grid'); //display custom thumbnail size ?>
-                </a> -->
+                </a>
                 <?php the_post_thumbnail('album-grid'); //display custom thumbnail size ?>
-            </li>
-        <!--end li-->
-
+            </li> <!--end li-->
     </ul>
     <!--end photogallery-->
-
 </div><!--end content-->
 
 

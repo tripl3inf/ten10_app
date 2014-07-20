@@ -6,9 +6,6 @@ module.exports = function (grunt) {
 		data: { //data passed into config.  Can use with <%= test %>
 			src: {
 				bootstrap: 'assets/vendor/bootstrap/js/*.js'
-			},
-			dist: {
-
 			}
 		}
 	});
