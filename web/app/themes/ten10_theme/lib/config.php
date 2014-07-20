@@ -40,6 +40,15 @@ function roots_sidebar_class() {
  *
  * See lib/sidebar.php for more details
  */
+
+
+// find custom post types
+function is_cpt_return(){
+    if ( get_post_type() == 'gallery' )
+        return true;
+    else return false;
+}
+
 function roots_display_sidebar() {
   $sidebar_config = new Roots_Sidebar(
     /**
@@ -52,7 +61,10 @@ function roots_display_sidebar() {
      *
      * The second element must be an array even if there's only 1 argument.
      */
+
+
     array(
+      'is_cpt_return',
       'is_404',
       'is_front_page'
     ),
@@ -67,7 +79,6 @@ function roots_display_sidebar() {
 
   return apply_filters('roots/display_sidebar', $sidebar_config->display);
 }
-
 /**
  * $content_width is a global variable used by WordPress for max image upload sizes
  * and media embeds (in pixels).

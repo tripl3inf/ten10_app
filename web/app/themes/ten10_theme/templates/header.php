@@ -1,27 +1,70 @@
 <!--<header id="mainBanner" class="container navbar navbar-default navbar-static-bottom" role="banner">-->
 <script src="http://192.168.1.134:35729/livereload.js?snipver=1"></script>
 
-<header class="main ">
+<header class="main">
     <div class="container">
-    <h1>TEN10 ENTERTAINMENT</h1>
+        <div class="row">
+            <h1 class="col-sm-8">TEN10 ENTERTAINMENT</h1>
+            <div class="featured col-sm-3 col-sm-offset-1">Invest in a Dessert Winds film production</div>
+        </div>
+
         <nav class="navbar navbar-static-top" role="navigation">
-                    <?php
-                        if (has_nav_menu('primary_navigation')) :
-                            wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
-                        endif;
-                    ?>
+            <?php
+                if (has_nav_menu('primary_navigation')) :
+                wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
+                endif;
+            ?>
         </nav>
     </div>
 </header>
 
 
 
-<div class="container">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner/images/banner1.jpg" class="img-responsive" style="width:100%" alt="...">
-</div>
+<!--<div class="container">-->
+<!--    <div class="row">-->
+<!--        <img src="--><?php //echo get_template_directory_uri(); ?><!--/assets/img/banner/images/banner1.jpg" class="img-responsive" style="width:100%" alt="...">-->
+<!--    </div>-->
+<!--</div>-->
 
-
-
+<!---->
+<!--function pw_show_gallery_image_urls( $content ) {-->
+<!---->
+<!--global $post;-->
+<!---->
+<!--// Only do this on singular items-->
+<!--if( ! is_singular() )-->
+<!--return $content;-->
+<!---->
+<!--// Make sure the post has a gallery in it-->
+<!--if( ! has_shortcode( $post->post_content, 'gallery' ) )-->
+<!--return $content;-->
+<!---->
+<!--// Retrieve all galleries of this post-->
+<!--$galleries = get_post_galleries_images( $post );-->
+<!---->
+<!--$image_list = '<ul>';-->
+<!---->
+<!--    // Loop through all galleries found-->
+<!--    foreach( $galleries as $gallery ) {-->
+<!---->
+<!--    // Loop through each image in each gallery-->
+<!--    foreach( $gallery as $image ) {-->
+<!---->
+<!--    $image_list .= '<li>' . $image . '</li>';-->
+<!---->
+<!--    }-->
+<!---->
+<!--    }-->
+<!---->
+<!--    $image_list .= '</ul>';-->
+<!---->
+<!--// Append our image list to the content of our post-->
+<!--$content .= $image_list;-->
+<!---->
+<!--return $content;-->
+<!---->
+<!--}-->
+<!--add_filter( 'the_content', 'pw_show_gallery_image_urls' );-->
 
 <!--        <nav class="navbar navbar-default navbar-static-top" role="navigation">-->
 <!--            <div class="container">-->

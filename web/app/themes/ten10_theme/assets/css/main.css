@@ -6235,6 +6235,9 @@ header.main h1 {
   color: #FFF;
   font-size: 64px;
 }
+header.main .featured {
+  border: 2px solid #fff;
+}
 header.main .navbar {
   margin: 0;
   min-height: 0;

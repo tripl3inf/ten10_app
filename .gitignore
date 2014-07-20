@@ -38,3 +38,5 @@ node_modules
 # Vagrant
 bin
 .vagrant
+
+web/app/themes/ten10_theme/assets/vendor/**

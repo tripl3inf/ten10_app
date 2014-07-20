@@ -1,18 +1,8 @@
 <?php
 /*
-Template Name: Custom Template
+Template Name: Gallery Template
 */
 ?>
-
-<?php //while (have_posts()) : the_post(); ?>
-<!--  --><?php //get_template_part('templates/page', 'header'); ?>
-<!--  --><?php //get_template_part('templates/content', 'page'); ?>
-<?php //endwhile; ?>
-
-
-
-
-
 
 
 <?php
@@ -23,7 +13,7 @@ $wp_query = new WP_Query(
         'posts_per_page' => -1,
         'post_type' => 'gallery'
     ));
-while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+while (have_posts()) : the_post(); ?>
 
 
 
@@ -54,6 +44,7 @@ while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
 
 <?php endwhile; ?>
+
 
 
 

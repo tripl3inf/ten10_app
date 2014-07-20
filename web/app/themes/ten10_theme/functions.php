@@ -21,8 +21,14 @@ $roots_includes = array(
   'lib/gallery.php',         // Custom [gallery] modifications
   'lib/comments.php',        // Custom comments modifications
   'lib/scripts.php',         // Scripts and stylesheets
-  'lib/extras.php',          // Custom functions
+  'lib/info_widget.php'     // Theme support info
+  //'slider-type.php'
+//  'templates/template-gallery.php'
 );
+
+
+
+
 
 foreach ($roots_includes as $file) {
   if (!$filepath = locate_template($file)) {
@@ -32,3 +38,4 @@ foreach ($roots_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
