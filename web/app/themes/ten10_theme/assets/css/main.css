@@ -6220,6 +6220,8 @@ body {
   background: #ccc;
 }
 header.main {
+  height: 122px;
+  padding: 8px 0 0 0;
   background: #025287;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #025287), color-stop(95%, #3a8bc1));
   background: -webkit-linear-gradient(top, #025287 0%, #3a8bc1 95%);
@@ -6229,17 +6231,23 @@ header.main {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#025287', endColorstr='#3a8bc1', GradientType=0);
   border-bottom: 2px solid #fff;
 }
-header.main h1 {
-  margin: 0;
-  font-weight: bold;
-  color: #FFF;
-  font-size: 64px;
+header.main .mod_featured {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 4px;
 }
-header.main .featured {
+header.main .mod_featured > div {
+  height: 72px;
+  padding: 4px 6px;
   border: 2px solid #fff;
+  margin: 0 20px 0 0;
+  background: no-repeat 152px -12px url("../img/featured_widget/featured_img1.png") #3490d3;
 }
 header.main .navbar {
-  margin: 0;
+  margin: 6px 0 0 0;
   min-height: 0;
   height: 18px;
 }
@@ -6248,10 +6256,11 @@ header.main .navbar ul li:last-child a {
 }
 header.main .navbar ul li a {
   color: #FFF;
-  padding: 0 14px;
-  font-size: 14px;
+  padding: 0 10px;
+  font-size: 12px;
   border-right: 1px solid #fff;
   line-height: 1em;
+  text-transform: uppercase;
 }
 header.main .navbar ul li a:hover {
   background: none;
@@ -6262,11 +6271,9 @@ header.main .navbar ul li a:hover:after {
   position: absolute;
   margin: 0 0 0 50%;
   left: -16px;
-  top: 20px;
-  width: 0;
-  height: 0;
-  border-left: 16px solid transparent;
-  border-right: 16px solid transparent;
-  border-top: 18px solid #fff;
+  top: 21px;
+  height: 30px;
+  width: 30px;
+  background: url("../img/menu_tri.svg") transparent 0 0 no-repeat;
 }
 /*# sourceMappingURL=main.css.map */
