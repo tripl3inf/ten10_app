@@ -39,4 +39,4 @@ node_modules
 bin
 .vagrant
 
-web/app/themes/ten10_theme/assets/vendor/**
+web/app/themes/ten10_theme/assets/vendor/*

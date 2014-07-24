@@ -21,8 +21,9 @@ module.exports = {
 		    hostname: '*'
         },
 		files: [
-            'assets/less/**/*.less',
-			'assets/js/scripts.js',
+            'assets/less/layouts/*.less',
+//            'assets/less/**/*.less',
+//			'assets/js/scripts.js',
 //			'templates/*.php',
 			'*.php'
 		]
