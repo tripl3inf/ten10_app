@@ -1,0 +1,46 @@
+.navbar {
+  margin: 6px 0 0 0;
+  min-height: 0;
+  height: 18px;
+
+  ul {
+    padding: 0;
+
+    li {
+      display: inline-block;
+
+      a {
+        color: #FFF;
+        padding: 0 10px;
+        font-size: 12px;
+        border-right: 1px solid #fff;
+        line-height: 1em;
+        text-transform: uppercase;
+      }
+
+      a:hover {
+        background: none;
+        //text-decoration: underline;
+      }
+
+      .active a:after {
+        content: '';
+        display: block;
+        position: absolute;
+        margin: 0 0 0 50%;
+        left: -16px;
+        top: 21px;
+        height: 30px;
+        width: 30px;
+        background: url("../img/menu_tri.svg") transparent 0 0 no-repeat;
+      }
+
+    }
+
+    li:last-child a {
+      border: none;
+    }
+
+  }
+
+}

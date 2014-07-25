@@ -6190,6 +6190,42 @@ button.close {
     display: none !important;
   }
 }
+.navbar {
+  margin: 6px 0 0 0;
+  min-height: 0;
+  height: 18px;
+}
+.navbar ul {
+  padding: 0;
+}
+.navbar ul li {
+  display: inline-block;
+}
+.navbar ul li a {
+  color: #FFF;
+  padding: 0 10px;
+  font-size: 12px;
+  border-right: 1px solid #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.navbar ul li a:hover {
+  background: none;
+}
+.navbar ul li .active a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  margin: 0 0 0 50%;
+  left: -16px;
+  top: 21px;
+  height: 30px;
+  width: 30px;
+  background: url("../img/menu_tri.svg") transparent 0 0 no-repeat;
+}
+.navbar ul li:last-child a {
+  border: none;
+}
 .gallery-row {
   padding: 10px 0;
 }
@@ -6246,34 +6282,24 @@ header.main .mod_featured > div {
   margin: 0 20px 0 0;
   background: no-repeat 152px -12px url("../img/featured_widget/featured_img1.png") #3490d3;
 }
-header.main .navbar {
-  margin: 6px 0 0 0;
-  min-height: 0;
-  height: 18px;
-}
-header.main .navbar ul li:last-child a {
-  border: none;
-}
-header.main .navbar ul li a {
-  color: #FFF;
-  padding: 0 10px;
-  font-size: 12px;
-  border-right: 1px solid #fff;
-  line-height: 1em;
-  text-transform: uppercase;
-}
-header.main .navbar ul li a:hover {
-  background: none;
-}
-header.main .navbar ul li a:hover:after {
-  content: '';
-  display: block;
-  position: absolute;
-  margin: 0 0 0 50%;
-  left: -16px;
-  top: 21px;
-  height: 30px;
-  width: 30px;
-  background: url("../img/menu_tri.svg") transparent 0 0 no-repeat;
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background: #3a8bc1;
+  /* Old browsers */
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(2%, #3a8bc1), color-stop(89%, #025287));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #3a8bc1 2%, #025287 89%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #3a8bc1 2%, #025287 89%);
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, #3a8bc1 2%, #025287 89%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3a8bc1', endColorstr='#025287', GradientType=0);
+  /* IE6-9 */
 }
 /*# sourceMappingURL=main.css.map */
