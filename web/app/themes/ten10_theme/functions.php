@@ -28,8 +28,8 @@ $roots_includes = array(
 
 
 
-$footer_nav_id = wp_create_nav_menu(__('Footer Navigation', 'roots'), array('slug' => 'footer_navigation'));
-$roots_nav_theme_mod['footer_navigation'] = $footer_nav_id;
+$footer_nav_id = wp_create_nav_menu(__('Footer Navigation', 'roots'), array('slug' => 'footer_nav'));
+$roots_nav_theme_mod['footer_nav'] = $footer_nav_id;
 
 foreach ($roots_includes as $file) {
   if (!$filepath = locate_template($file)) {

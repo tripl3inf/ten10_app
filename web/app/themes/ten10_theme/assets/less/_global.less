@@ -1,46 +1,159 @@
 .navbar {
-  margin: 6px 0 0 0;
-  min-height: 0;
-  height: 18px;
 
-  ul {
-    padding: 0;
+  margin: 8px 0 0 0;
 
-    li {
-      display: inline-block;
-
-      a {
-        color: #FFF;
-        padding: 0 10px;
-        font-size: 12px;
-        border-right: 1px solid #fff;
-        line-height: 1em;
-        text-transform: uppercase;
-      }
-
+  .nav {
+    > li {
+      a:focus,
       a:hover {
-        background: none;
-        //text-decoration: underline;
+        background: transparent;
+        //color: #333;
       }
-
-      .active a:after {
-        content: '';
-        display: block;
-        position: absolute;
-        margin: 0 0 0 50%;
-        left: -16px;
-        top: 21px;
-        height: 30px;
-        width: 30px;
-        background: url("../img/menu_tri.svg") transparent 0 0 no-repeat;
-      }
-
     }
 
-    li:last-child a {
+
+
+    .dropdown-menu {
+//      display: block;
       border: none;
+      background:rgba(255,255,255,0.6);
+
+      li {
+        a {
+          color: #333;
+        }
+        a:hover,
+        a:focus {
+            color: #fff;
+            background: #3A8BC1;
+          }
+      }
+
+
     }
 
   }
 
+  ul#menu-main-nav,
+  ul#menu-footer-navigation {
+
+    > li {
+      > a {
+        color: #FFF;
+      }
+      a:after {
+        content: '|';
+        display: inline-block;
+        position: relative;
+        left: 15px;
+      }
+
+
+      a:focus:after,
+      a:hover:after {
+        color: #fff;
+      }
+
+    }
+
+    li:last-child a:after {
+      content: none;
+    }
+    
+    
+  li.active {
+      > a {
+        color: #333;
+        font-weight: bold;
+      }
+      a:after {
+        color: #fff;
+      }
+  }
+      .dropdown-toggle {
+        .caret {
+          display: none;
+        }
+      }
+  }
+
+
+
+  ul#menu-main-nav {
+        > li.active:after {
+          content: '';
+          display: block;
+          position: absolute;
+          margin: 0 0 0 50%;
+          left: -15px;
+          height: 30px;
+          width: 30px;
+          background: url("../img/menu_tri.svg") transparent 0 0 no-repeat;
+        }
+  }
+
+
+
+
+
 }
+
+//.navbar {
+//  margin: 16px 0 0 0;
+//  min-height: 0;
+//  height: 18px;
+//
+//  ul {
+//    padding: 0;
+//
+//    li {
+//      display: inline-block;
+//
+//      a {
+//        color: #FFF;
+//        padding: 10px;
+//        font-size: 14px;
+//        border-right: 1px solid #fff;
+//        line-height: 0;
+//        height: 14px;
+//        text-transform: uppercase;
+//      }
+//
+//      a:hover {
+//        background: none;
+//        //text-decoration: underline;
+//      }
+//
+//      .dropdown-toggle {
+//        .caret {
+//          display: none;
+//        }
+//        i {
+//          line-height: 0;
+//        }
+//      }
+//
+//    }
+
+//    li:first-child a {
+//      padding-left: 0;
+//    }
+
+//    li:last-child a {
+//      border: none;
+//    }
+//
+//    li.active a:after {
+//        content: '';
+//        display: block;
+//        position: absolute;
+//        margin: 0 0 0 50%;
+//        left: -16px;
+//        top: 24px;
+//        height: 30px;
+//        width: 30px;
+//        background: url("../img/menu_tri.svg") transparent 0 0 no-repeat;
+//      }
+//  }
+
+//}
