@@ -1,3 +1,7 @@
+############################################
+# Setup Server
+############################################
+
 set :stage, :staging
 
 # Simple Role Syntax
@@ -15,9 +19,7 @@ server 't3inf.com', user: 'tripl3inf', roles: %w{web app db}
 # you can see them in [net/ssh documentation](http://net-ssh.github.io/net-ssh/classes/Net/SSH.html#method-c-start)
 # set it globally
 
-set :ssh_options, {
- forward_agent: true
-}
+set :ssh_options, forward_agent: true
 
 fetch(:default_env).merge!(wp_env: :staging)
 

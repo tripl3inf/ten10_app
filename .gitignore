@@ -1,3 +1,7 @@
+#osx files
+.DS_Store
+._.DS_Store
+
 # Idea IDE files
 .idea*
 ten10.iml
