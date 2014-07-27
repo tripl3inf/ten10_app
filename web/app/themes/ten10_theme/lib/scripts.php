@@ -51,8 +51,7 @@ function roots_scripts() {
 ?>
 
 <?php
-  wp_enqueue_style('font-awesome', get_template_directory_uri() . $assets['font-awesome'], false, null);
-  wp_enqueue_style('roots_css', get_template_directory_uri() . $assets['css'], false, null);
+
 
   /**
    * jQuery is loaded using the same method from HTML5 Boilerplate:
@@ -70,6 +69,10 @@ function roots_scripts() {
   }
 
   wp_enqueue_script('modernizr', get_template_directory_uri() . $assets['modernizr'], array(), null, false);
+
+  wp_enqueue_style('font-awesome', get_template_directory_uri() . $assets['font-awesome'], false, null);
+  wp_enqueue_style('roots_css', get_template_directory_uri() . $assets['css'], false, null);
+
   wp_enqueue_script('jquery');
   wp_enqueue_script('roots_js', get_template_directory_uri() . $assets['js'], array(), null, true);
 
