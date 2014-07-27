@@ -10,7 +10,7 @@
             ?>
 
 
-            <ul class="nav pull-right navbar-nav">
+            <ul class="social_media nav pull-right navbar-nav">
                 <li>
                     <a href="#">
                         <i class="fa fa-facebook-square fa-stack-2x fa-inverse"></i>
@@ -18,7 +18,17 @@
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fa fa-twitter-square fa-stack-2x fa-inverse"></i>
+                        <i class="fa fa-twitter fa-stack-2x fa-inverse"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-google-plus fa-stack-2x fa-inverse"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-rss fa-stack-2x fa-inverse"></i>
                     </a>
                 </li>
             </ul>

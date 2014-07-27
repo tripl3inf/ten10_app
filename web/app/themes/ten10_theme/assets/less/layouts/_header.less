@@ -4,7 +4,7 @@ body {
 }
 
 header.main {
-  height: 122px;
+  //height: 112px;
   padding: 8px 0 0 0;
 
   background: #025287;
@@ -22,9 +22,26 @@ header.main {
     height: 68px;
   }
 
+  .navbar {
+    margin: 0;
+
+  }
+  .user_menu {
+    > li {
+      > a i {
+        font-size: 20px;
+        margin: -4px 0 0 0;
+      }
+    }
+    .search {
+      width: 220px;
+      padding: 8px;
+      margin-left: -12em;
+
+    }
+  }
   .mod_featured {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 18px;
     line-height: 20px;
     text-transform: uppercase;
     margin: 0;
@@ -33,14 +50,19 @@ header.main {
 
     //      font-weight: bold;
 
+    
     > div {
-      height: 72px;
-      padding: 4px 6px;
+      padding: 0 6px;
       border: 2px solid #fff;
-      margin: 0 20px 0 0;
-
+      margin: 0 10px 0 0;
       background: no-repeat right -12px url("../img/featured_widget/featured_img1.png") #3490D3;
+
+      p {
+        margin: 0;  
+      }
     }
+
+
 
 
   }
