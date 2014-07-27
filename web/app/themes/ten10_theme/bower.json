@@ -1,11 +1,11 @@
 {
-  "name": "roots",
-  "version": "7.0.0",
-  "homepage": "http://roots.io",
+  "name": "ten10",
+  "version": "1.0.0",
+  "homepage": "http://t3inf.com",
   "authors": [
-    "Ben Word <ben@benword.com>"
+    "Alex Aloia - tripl3infinity@gmail.com"
   ],
-  "license": "MIT",
+  "license": "PRIVATE",
   "private": true,
   "ignore": [
     "**/.*",
@@ -16,6 +16,7 @@
     "modernizr": "2.8.2",
     "jquery": "1.11.1",
     "bootstrap": "3.2.0",
-    "respond": "1.4.2"
+    "respond": "1.4.2",
+    "font-awesome": "~4.1.0"
   }
 }
