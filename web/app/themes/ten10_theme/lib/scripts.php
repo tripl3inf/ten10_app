@@ -23,7 +23,7 @@ function roots_scripts() {
     $assets = array(
       'livereload' => '//192.168.1.134:35729/livereload.js?snipver=1',
       'font-awesome' => '/assets/vendor/font-awesome/css/font-awesome.css',
-        'font-awesome-more' => '/assets/vendor/font-awesome-more/css/font-awesome.css',
+     // 'font-awesome-more' => '/assets/vendor/font-awesome-more/css/font-awesome.css',
       'css'       => '/assets/css/main.css',
       'js'        => '/assets/js/scripts.js',
       'modernizr' => '/assets/vendor/modernizr/modernizr.js',
@@ -37,17 +37,21 @@ function roots_scripts() {
     $get_assets = file_get_contents(get_template_directory() . '/assets/manifest.json');
     $assets     = json_decode($get_assets, true);
     $assets     = array(
+      'font-awesome' => '/assets/vendor/font-awesome/css/font-awesome.css',
       'css'       => '/assets/css/main.min.css' . '?' . $assets['assets/css/main.min.css']['hash'],
       'js'        => '/assets/js/scripts.min.js' . '?' . $assets['assets/js/scripts.min.js']['hash'],
       'modernizr' => '/assets/js/vendor/modernizr.min.js',
-      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'
+      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
+      'bootstrap' => '/assets/vendor/bootstrap/dist/js/bootstrap.min.js',
+      'bootstrap-carousel' => '/assets/vendor/bootstrap/js/carousel.js',
+      'bootstrap-dropdown' => '/assets/vendor/bootstrap/js/dropdown.js',
+      'bootstrap-tooltip' => '/assets/vendor/bootstrap/js/tooltip.js'
     );
   }
 ?>
 
 <?php
   wp_enqueue_style('font-awesome', get_template_directory_uri() . $assets['font-awesome'], false, null);
-    wp_enqueue_style('font-awesome-more', get_template_directory_uri() . $assets['font-awesome-more'], false, null);
   wp_enqueue_style('roots_css', get_template_directory_uri() . $assets['css'], false, null);
 
   /**

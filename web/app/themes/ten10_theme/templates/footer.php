@@ -9,7 +9,6 @@
             endif;
             ?>
 
-
             <ul class="social_media nav pull-right navbar-nav">
                 <li>
                     <a href="#">
@@ -33,20 +32,13 @@
                 </li>
             </ul>
 
-<!--            <span class="fa-stack fa-lg">-->
-<!--                <i class="fa fa-square-o fa-stack-2x"></i>-->
-<!--                <i class="fa fa-facebook-square fa-stack-1x fa-inverse"></i>-->
-<!--            </span>-->
-
-
-
         </nav>
     </div>
 </footer>
 
 
 <!-- DEV ONLY!!! -->
-<script src="//localhost:35729/livereload.js"></script>
+<!--<script src="//localhost:35729/livereload.js"></script>-->
 
 
 
