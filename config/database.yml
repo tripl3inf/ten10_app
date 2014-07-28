@@ -1,8 +1,8 @@
 staging:
   host: localhost
   database: ten10_staging
-  username: root
-  password: 'superCool$hit101'
+  username: ten10_wp
+  password: 'ten10_wp_staging'
 production:
   host: localhost
   database: db_name

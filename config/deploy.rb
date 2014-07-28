@@ -26,7 +26,7 @@ set :scm, :git
 
 set :branch, :master
 
-set :deploy_to, "/var/www/CLIENT/#{fetch(:application)}"
+set :deploy_to, "/srv/client/#{fetch(:application)}"
 
 
 ############################################
