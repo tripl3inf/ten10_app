@@ -1,9 +1,8 @@
 set :application, 'my_app_name'
 set :repo_url, 'git@example.com:me/my_repo.git'
 
-# Branch options
-# Prompts for the branch name (defaults to current branch)
-#ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+# require Slack config
+#require './config/slack'
 
 ############################################
 # Setup WordPress
@@ -29,7 +28,6 @@ set :branch, :master
 
 set :deploy_to, "/srv/client/#{fetch(:application)}"
 
-set :log_level, :info
 
 ############################################
 # Setup Capistrano

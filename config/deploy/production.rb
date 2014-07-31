@@ -22,3 +22,4 @@ server 'example.com', user: 'deploy', roles: %w{web app db}
 
 fetch(:default_env).merge!(wp_env: :production)
 
+set :branch, "master"

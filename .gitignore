@@ -1,6 +1,18 @@
+#osx files
+.DS_Store
+._.DS_Store
+
+# Idea IDE files
+.idea*
+ten10.iml
+COMPS
 # WordPress
 web/wp
 web/.htaccess
+
+# Capistrano
+Capfile
+vvv-*
 
 # WP-CLI
 db-sync
@@ -19,16 +31,16 @@ web/app/mu-plugins/*
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
-!web/app/mu-plugins/disallow-indexing.php
 !web/app/mu-plugins/register-theme-directory.php
 
 # Vendor (e.g. Composer)
-vendor/*
+**/vendor/**
 !vendor/.gitkeep
-
 # Node Package Manager
 node_modules
 
 # Vagrant
 bin
 .vagrant
+
+web/app/themes/ten10_theme/assets/vendor/*
