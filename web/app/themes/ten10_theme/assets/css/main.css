@@ -6323,10 +6323,11 @@ header.main .mod_featured > div p {
   margin: 0;
 }
 footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
-  height: 28px;
+  height: 80px;
   width: 100%;
+  border-top: 2px solid #fff;
   background: #3a8bc1;
   /* Old browsers */
   /* FF3.6+ */
@@ -6342,16 +6343,27 @@ footer {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3a8bc1', endColorstr='#025287', GradientType=0);
   /* IE6-9 */
 }
-footer ul li {
+footer .container {
+  height: inherit;
+}
+footer .container nav {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+footer .container nav ul li {
   font-size: 12px;
 }
-footer ul li a {
+footer .container nav ul li a {
   color: #FDFDFD;
 }
-footer .social_media {
+footer .container nav .social_media {
   font-size: 9px;
 }
-footer .social_media li {
+footer .container nav .social_media li {
   margin: -0.2em 0.8em 0 0;
 }
 /*# sourceMappingURL=main.css.map */

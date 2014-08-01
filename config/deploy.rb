@@ -33,8 +33,8 @@ set :deploy_to, "/srv/client/#{fetch(:application)}"
 # Setup Capistrano
 ############################################
 
-set :log_level, :debug
-set :use_sudo, true
+set :log_level, :info
+set :use_sudo, false
 set :pty, true
 
 set :ssh_options, {
@@ -70,7 +70,7 @@ end
 
 # The above restart task is not run by default
 # Uncomment the following line to run it on deploys if needed
-# after 'deploy:publishing', 'deploy:restart'
+ after 'deploy:publishing', 'deploy:restart'
 
 
 

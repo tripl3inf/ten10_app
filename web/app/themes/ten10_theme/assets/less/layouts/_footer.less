@@ -2,10 +2,11 @@
 }
 
 footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
-  height: 28px;
+  height: 80px;
   width: 100%;
+  border-top: 2px solid #fff;
 
   background: #3a8bc1; /* Old browsers */
   background: -moz-linear-gradient(top, #3a8bc1 2%, #025287 89%); /* FF3.6+ */
@@ -15,19 +16,27 @@ footer {
   background: -ms-linear-gradient(top, #3a8bc1 2%, #025287 89%); /* IE10+ */
   background: linear-gradient(to bottom, #3a8bc1 2%, #025287 89%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3a8bc1', endColorstr='#025287', GradientType=0); /* IE6-9 */
+  .container {
+    height: inherit;
+    nav {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
 
-  ul {
-    li {
-      font-size: 12px;
-      a {
-        color: #FDFDFD;
+      ul {
+        li {
+          font-size: 12px;
+          a {
+            color: #FDFDFD;
+          }
+        }
       }
-    }
-  }
-  .social_media {
-    font-size: 9px;
-    li {
-      margin: -0.2em 0.8em 0 0;
+      .social_media {
+        font-size: 9px;
+        li {
+          margin: -0.2em 0.8em 0 0;
+        }
+      }
     }
   }
 }

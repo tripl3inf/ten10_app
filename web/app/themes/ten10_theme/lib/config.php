@@ -3,10 +3,12 @@
  * Enable theme features
  */
 add_theme_support('soil-clean-up');         // Enable clean up from Soil
-//add_theme_support('soil-relative-urls');    // Enable relative URLs from Soil
+add_theme_support('soil-relative-urls');    // Enable relative URLs from Soil
 add_theme_support('soil-nice-search');      // Enable /?s= to /search/ redirect from Soil
 add_theme_support('bootstrap-gallery');     // Enable Bootstrap's thumbnails component on [gallery]
 add_theme_support('jquery-cdn');            // Enable to load jQuery from the Google CDN
+
+add_image_size( 'featured_img_split', 600, 665, true );
 
 /**
  * Configuration values
@@ -17,23 +19,25 @@ define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y (Note: Universal Analytics only
  * .main classes
  */
 function roots_main_class() {
-  if (roots_display_sidebar()) {
-    // Classes on pages with the sidebar
-    $class = 'col-sm-8';
-  } else {
-    // Classes on full width pages
-    $class = 'col-sm-12';
-  }
+//  if (roots_display_sidebar()) {
+//    // Classes on pages with the sidebar
+//    $class = 'col-sm-8';
+//  } else {
+//    // Classes on full width pages
+//    $class = 'col-sm-12';
+//  }
 
-  return apply_filters('roots/main_class', $class);
+  //  $class = 'test';
+  //return apply_filters('roots/main_class', $class);
 }
 
 /**
  * .sidebar classes
- */
 function roots_sidebar_class() {
   return apply_filters('roots/sidebar_class', 'col-sm-4');
 }
+ */
+
 
 /**
  * Define which pages shouldn't have the sidebar
@@ -73,7 +77,8 @@ function roots_display_sidebar() {
      * Any of these page templates that return true won't show the sidebar
      */
     array(
-      'template-custom.php'
+      'template-custom.php',
+      'templates/template-feature-split.php'
     )
   );
 
