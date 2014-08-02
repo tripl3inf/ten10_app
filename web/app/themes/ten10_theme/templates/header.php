@@ -3,8 +3,10 @@
 <header class="main">
     <div class="container">
         <div class="row">
-            <img id="logo_header" class="col-sm-9" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg"
+        	<div class="col-sm-12 col-lg-9">
+            	<img id="logo_header" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png"
                  alt=""/>
+			</div>
 
             <div class="mod_featured col-sm-3">
                 <div>
@@ -52,7 +54,9 @@
     </div>
 </header>
 
+<?php 
 
+?>
 
 
 

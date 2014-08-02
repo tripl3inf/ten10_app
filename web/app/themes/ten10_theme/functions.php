@@ -21,15 +21,15 @@ $roots_includes = array(
   'lib/gallery.php',         // Custom [gallery] modifications
   'lib/comments.php',        // Custom comments modifications
   'lib/scripts.php',         // Scripts and stylesheets
-  'lib/info_widget.php'     // Theme support info
+  'lib/info_widget.php',
+	'lib/custom_gallery.php'     // Theme support info
   //'slider-type.php'
 //  'templates/template-gallery.php'
 );
 
 
 
-$footer_nav_id = wp_create_nav_menu(__('Footer Navigation', 'roots'), array('slug' => 'footer_nav'));
-$roots_nav_theme_mod['footer_nav'] = $footer_nav_id;
+
 
 foreach ($roots_includes as $file) {
   if (!$filepath = locate_template($file)) {
@@ -39,4 +39,17 @@ foreach ($roots_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -4,6 +4,15 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 preserveAspectRatio="xMinYMin meet" width="846.7px" height="85.3px" viewBox="0 0 846.7 85.3" enable-background="new 0 0 846.7 85.3" xml:space="preserve">
 
+<defs>
+    <filter id="f1" x="0" y="0" width="100%" height="100%">
+    
+    <feOffset result="offOut" in="SourceAlpha" dx="0" dy="1" />
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="2" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
+  </defs>
+
 <path fill="#388FD2" d="M242.7,4.1h32.9v15.2h-13.2v14.4h12.3v14.4h-12.3v16.7h14.5V80h-34.2V4.1z"/>
 <g id="_x31_0.psd">
 
@@ -246,6 +255,7 @@ HwAAAABJRU5ErkJggg==" transform="matrix(1 0 0 1 165.2002 -4.3501)">
 <path fill="#FFFFFF" d="M142.4,4.1V80h-17.3l-10.3-34.5V80H98.3V4.1h16.5l11.1,34.2V4.1H142.4z"/>
 <path fill="#FFFFFF" d="M179.2,4.1V80h-18.9V39.3c0-5.9-0.1-9.4-0.4-10.6c-0.3-1.2-1.1-2.1-2.3-2.7c-1.2-0.6-4.1-0.9-8.5-0.9h-1.9
 	v-8.8c9.2-2,16.1-6,20.9-12.2H179.2z"/>
+	<g filter="url(#f1)">
 <path fill="#388FD2" d="M327,4.1V80h-17.3l-10.3-34.5V80h-16.5V4.1h16.5l11.1,34.2V4.1H327z"/>
 <path fill="#388FD2" d="M374.9,4.1v15.2h-11.7V80h-19.7V19.2h-11.7V4.1H374.9z"/>
 <path fill="#388FD2" d="M379.7,4.1H412.6v15.2H399.4v14.4h12.3v14.4h-12.3v16.7h14.5V80h-34.2V4.1L379.7,4.1z"/>
@@ -263,4 +273,5 @@ HwAAAABJRU5ErkJggg==" transform="matrix(1 0 0 1 165.2002 -4.3501)">
 <path fill="#388FD2" d="M710.901,4.1h32.898v15.2h-13.1v14.4H743v14.4H730.7v16.7h14.5V80H711L710.901,4.1L710.901,4.1z"/>
 <path fill="#388FD2" d="M795.2,4.1V80h-17.299L767.6,45.5V80h-16.5V4.1h16.5l11.1,34.1V4.1H795.2z"/>
 <path fill="#388FD2" d="M843.1,4.1v15.2h-11.699V80H811.7V19.2H800V4.1H843.1z"/>
+</g>
 </svg>

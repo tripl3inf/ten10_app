@@ -9,11 +9,24 @@ add_theme_support('bootstrap-gallery');     // Enable Bootstrap's thumbnails com
 add_theme_support('jquery-cdn');            // Enable to load jQuery from the Google CDN
 
 add_image_size( 'featured_img_split', 600, 665, true );
+add_image_size( 'img_gallery_home', 800, 9999999, true ); // Permalink thumbnail size
+
+
+
 
 /**
  * Configuration values
  */
 define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y (Note: Universal Analytics only, not Classic Analytics)
+
+
+//footer nav
+$footer_nav_id = wp_create_nav_menu(__('Footer Navigation', 'roots'), array('slug' => 'footer_nav'));
+$roots_nav_theme_mod['footer_nav'] = $footer_nav_id;
+
+
+
+
 
 /**
  * .main classes
@@ -65,8 +78,6 @@ function roots_display_sidebar() {
      *
      * The second element must be an array even if there's only 1 argument.
      */
-
-
     array(
       'is_cpt_return',
       'is_404',
@@ -92,3 +103,98 @@ function roots_display_sidebar() {
  * Default: 1140px is the default Bootstrap container width.
  */
 if (!isset($content_width)) { $content_width = 1140; }
+
+
+
+
+// add_action( 'add_meta_boxes', 'my_meta_boxes' );
+
+// function my_meta_boxes() {
+// 	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+
+// 	if( get_post_meta( $post_id, '_wp_page_template', true) == 'templates/template-home.php' ) {
+
+// 		add_meta_box( 'topics_meta' , 'Topic Landing Pages Settings' , 'display_topics_meta' ,  'page', 'normal' , 'high');
+
+// 	}
+// }
+
+
+if (class_exists('MultiPostThumbnails')) {
+	new MultiPostThumbnails(
+			array(
+					'label' => 'Secondary Image',
+					'id' => 'secondary-image',
+					'post_type' => 'page'
+			)
+	);
+}
+
+
+
+$remove = new Frosty_Remove_Meta_Box();
+
+class Frosty_Remove_Meta_Box {
+	
+	function Frosty_Remove_Meta_Box() {
+		$this->__construct();
+	}
+	
+	/* To infinity and beyond */
+	function __construct() {
+		add_action( 'admin_head', array( __CLASS__, 'remove_meta_box' ) );
+	}
+	
+	function remove_meta_box() {
+                // Remove the meta box for all post types. (post,page,custom_post)
+		$post_types = get_post_types( array( 'public' => true ), 'objects' );
+		
+		foreach ( $post_types as $type ) {
+			remove_meta_box( 'postimagediv', $type->name, 'side' );
+		}
+	}
+	
+}
+
+
+
+
+function be_sample_metaboxes( $meta_boxes ) {
+    $prefix = '_cmb_'; // Prefix for all fields
+    $meta_boxes['test_metabox'] = array(
+        'id' => 'test_metabox',
+        'title' => 'Test Metabox',
+        'pages' => array('page'), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => true, // Show field names on the left
+        'fields' => array(
+            
+
+        	array(
+                'name' => 'Test Text',
+                'desc' => 'field description (optional)',
+                'id' => $prefix . 'test_text',
+        		'type' => 'file',
+            ),
+        		
+        		
+        ),
+    );
+
+    return $meta_boxes;
+}
+add_filter( 'cmb_meta_boxes', 'be_sample_metaboxes' );
+
+// Initialize the metabox class
+add_action( 'init', 'be_initialize_cmb_meta_boxes', 9999 );
+function be_initialize_cmb_meta_boxes() {
+	if ( !class_exists( 'cmb_Meta_Box' ) ) {
+		require_once( 'metabox/init.php' );
+	}
+}
+
+
+
+
+

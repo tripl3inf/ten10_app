@@ -18,6 +18,16 @@ if ( has_post_thumbnail() ) {
         <img src="<?php echo $image_attributes[0]; ?>" class="img-responsive">
     </div>
     
+                            <?php
+                    global $post;
+                    $text = get_post_meta( $post->ID, '_cmb_test_text', true );
+                    echo $text;
+                    ?>
+    <div class="col-lg-6">
+        <img src="<?php echo $text ?>" class="img-responsive">
+    </div>
+    
+    
     <article class="col-lg-6">
         <div class="entry-content">
             <?php the_content(); ?>
