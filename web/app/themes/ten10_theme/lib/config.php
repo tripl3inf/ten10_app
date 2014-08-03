@@ -107,54 +107,18 @@ if (!isset($content_width)) { $content_width = 1140; }
 
 
 
-// add_action( 'add_meta_boxes', 'my_meta_boxes' );
 
-// function my_meta_boxes() {
-// 	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+// remove standard featured img metabox
+function ds_hide_stuff() {
+	global $post_type;
+		//remove_action( 'media_buttons', 'media_buttons' );
+		//remove_meta_box('slugdiv', $post_type, 'normal');
+		remove_meta_box('postimagediv', $post_type, 'side');
 
-// 	if( get_post_meta( $post_id, '_wp_page_template', true) == 'templates/template-home.php' ) {
-
-// 		add_meta_box( 'topics_meta' , 'Topic Landing Pages Settings' , 'display_topics_meta' ,  'page', 'normal' , 'high');
-
-// 	}
-// }
-
-
-if (class_exists('MultiPostThumbnails')) {
-	new MultiPostThumbnails(
-			array(
-					'label' => 'Secondary Image',
-					'id' => 'secondary-image',
-					'post_type' => 'page'
-			)
-	);
+		//$ds_hide_postdiv = "<style type=\"text/css\"> #postdiv, #postdivrich { display: none; }</style>";
+		//print($ds_hide_postdiv);
 }
-
-
-
-$remove = new Frosty_Remove_Meta_Box();
-
-class Frosty_Remove_Meta_Box {
-	
-	function Frosty_Remove_Meta_Box() {
-		$this->__construct();
-	}
-	
-	/* To infinity and beyond */
-	function __construct() {
-		add_action( 'admin_head', array( __CLASS__, 'remove_meta_box' ) );
-	}
-	
-	function remove_meta_box() {
-                // Remove the meta box for all post types. (post,page,custom_post)
-		$post_types = get_post_types( array( 'public' => true ), 'objects' );
-		
-		foreach ( $post_types as $type ) {
-			remove_meta_box( 'postimagediv', $type->name, 'side' );
-		}
-	}
-	
-}
+add_action( 'admin_head', 'ds_hide_stuff'  );
 
 
 
@@ -170,18 +134,14 @@ function be_sample_metaboxes( $meta_boxes ) {
         'show_names' => true, // Show field names on the left
         'fields' => array(
             
-
         	array(
                 'name' => 'Test Text',
                 'desc' => 'field description (optional)',
                 'id' => $prefix . 'test_text',
         		'type' => 'file',
-            ),
-        		
-        		
+            ),		
         ),
     );
-
     return $meta_boxes;
 }
 add_filter( 'cmb_meta_boxes', 'be_sample_metaboxes' );
@@ -193,7 +153,6 @@ function be_initialize_cmb_meta_boxes() {
 		require_once( 'metabox/init.php' );
 	}
 }
-
 
 
 
