@@ -23,6 +23,7 @@ function roots_scripts() {
     $assets = array(
       'livereload' => '//192.168.1.134:35729/livereload.js?snipver=1',
       'font-awesome' => '/assets/vendor/font-awesome/css/font-awesome.css',
+      'mob_nav' => 'responsive-nav.css',
      // 'font-awesome-more' => '/assets/vendor/font-awesome-more/css/font-awesome.css',
       'css'       => '/assets/css/main.css',
       'js'        => '/assets/js/scripts.js',

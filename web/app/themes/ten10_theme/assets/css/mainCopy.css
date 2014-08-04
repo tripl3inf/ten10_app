@@ -6392,12 +6392,11 @@ footer .container nav .social_media li {
 }
 .slider_home .slider_container {
   padding-right: 0;
-  height: 355px;
 }
 .slider_home .feat_img_container {
   padding-left: 0;
 }
-.slider_home .feat_img_container img {
+.slider_home .feat_img_container image {
   width: 100%;
 }
 /*# sourceMappingURL=main.css.map */

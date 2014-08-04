@@ -7,8 +7,9 @@ db_backups/*
 
 # Idea IDE files
 .idea*
+.idea
 ten10.iml
-COMPS/**/*
+compositions/*
 # WordPress
 web/wp
 web/.htaccess

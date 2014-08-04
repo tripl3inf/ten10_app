@@ -109,51 +109,167 @@ if (!isset($content_width)) { $content_width = 1140; }
 
 
 // remove standard featured img metabox
-function ds_hide_stuff() {
-	global $post_type;
-		//remove_action( 'media_buttons', 'media_buttons' );
-		//remove_meta_box('slugdiv', $post_type, 'normal');
-		remove_meta_box('postimagediv', $post_type, 'side');
-
-		//$ds_hide_postdiv = "<style type=\"text/css\"> #postdiv, #postdivrich { display: none; }</style>";
-		//print($ds_hide_postdiv);
-}
-add_action( 'admin_head', 'ds_hide_stuff'  );
-
-
+//function ds_hide_stuff() {
+//	global $post_type;
+//		//remove_action( 'media_buttons', 'media_buttons' );
+//		//remove_meta_box('slugdiv', $post_type, 'normal');
+//		remove_meta_box('postimagediv', $post_type, 'side');
+//
+//		//$ds_hide_postdiv = "<style type=\"text/css\"> #postdiv, #postdivrich { display: none; }</style>";
+//		//print($ds_hide_postdiv);
+//}
+//add_action( 'admin_head', 'ds_hide_stuff'  );
 
 
-function be_sample_metaboxes( $meta_boxes ) {
+
+
+function custom_metaboxes( $meta_boxes ) {
     $prefix = '_cmb_'; // Prefix for all fields
-    $meta_boxes['test_metabox'] = array(
-        'id' => 'test_metabox',
-        'title' => 'Test Metabox',
+    $meta_boxes['metabox_home'] = array(
+        'id' => 'metabox_home_imgs',
+        'title' => 'Home Page Featured Images',
         'pages' => array('page'), // post type
         'context' => 'normal',
         'priority' => 'high',
         'show_names' => true, // Show field names on the left
+//        'show_on' => array( 'key' => 'page-template', 'value' => 'templates/template-home.php' ),
+        'show_on' => array( 'key' => 'id', 'value' => array( 86 ) ),
         'fields' => array(
-            
-        	array(
-                'name' => 'Test Text',
-                'desc' => 'field description (optional)',
-                'id' => $prefix . 'test_text',
-        		'type' => 'file',
-            ),		
+
+            array(
+                'name' => 'Choose Image 1:',
+                'desc' => 'the TOP right static image on home page.',
+                'id' => $prefix . 'home_img_1',
+                'type' => 'file',
+                // 'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
+            ),
+
+            array(
+                'name' => 'Choose Image 2:',
+                'desc' => 'the BOTTOM right static image on home page.',
+                'id' => $prefix . 'home_img_2',
+                'type' => 'file',
+                // 'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
+            ),
         ),
     );
     return $meta_boxes;
 }
-add_filter( 'cmb_meta_boxes', 'be_sample_metaboxes' );
+add_filter( 'cmb_meta_boxes', 'custom_metaboxes' );
 
 // Initialize the metabox class
-add_action( 'init', 'be_initialize_cmb_meta_boxes', 9999 );
-function be_initialize_cmb_meta_boxes() {
+add_action( 'init', 'init_custom_meta_boxes', 9999 );
+function init_custom_meta_boxes() {
 	if ( !class_exists( 'cmb_Meta_Box' ) ) {
 		require_once( 'metabox/init.php' );
 	}
 }
 
+
+
+
+
+// move admin bar to bottom
+function fb_move_admin_bar() { ?>
+    <style type="text/css">
+        body {
+            margin-top: -28px;
+            padding-bottom: 28px;
+        }
+        body.admin-bar #wphead {
+            padding-top: 0;
+        }
+        body.admin-bar #footer {
+            padding-bottom: 28px;
+        }
+        #wpadminbar {
+            top: auto !important;
+            bottom: 0;
+        }
+        #wpadminbar .quicklinks .menupop ul {
+            bottom: 28px;
+        }
+    </style>
+<?php }
+// on backend area
+add_action( 'admin_head', 'fb_move_admin_bar' );
+// on frontend area
+add_action( 'wp_head', 'fb_move_admin_bar' );
+
+
+// remove comments tab from admin menubar
+// remove links/menus from the admin bar
+function mytheme_admin_bar_render() {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_menu('comments');
+
+
+
+}
+add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
+
+
+
+
+// Use your custom URL logo link
+function wpc_url_login(){
+    return "http://t3inf.com/"; // your URL here
+}
+add_filter('login_headerurl', 'wpc_url_login');
+
+
+// Custom WordPress Login Logo
+function login_css() {
+    wp_enqueue_style( 'login_css', get_template_directory_uri() . '/assets/css/login.css' );
+}
+add_action('login_head', 'login_css');
+
+// Custom WordPress Footer
+function remove_footer_admin () {
+    echo '&copy; 2014 - tripl3infinity Design &copy Dev';
+}
+add_filter('admin_footer_text', 'remove_footer_admin');
+
+// Remove dashboard widgets
+add_action('wp_dashboard_setup', 'wpc_dashboard_widgets');
+function wpc_dashboard_widgets() {
+    global $wp_meta_boxes;
+    // Last comments
+    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']);
+    // Incoming links
+    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
+}
+
+
+
+
+function my_custom_post_product() {
+    $labels = array(
+        'name'               => _x( 'Products', 'post type general name' ),
+        'singular_name'      => _x( 'Product', 'post type singular name' ),
+        'add_new'            => _x( 'Add New', 'book' ),
+        'add_new_item'       => __( 'Add New Product' ),
+        'edit_item'          => __( 'Edit Product' ),
+        'new_item'           => __( 'New Product' ),
+        'all_items'          => __( 'All Products' ),
+        'view_item'          => __( 'View Product' ),
+        'search_items'       => __( 'Search Products' ),
+        'not_found'          => __( 'No products found' ),
+        'not_found_in_trash' => __( 'No products found in the Trash' ),
+        'parent_item_colon'  => '',
+        'menu_name'          => 'Products'
+    );
+    $args = array(
+        'labels'        => $labels,
+        'description'   => 'Holds our products and product specific data',
+        'public'        => true,
+        'menu_position' => 5,
+        'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+        'has_archive'   => true,
+    );
+    register_post_type( 'product', $args );
+}
+add_action( 'init', 'my_custom_post_product' );
 
 
 
