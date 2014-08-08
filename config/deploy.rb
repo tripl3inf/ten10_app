@@ -17,7 +17,7 @@ set :wp_localurl, "http://localhost" # Your local environment URL
 # Setup project
 ############################################
 
-set :application, "wp-deploy"
+set :application, "wp_deploy"
 set :repo_url, "git@github.com:tripl3inf/ten10_app.git"
 set :scm, :git
 
@@ -27,8 +27,8 @@ set :git_strategy, SubmoduleStrategy
 # Setup Capistrano
 ############################################
 
-set :log_level, :info
-set :use_sudo, false
+set :log_level, :debug
+set :use_sudo, true
 
 set :ssh_options, {
   forward_agent: true
@@ -40,7 +40,8 @@ set :keep_releases, 5
 # Linked files and directories (symlinks)
 ############################################
 
-set :linked_files, %w{wp-config.php .htaccess}
+#set :linked_files, %w{wp-config.php .htaccess}
+set :linked_files, %w{wp-config.php}
 set :linked_dirs, %w{content/uploads}
 
 namespace :deploy do
