@@ -4,9 +4,12 @@
 *.sql
 *.sqlite
 database.yml
+.credentials
+
 
 # OS generated files #
 ######################
+.idea/**
 .DS_Store*
 ehthumbs.db
 Icon?
