@@ -1,0 +1,90 @@
+{
+    "name": "ten10",
+    "description": "Custom WordPress Theme",
+
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://wpackagist.org"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "wordpress",
+                "type": "webroot",
+                "version": "3.9.2",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://wordpress.org/wordpress-3.9.1.zip"
+                },
+                "require" : {
+                    "fancyguy/webroot-installer": "1.1.0"
+                }
+            }
+        },
+
+
+        {
+            "type": "package",
+            "package": {
+                "name": "wp-migrate-db",
+                "type": "wordpress-muplugin",
+                "version": "0.0.5",
+                "dist": {
+                    "type": "zip",
+                    "url": "http://downloads.wordpress.org/plugin/wp-migrate-db.0.5.zip"
+                },
+                "require" : {
+                    "fancyguy/webroot-installer": "1.1.0"
+                }
+            }
+        },
+
+
+        {
+            "type": "package",
+            "package": {
+                "name": "WebDevStudios/Custom-Metaboxes-and-Fields-for-WordPress",
+                "type": "wordpress-muplugin",
+                "version": "1.2.0",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/WebDevStudios/Custom-Metaboxes-and-Fields-for-WordPress/archive/master.zip"
+                },
+                "require" : {
+                    "fancyguy/webroot-installer": "1.1.0"
+                }
+            }
+        }
+
+    ],
+
+
+
+    "require": {
+        "wordpress": "3.9.2",
+        "fancyguy/webroot-installer": "1.*",
+        "wpackagist-plugin/wp-migrate-db": "*",
+        "wpackagist-plugin/theme-check": "20131213.1",
+        "WebDevStudios/Custom-Metaboxes-and-Fields-for-WordPress": "*"
+    },
+
+
+
+    "autoload": {
+    },
+
+
+
+    "extra": {
+        "webroot-dir": "wordpress",
+        "webroot-package": "wordpress",
+        "installer-paths": {
+            "content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+            "content/themes/{$name}/": ["type:wordpress-theme"]
+        }
+    }
+
+}
+

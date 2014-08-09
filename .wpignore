@@ -7,3 +7,10 @@ readme.md
 .gitattributes
 .gitignore
 .gitmodules
+
+**/node_modules/**
+**/assets/vendor/**
+
+vendor/**
+content/plugins/**
+content/mu-plugins/**

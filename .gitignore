@@ -32,3 +32,8 @@ wp-config.php
 _assets
 node_modules
 ai-cache/*
+
+wordpress/**
+vendor/**
+content/plugins/**
+content/mu-plugins/**

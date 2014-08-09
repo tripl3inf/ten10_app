@@ -3,12 +3,12 @@
 ############################################
 
 set :stage, :staging
-set :stage_url, "http://www.example.com"
-server "XXX.XXX.XX.XXX", user: "SSHUSER", roles: %w{web app db}
-set :deploy_to, "/deploy/to/path"
+set :stage_url, "http://t3inf.com"
+server "t3inf.com", user: "tripl3inf", roles: %w{web app db}
+set :deploy_to, "/srv/client/ten10"
 
 ############################################
 # Setup Git
 ############################################
 
-set :branch, "development"
+set :branch, "wp_deploy"
