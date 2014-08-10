@@ -1,0 +1,18 @@
+#login {
+    width: 450px;
+}
+
+#login h1 a {
+    background-image: url("../img/logo_login.png") !important;
+    width: 100% !important;
+    display: block;
+    height: 100%;
+    background-position: 0 0;
+    background-size: 100%;
+    padding: 25px 0 0 0;
+}
+
+#wpadminbar .ab-top-secondary .menupop .ab-sub-wrapper {
+     position: relative !important;
+     top: -150px !important;
+ }

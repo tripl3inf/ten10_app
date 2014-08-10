@@ -1,0 +1,92 @@
+/* =============================================================================
+   Media queries for different screen sizes
+   ========================================================================== */
+
+.nav > li > a:hover, .nav > li > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.dropdown-menu {
+  border: none;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.navbar-nav {
+  margin-bottom: 0;
+  li {
+    a {
+      color: #FFF;
+      padding: 10px 13px;
+    }
+
+    a:focus,
+    a:hover {
+      background: transparent;
+      //color: #333;
+    }
+
+    a:after {
+      content: '|';
+      display: inline-block;
+      position: relative;
+      left: 15px;
+    }
+
+    a:focus:after,
+    a:hover:after {
+      color: #fff;
+    }
+
+  }
+
+  li:first-child a {
+    padding-left: 0;
+  }
+
+  li:last-child a:after {
+    content: none;
+  }
+
+  li.active {
+    > a {
+      color: #333;
+      font-weight: bold;
+    }
+
+    a:after {
+      color: #fff;
+    }
+  }
+
+  .dropdown-toggle {
+    .caret {
+      display: none;
+    }
+  }
+}
+
+#menu-primary-navigation.navbar-nav {
+  > li.active:after {
+    content: '';
+    display: block;
+    position: absolute;
+    margin: 1px 0 0 50%;
+    left: -15px;
+    height: 30px;
+    width: 30px;
+    background: url("../img/menu_tri.svg") transparent 0 0 no-repeat;
+  }
+}
+
+
+
+
+
+
+
+
