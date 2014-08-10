@@ -69,9 +69,21 @@ Disallow: /')
         execute :chmod, "644 #{release_path}/robots.txt"
       end
   	end
+
+  	  desc 'Restart application'
+      task :restart do # doesnt do anything, but is req by ruby app
+        on roles(:app), in: :sequence, wait: 5 do
+          # Your restart mechanism here, for example:
+          execute :service, :nginx, :reload
+        end
+      end
+    end
+
+
   end
 
   after :finished, :create_robots
   after :finishing, "deploy:cleanup"
+  after :finishing, 'deploy:restart'
 
 end
