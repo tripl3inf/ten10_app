@@ -22,6 +22,8 @@ set :repo_url, "git@github.com:tripl3inf/ten10_app.git"
 set :scm, :git
 
 set :git_strategy, SubmoduleStrategy
+set :branch, "wp_deploy"
+
 
 ############################################
 # Setup Capistrano
