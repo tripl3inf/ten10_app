@@ -55,7 +55,18 @@ namespace :wp do
           user = fetch(:wp_user)
 
           # Install WordPress
+
+
+
+
+
+
+          ### ! comment out the following to install wordpress with composer -- not as a submodule
           execute :wp, "core install --url='#{wp_siteurl}' --title='#{title}' --admin_user='#{user}' --admin_password='#{password}' --admin_email='#{email}'"
+
+
+
+
 
           if !fetch(:setup_all)
             puts <<-MSG
