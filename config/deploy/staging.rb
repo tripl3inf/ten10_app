@@ -11,4 +11,7 @@ set :deploy_to, "/srv/client/ten10"
 # Setup Git
 ############################################
 
-set :branch, "wp_deploy"
+
+
+
+
