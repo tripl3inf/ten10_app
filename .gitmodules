@@ -7,3 +7,7 @@
 #    path = content/themes/ten10_roots/lib/metabox
 #    url = git@github.com:WebDevStudios/Custom-Metaboxes-and-Fields-for-WordPress.git
 #    fetch = +refs/heads/*:refs/remotes/origin/*
+[submodule "wordpress"]
+	path = wordpress
+	url = https://github.com/WordPress/WordPress.git
+	branch = 3.9-branch
