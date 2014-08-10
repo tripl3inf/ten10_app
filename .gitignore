@@ -6,7 +6,6 @@
 database.yml
 .credentials
 
-
 # OS generated files #
 ######################
 .idea/**
