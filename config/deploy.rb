@@ -38,6 +38,15 @@ set :ssh_options, {
 
 set :keep_releases, 5
 
+
+##### bower ####
+set :bower_flags, '--quiet --config.interactive=false'
+set :bower_roles, :web
+#set :bower_target_path, "#{shared_path}/content/themes/ten10_roots"
+
+
+
+
 ############################################
 # Linked files and directories (symlinks)
 ############################################

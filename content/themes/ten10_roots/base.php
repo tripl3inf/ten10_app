@@ -14,31 +14,33 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
     </div>
   <![endif]-->
 
+
+ <div class="wrap" role="document">
+
   <?php
     do_action('get_header');
     get_template_part('templates/header');
   ?>
 
-  <div class="wrap container" role="document">
 
-    <div class="content row">
-      <main class="main <?php echo roots_main_class(); ?>" role="main">
+     <div class="container">
+     <!--  <div class="content"dd> -->
+      <main class="main<?php echo roots_main_class(); ?>" role="main">
         <?php include roots_template_path(); ?>
 
       </main>
 
-    </div><!-- /.content -->
+        <!--   </div> /.content -->
+     </div>
 
 
 
 
-
-
-
-
-  </div><!-- /.wrap -->
 
   <?php get_template_part('templates/footer'); ?>
 
+
+
+ </div><!-- /.wrap -->
 </body>
 </html>

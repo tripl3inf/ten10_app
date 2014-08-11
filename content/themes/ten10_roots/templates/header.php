@@ -1,6 +1,6 @@
 <!--<header id="mainBanner" class="container navbar navbar-default navbar-static-bottom" role="banner">-->
 <header class="main">
-    <div class="container">
+<div class="container">
         <div class="banner row">
         	<div class="col-sm-12 col-md-9">
             	<img id="logo_header" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_v2.png" class="img-responsive" alt=""/>
@@ -17,7 +17,7 @@
 
         
             
-        <nav class=" navbar navbar-static-top" role="navigation">
+        <nav class="row navbar navbar-static-top" role="navigation">
             <?php
             if (has_nav_menu('primary_navigation')) :
                 wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'col-xs-12 nav navbar-nav'));
@@ -26,8 +26,7 @@
 
 
         </nav>
-            
-    </div>
+</div>
 </header>
 
 <?php 

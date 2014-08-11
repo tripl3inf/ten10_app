@@ -14,6 +14,10 @@
  * remove or comment out: add_theme_support('jquery-cdn');
  * ======================================================================== */
 
+
+
+
+
 (function($) {
 
 // Use this variable to set up the common and page specific functions. If you 
@@ -28,7 +32,12 @@ var Roots = {
   // Home page
   home: {
     init: function() {
-      // JavaScript to be fired on the home page
+
+
+
+
+
+
     }
   },
   // About us page, note the change from about-us to about_us.

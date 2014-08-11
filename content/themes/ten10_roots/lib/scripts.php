@@ -27,7 +27,6 @@ function roots_scripts() {
      // 'font-awesome-more' => '/assets/vendor/font-awesome-more/css/font-awesome.css',
       'css'       => '/assets/css/main.css',
       'js'        => '/assets/js/scripts.js',
-      'custom_slider'        => '/assets/js/custom_slider.js',
       'modernizr' => '/assets/vendor/modernizr/modernizr.js',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js',
       'bootstrap' => '/assets/vendor/bootstrap/dist/js/bootstrap.min.js',
@@ -42,7 +41,6 @@ function roots_scripts() {
       'font-awesome' => '/assets/vendor/font-awesome/css/font-awesome.css',
         'css'       => '/assets/css/main.css',
         'js'        => '/assets/js/scripts.js',
-        'custom_slider'        => '/assets/js/custom_slider.js',
 //      'css'       => '/assets/css/main.min.css' . '?' . $assets['assets/css/main.min.css']['hash'],
 //      'js'        => '/assets/js/scripts.min.js' . '?' . $assets['assets/js/scripts.min.js']['hash'],
       'modernizr' => '/assets/js/vendor/modernizr.min.js',
@@ -53,9 +51,7 @@ function roots_scripts() {
       'bootstrap-tooltip' => '/assets/vendor/bootstrap/js/tooltip.js'
     );
   }
-?>
 
-<?php
 
 
   /**
@@ -85,10 +81,16 @@ function roots_scripts() {
   wp_enqueue_script('bootstrap-tooltip', get_template_directory_uri() . $assets['bootstrap-tooltip'], array(), null, false);
   wp_enqueue_script('bootstrap-dropdown', get_template_directory_uri() . $assets['bootstrap-dropdown'], array(), null, false);
 
-  wp_enqueue_script('custom_slider', get_template_directory_uri() . $assets['bootstrap'], array(), null, false);
  // wp_enqueue_script('bootstrap-carousel', get_template_directory_uri() . $assets['bootstrap-carousel'], array(), null, false);
 }
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);
+
+function custom_scripts() {
+    wp_enqueue_script('roots_custom', get_template_directory_uri() . '/assets/js/custom_slider.js');
+}
+add_action('wp_enqueue_scripts', 'custom_scripts', 200);
+
+
 
 // http://wordpress.stackexchange.com/a/12450
 function roots_jquery_local_fallback($src, $handle = null) {

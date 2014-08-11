@@ -6226,9 +6226,6 @@ button.close {
 .navbar-nav li a:hover:after {
   color: #fff;
 }
-.navbar-nav li:first-child a {
-  padding-left: 0;
-}
 .navbar-nav li:last-child a:after {
   content: none;
 }
@@ -6326,9 +6323,6 @@ header.main .container .banner.row {
 header.main .container .banner.row #logo_header {
   position: relative;
 }
-header.main .container .banner.row .navbar {
-  margin: 0;
-}
 header.main .container .banner.row .user_menu > li > a i {
   font-size: 20px;
   margin: -4px 0 0 0;
@@ -6355,29 +6349,98 @@ header.main .container .banner.row .mod_featured > div p {
   margin: 0;
   font-size: 16px;
 }
-#slider_home {
+#widget_home {
   height: 355px;
 }
-#slider_home .carousel-indicators {
+#widget_home .carousel-indicators {
   position: absolute;
   bottom: 10px;
-  right: 40px;
+  right: 0px;
+  margin: 0;
+  padding: 0;
+  width: inherit;
 }
-#slider_home .carousel-inner .slider_desc {
-  text-align: center;
+#widget_home .carousel-indicators li {
+  margin: 2px 5px;
+}
+#widget_home .carousel {
+  padding: 0;
+}
+#widget_home .carousel .carousel-inner .slider_desc {
+  text-align: left;
   position: absolute;
-  bottom: 25px;
+  bottom: 30px;
+  width: 60%;
+  left: 40%;
+  padding: 0 20px;
+}
+#widget_home .carousel .carousel-inner .slider_desc .title {
+  font-size: 32px;
+  text-shadow: 0 0 10px #999;
+}
+#widget_home .carousel .carousel-inner .slider_desc .caption {
+  font-size: 16px;
+}
+#widget_home .carousel .carousel-inner .slider_img {
+  height: 355px;
+}
+#widget_home .feat_img_container {
+  height: 355px;
+  padding: 0;
+  overflow: hidden;
+}
+#widget_home .feat_img_container img {
   width: 100%;
+  overflow: hidden;
 }
-#slider_home .carousel-inner .slider_img {
-  height: 355px;
+.menu_featured {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  background: #0e6aab;
+  border-top: 2px solid #fff;
+  /*
+  ul > li {
+    float: none;
+
+    > a {
+      background: url("../img/film_strip_BG.jpg") transparent no-repeat center 0;
+      display: block;
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      height: 250px;
+      float: none;
+
+    }
+  }*/
 }
-#slider_home .feat_img_container {
-  height: 355px;
-  width: 385px;
+.menu_featured h4 {
+  padding: 0 30px;
+  font-size: 16px;
+  color: #fff;
 }
-#slider_home .feat_img_container img {
-  height: 50%;
+.menu_featured ul {
+  margin: 0;
+  width: 100%;
+  padding: 0;
+}
+.menu_featured ul > li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  list-style: none;
+  height: 200px;
+  background: url("../img/film_strip_BG.jpg") transparent no-repeat center;
+}
+.menu_featured ul > li a {
+  display: inline-block;
+  color: #000;
+  text-align: center;
+  line-height: 180px;
+  font-size: 18px;
+}
+.menu_featured ul > li a img {
+  width: 100%;
 }
 footer {
   position: relative;
@@ -6421,7 +6484,11 @@ footer .container nav .social_media {
   font-size: 9px;
 }
 footer .container nav .social_media li {
-  margin: -0.2em 0.8em 0 0;
+  width: 40px;
+  height: 40px;
+}
+footer .container nav .social_media li a:after {
+  content: none;
 }
 .slider_home .slider_container {
   padding-right: 0;
