@@ -4,22 +4,8 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e599c3bedb70a04938ff5f44ebfce95c",
+    "hash": "488e2fb743f1abe4bcd5a82fac6aad6d",
     "packages": [
-        {
-            "name": "WebDevStudios/Custom-Metaboxes-and-Fields-for-WordPress",
-            "version": "1.2.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/WebDevStudios/Custom-Metaboxes-and-Fields-for-WordPress/archive/master.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "fancyguy/webroot-installer": "1.1.0"
-            },
-            "type": "wordpress-muplugin"
-        },
         {
             "name": "composer/installers",
             "version": "v1.0.16",
@@ -152,30 +138,16 @@
             "time": "2013-03-15 17:51:14"
         },
         {
-            "name": "wordpress",
-            "version": "3.9.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://wordpress.org/wordpress-3.9.1.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "fancyguy/webroot-installer": "1.1.0"
-            },
-            "type": "webroot"
-        },
-        {
-            "name": "wpackagist-plugin/theme-check",
-            "version": "20131213.1",
+            "name": "wpackagist-plugin/clean-and-simple-contact-form-by-meg-nicholas",
+            "version": "4.3.4",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/theme-check/",
-                "reference": "tags/20131213.1"
+                "url": "http://plugins.svn.wordpress.org/clean-and-simple-contact-form-by-meg-nicholas/",
+                "reference": "tags/4.3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/theme-check.20131213.1.zip",
+                "url": "http://downloads.wordpress.org/plugin/clean-and-simple-contact-form-by-meg-nicholas.4.3.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -183,10 +155,10 @@
                 "composer/installers": "~1.0"
             },
             "replace": {
-                "wpackagist/theme-check": "self.version"
+                "wpackagist/clean-and-simple-contact-form-by-meg-nicholas": "self.version"
             },
             "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/theme-check/"
+            "homepage": "http://wordpress.org/plugins/clean-and-simple-contact-form-by-meg-nicholas/"
         },
         {
             "name": "wpackagist-plugin/wp-migrate-db",
@@ -213,7 +185,52 @@
         }
     ],
     "packages-dev": [
-
+        {
+            "name": "wpackagist-plugin/a-fresher-cache",
+            "version": "0.1.2",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/a-fresher-cache/",
+                "reference": "tags/0.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/a-fresher-cache.0.1.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/a-fresher-cache": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/a-fresher-cache/"
+        },
+        {
+            "name": "wpackagist-plugin/theme-check",
+            "version": "20131213.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/theme-check/",
+                "reference": "tags/20131213.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/theme-check.20131213.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/theme-check": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/theme-check/"
+        }
     ],
     "aliases": [
 
@@ -223,9 +240,9 @@
 
     ],
     "prefer-stable": false,
-    "platform": [
-
-    ],
+    "platform": {
+        "php": ">=5.3.0"
+    },
     "platform-dev": [
 
     ]
