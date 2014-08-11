@@ -86,6 +86,19 @@ Disallow: /')
   	end
   end
 
+
+                              #namespace :grunt do
+                              #    desc "Build Grunt"
+                              #    task :build do
+                              #        on roles (:app) do
+                              #            within release_path do
+                              #                execute "grunt", "build"
+                              #            end
+                              #        end
+                              #    end
+                              #end
+                              #  after :finishing, "grunt:build"
+
   after :finished, :create_robots
   after :finishing, "deploy:cleanup"
 

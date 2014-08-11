@@ -3,7 +3,7 @@
     <div class="container">
         <div class="banner row">
         	<div class="col-sm-12 col-md-9">
-            	<img id="logo_header" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" class="img-responsive" alt=""/>
+            	<img id="logo_header" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_v2.png" class="img-responsive" alt=""/>
 			</div>
 
             <div class="mod_featured col-sm-3  hidden-xs hidden-sm">

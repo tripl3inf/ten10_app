@@ -9,7 +9,7 @@ add_theme_support('bootstrap-gallery');     // Enable Bootstrap's thumbnails com
 add_theme_support('jquery-cdn');            // Enable to load jQuery from the Google CDN
 
 add_image_size( 'featured_img_split', 600, 665, true );
-add_image_size( 'img_gallery_home', 800, 9999999, true ); // Permalink thumbnail size
+add_image_size( 'img_gallery_home', 785, 355, true ); // Permalink thumbnail size
 
 
 
@@ -132,9 +132,59 @@ function custom_metaboxes( $meta_boxes ) {
         'context' => 'normal',
         'priority' => 'high',
         'show_names' => true, // Show field names on the left
-//        'show_on' => array( 'key' => 'page-template', 'value' => 'templates/template-home.php' ),
-        'show_on' => array( 'key' => 'id', 'value' => array( 86 ) ),
+        'show_on' => array( 'key' => 'page-template', 'value' => 'templates/template-home.php' ),
+//        'show_on' => array( 'key' => 'id', 'value' => array( 86 ) ),
         'fields' => array(
+
+//            array(
+//                'name' => 'Choose Slider Images:',
+//                'desc' => 'Home slider gallery.',
+//                'id' => $prefix . 'slider_home',
+//                'type' => 'file_list',
+//                'allow' => array( 'attachment' ) // limit to just attachments with array( 'attachment' )
+//            ),
+
+
+
+
+
+            array(
+                'id'          => $prefix . 'repeat_group',
+                'type'        => 'group',
+                'description' => __( 'Generates reusable form entries', 'cmb' ),
+                'options'     => array(
+                    'group_title'   => __( 'Entry {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+                    'add_button'    => __( 'Add Another Entry', 'cmb' ),
+                    'remove_button' => __( 'Remove Entry', 'cmb' ),
+                    'sortable'      => true, // beta
+                ),
+                // Fields array works the same, except id's only need to be unique for this group. Prefix is not needed.
+                'fields'      => array(
+                    array(
+                        'name' => 'Entry Title',
+                        'id'   => 'title',
+                        'type' => 'text',
+                        // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+                    ),
+                    array(
+                        'name' => 'Description',
+                        'description' => 'Write a short description for this entry',
+                        'id'   => 'description',
+                        'type' => 'textarea_small',
+                    ),
+                    array(
+                        'name' => 'Entry Image',
+                        'id'   => 'image',
+                        'type' => 'file',
+                    ),
+                    array(
+                        'name' => 'Image Caption',
+                        'id'   => 'image_caption',
+                        'type' => 'text',
+                    ),
+                ),
+            ),
+
 
             array(
                 'name' => 'Choose Image 1:',
@@ -151,8 +201,12 @@ function custom_metaboxes( $meta_boxes ) {
                 'type' => 'file',
                 // 'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
             ),
+
+
         ),
     );
+
+
 
 
 
