@@ -22,6 +22,7 @@ set :repo_url, "git@github.com:tripl3inf/ten10_app.git"
 set :scm, :git
 
 set :git_strategy, SubmoduleStrategy
+set :branch, :wp_deploy
 
 
 ############################################
@@ -46,19 +47,20 @@ set :linked_files, %w{wp-config.php}
 set :linked_dirs, %w{content/uploads}
 
 namespace :deploy do
-namespace :composer do
-    desc "Install composer dependencies"
-    task :install do
-        on roles (:app) do
-            within release_path do
-                execute "composer", "install", "--no-dev --prefer-dist --no-scripts --quiet"
-            end
-        end
-    end
-end
+
+#namespace :composer do
+#    desc "Install composer dependencies"
+#    task :install do
+#        on roles (:app) do
+#            within release_path do
+#                execute "composer", "install", "--no-dev --prefer-dist --no-scripts --quiet"
+#            end
+#        end
+#    end
+#end
 
 
-    before "deploy:started", "composer:install"
+#    before "deploy:started", "composer:install"
 
 
   desc "create WordPress files for symlinking"
