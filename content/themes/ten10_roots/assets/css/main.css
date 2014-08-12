@@ -6221,6 +6221,7 @@ button.close {
   display: inline-block;
   position: relative;
   left: 15px;
+  color: #3399cc;
 }
 .navbar-nav li a:focus:after,
 .navbar-nav li a:hover:after {
@@ -6230,7 +6231,7 @@ button.close {
   content: none;
 }
 .navbar-nav li.active > a {
-  color: #333;
+  color: #66ccff;
   font-weight: bold;
 }
 .navbar-nav li.active a:after {
@@ -6245,9 +6246,9 @@ button.close {
   position: absolute;
   margin: 1px 0 0 50%;
   left: -15px;
-  height: 30px;
-  width: 30px;
-  background: url("../img/menu_tri.svg") transparent 0 0 no-repeat;
+  height: 18px;
+  width: 28px;
+  background: url("../img/menu_tri.png") transparent 0 0 no-repeat;
 }
 .gallery-row {
   padding: 10px 0;
@@ -6288,22 +6289,10 @@ body {
   background: #ccc;
 }
 .blue_grad_lrg {
-  background: #025287;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #025287), color-stop(95%, #3a8bc1));
-  background: -webkit-linear-gradient(top, #025287 0%, #3a8bc1 95%);
-  background: -o-linear-gradient(top, #025287 0%, #3a8bc1 95%);
-  background: -webkit-gradient(linear, left top, left bottom, from(#025287), color-stop(95%, #3a8bc1));
-  background: linear-gradient(to bottom, #025287 0%, #3a8bc1 95%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#025287', endColorstr='#3a8bc1', GradientType=0);
+  background: #0e6aab;
 }
 header.main {
-  background: #025287;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #025287), color-stop(95%, #3a8bc1));
-  background: -webkit-linear-gradient(top, #025287 0%, #3a8bc1 95%);
-  background: -o-linear-gradient(top, #025287 0%, #3a8bc1 95%);
-  background: -webkit-gradient(linear, left top, left bottom, from(#025287), color-stop(95%, #3a8bc1));
-  background: linear-gradient(to bottom, #025287 0%, #3a8bc1 95%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#025287', endColorstr='#3a8bc1', GradientType=0);
+  background: #0e6aab;
   border-bottom: 2px solid #fff;
 }
 header.main .container {
@@ -6319,6 +6308,9 @@ header.main .container {
 }
 header.main .container .banner.row {
   margin-top: 12px;
+}
+header.main .container .banner.row > div {
+  padding-left: 0;
 }
 header.main .container .banner.row #logo_header {
   position: relative;
@@ -6427,22 +6419,20 @@ header.main .container .banner.row .mod_featured > div p {
   padding: 0;
 }
 .menu_featured ul > li {
-  margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
   list-style: none;
-  height: 200px;
-  background: url("../img/film_strip_BG.jpg") transparent no-repeat center;
+  display: inline-block;
 }
 .menu_featured ul > li a {
   display: inline-block;
   color: #000;
   text-align: center;
-  line-height: 180px;
   font-size: 18px;
 }
-.menu_featured ul > li a img {
-  width: 100%;
+.menu_featured ul > li a span {
+  position: relative;
+  top: 115px;
 }
 .menu_featured ul > li:first-child {
   margin-right: -15px;
@@ -6455,34 +6445,22 @@ header.main .container .banner.row .mod_featured > div p {
 footer {
   position: relative;
   bottom: 0;
-  height: 80px;
   width: 100%;
   border-top: 2px solid #fff;
-  background: #3a8bc1;
-  /* Old browsers */
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(2%, #3a8bc1), color-stop(89%, #025287));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #3a8bc1 2%, #025287 89%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #3a8bc1 2%, #025287 89%);
-  /* Opera 11.10+ */
-  /* IE10+ */
-  background: linear-gradient(to bottom, #3a8bc1 2%, #025287 89%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3a8bc1', endColorstr='#025287', GradientType=0);
-  /* IE6-9 */
+  background: #00aeef;
 }
 footer .container {
   height: inherit;
 }
+footer .container .disclaimer {
+  font-size: 10px;
+  display: inline-block;
+  color: #fff;
+  padding: 0;
+  margin: 10px -15px 0 -15px;
+}
 footer .container nav {
   position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-       -o-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 footer .container nav ul li {
   font-size: 12px;

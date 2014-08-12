@@ -3,14 +3,14 @@ body {
 }
 
 .blue_grad_lrg {
-  background: #025287;
-  background: -moz-linear-gradient(top, #025287 0%, #3a8bc1 95%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #025287), color-stop(95%, #3a8bc1));
-  background: -webkit-linear-gradient(top, #025287 0%, #3a8bc1 95%);
-  background: -o-linear-gradient(top, #025287 0%, #3a8bc1 95%);
-  background: -ms-linear-gradient(top, #025287 0%, #3a8bc1 95%);
-  background: linear-gradient(to bottom, #025287 0%, #3a8bc1 95%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#025287', endColorstr='#3a8bc1', GradientType=0);
+  background: #0e6aab;
+//  background: -moz-linear-gradient(top, #025287 0%, #3a8bc1 95%);
+//  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #025287), color-stop(95%, #3a8bc1));
+//  background: -webkit-linear-gradient(top, #025287 0%, #3a8bc1 95%);
+//  background: -o-linear-gradient(top, #025287 0%, #3a8bc1 95%);
+//  background: -ms-linear-gradient(top, #025287 0%, #3a8bc1 95%);
+//  background: linear-gradient(to bottom, #025287 0%, #3a8bc1 95%);
+//  filter: Vprogid:DXImageTransform.Microsoft.gradient(startColorstr='#025287', endColorstr='#3a8bc1', GradientType=0);
 }
 
 
@@ -30,9 +30,13 @@ header.main {
     }
 
     .banner.row {
+      > div {
+        padding-left: 0;
+      }
       margin-top: 12px;
       #logo_header {
         position: relative;
+
       }
 
       .navbar {
@@ -176,12 +180,13 @@ header.main {
  }
     ul > li {
       //height: 250px;
-      margin-top: 10px;
+      //margin-top: 10px;
       margin-bottom: 10px;
       text-align: center;
       list-style: none;
-      height: 200px;
-      background: url("../img/film_strip_BG.jpg") transparent no-repeat center;
+      //height: 200px;
+      display: inline-block;
+     // background: url("../img/film_strip_BG.jpg") transparent no-repeat center;
 
     a {
       display: inline-block;
@@ -189,12 +194,15 @@ header.main {
       text-align: center;
      // height: 100%;
      // width: 100%;
-      line-height: 180px;
+//      line-height: 180px;
       font-size: 18px;
 
-      img {
-        width: 100%;
+      span {
+        position: relative;
+        top: 115px;
+
       }
+
     }
 //      display: block;
 //      display: inline-block;

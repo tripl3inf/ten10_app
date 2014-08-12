@@ -84,25 +84,22 @@ if (!empty($post)) {
         <ul>
             <li class="col-sm-4">
                 <a href="#">
-                    secular films
-                    <!--                <img src="-->
-                    <?php //echo get_template_directory_uri(); ?><!--/assets/img/film_strip_BG.jpg" class="img_responsive"/>-->
+                    <span>secular films</span>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/film_strip_BG.jpg" class="img_responsive"/>
                 </a>
             </li>
 
             <li class="col-sm-4">
                 <a href="#">
-                    faith-based films
-                    <!--                <img src="-->
-                    <?php //echo get_template_directory_uri(); ?><!--/assets/img/film_strip_BG.jpg" class="img_responsive"/>-->
+                    <span>faith-based films</span>
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/film_strip_BG.jpg" class="img_responsive"/>
                 </a>
             </li>
 
             <li class="col-sm-4">
                 <a href="#">
-                    television development & production
-                    <!--                <img src="-->
-                    <?php //echo get_template_directory_uri(); ?><!--/assets/img/film_strip_BG.jpg" class="img_responsive"/>-->
+                    <span>television development & production</span>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/film_strip_BG.jpg" class="img_responsive"/>
                 </a>
             </li>
         </ul>
