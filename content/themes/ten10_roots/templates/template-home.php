@@ -11,7 +11,7 @@ if (!empty($post)) {
 
 
 <?php while (have_posts()) : the_post(); ?>
-    <div id="widget_home" class="row">
+    <section id="widget_home" class="row">
         <div id="home_carousel" class="col-sm-8 carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ul class="carousel-indicators">
@@ -53,10 +53,10 @@ if (!empty($post)) {
             </div>
 
             <!-- Controls -->
-            <a class="left carousel-control" href="#home_carousel" role="button" data-slide="prev">
+            <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>
             </a>
-            <a class="right carousel-control" href="#home_carousel" role="button" data-slide="next">
+            <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right"></span>
             </a>
         </div>
@@ -71,17 +71,15 @@ if (!empty($post)) {
 
             <img src="<?php echo $home_img2; ?>"/>
         </div>
-
-
-    </div>
     </section>
 
 
 
-    <section class="menu_featured row">
-        <!--    <div class="row">-->
-        <!--        <h4 class="col-sm-12">TEN10 Entertainment - A Global Film & Television Fund - Leaders in Customizing Entertainment Portfolios - Offers Three Divisions of Investment</h4>-->
-        <!--    </div>-->
+    <section class="menu_featured">
+        <div class="row">
+            <h4 class="col-sm-12">TEN10 Entertainment - A Global Film & Television Fund - Leaders in Customizing
+                Entertainment Portfolios - Offers Three Divisions of Investment</h4>
+
 
         <ul>
             <li class="col-sm-4">

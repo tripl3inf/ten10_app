@@ -11,7 +11,7 @@ function custom_slider(){
     console.log( items.length );
 
     items.each(function( index ) {
-        indicator.append('<li data-slide-to="'+index+'" data-target="#home_carousel" class="active"></li>');
+        indicator.append('<li data-slide-to="'+index+'" data-target=".carousel" class="active"></li>');
         console.log( index );
     });
 

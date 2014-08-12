@@ -38,12 +38,48 @@ set :ssh_options, {
 
 set :keep_releases, 5
 
-
+### set path for bower
+set :default_env, { path: "~/local/bin/bower:~/local/bin:$PATH" }
 ##### bower ####
 set :bower_flags, '--quiet --config.interactive=false'
-set :bower_roles, :web
-#set :bower_target_path, "#{shared_path}/content/themes/ten10_roots"
+set :bower_roles, :all
+#set :bower_target_path, "#{fetch(:release_path)}srv/client/ten10/current/content/themes/ten10_roots"
+# or
+set :bower_target_path, -> { "#{release_path}/content/themes/ten10_roots" }
+#set :bower_target_path, "#{release_path}/content/themes/ten10_roots"
 
+
+
+#namespace :composer do
+#    desc "Install composer dependencies"
+#    task :install do
+#        on roles (:app) do
+#            within release_path do
+#                execute "composer", "install", "--no-dev --prefer-dist --no-scripts --quiet"
+#            end
+#        end
+#    end
+#end
+#    before "deploy:started", "composer:install"
+#namespace :deploy do
+#    desc 'install asset dependencies'
+#        task :install, roles: [:assets] do
+#            run "cd #{latest_release}/content/themes/ten10_roots && bower install --no-color"
+#        end
+#end
+
+#after 'deploy:install'
+#namespace :grunt do
+#    desc "Build Grunt"
+#    task :build do
+#        on roles (:app) do
+#            within release_path do
+#                execute "grunt", "build"
+#            end
+#        end
+#    end
+#end
+#  after :finishing, "grunt:build"
 
 
 
@@ -56,22 +92,6 @@ set :linked_files, %w{wp-config.php}
 set :linked_dirs, %w{content/uploads}
 
 namespace :deploy do
-
-#namespace :composer do
-#    desc "Install composer dependencies"
-#    task :install do
-#        on roles (:app) do
-#            within release_path do
-#                execute "composer", "install", "--no-dev --prefer-dist --no-scripts --quiet"
-#            end
-#        end
-#    end
-#end
-
-
-#    before "deploy:started", "composer:install"
-
-
   desc "create WordPress files for symlinking"
   task :create_wp_files do
     on roles(:app) do
@@ -86,9 +106,7 @@ namespace :deploy do
   task :create_robots do
   	on roles(:app) do
   		if fetch(:stage) != :production then
-
-		    io = StringIO.new('User-agent: *
-Disallow: /')
+		    io = StringIO.new('User-agent: *Disallow: /')
 		    upload! io, File.join(release_path, "robots.txt")
         execute :chmod, "644 #{release_path}/robots.txt"
       end
@@ -96,17 +114,9 @@ Disallow: /')
   end
 
 
-                              #namespace :grunt do
-                              #    desc "Build Grunt"
-                              #    task :build do
-                              #        on roles (:app) do
-                              #            within release_path do
-                              #                execute "grunt", "build"
-                              #            end
-                              #        end
-                              #    end
-                              #end
-                              #  after :finishing, "grunt:build"
+
+
+
 
   after :finished, :create_robots
   after :finishing, "deploy:cleanup"

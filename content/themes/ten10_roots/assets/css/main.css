@@ -6394,9 +6394,6 @@ header.main .container .banner.row .mod_featured > div p {
   overflow: hidden;
 }
 .menu_featured {
-  padding-top: 15px;
-  padding-bottom: 20px;
-  background: #0e6aab;
   border-top: 2px solid #fff;
   /*
   ul > li {
@@ -6413,6 +6410,11 @@ header.main .container .banner.row .mod_featured > div p {
 
     }
   }*/
+}
+.menu_featured .row {
+  background: #0e6aab;
+  padding-top: 15px;
+  padding-bottom: 20px;
 }
 .menu_featured h4 {
   padding: 0 30px;
@@ -6441,6 +6443,14 @@ header.main .container .banner.row .mod_featured > div p {
 }
 .menu_featured ul > li a img {
   width: 100%;
+}
+.menu_featured ul > li:first-child {
+  margin-right: -15px;
+  margin-left: 15px;
+}
+.menu_featured ul > li:last-child {
+  margin-right: 15px;
+  margin-left: -15px;
 }
 footer {
   position: relative;

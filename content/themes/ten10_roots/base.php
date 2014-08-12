@@ -25,7 +25,7 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
 
      <div class="container">
      <!--  <div class="content"dd> -->
-      <main class="main<?php echo roots_main_class(); ?>" role="main">
+      <main class="main row<?php echo roots_main_class(); ?>" role="main">
         <?php include roots_template_path(); ?>
 
       </main>

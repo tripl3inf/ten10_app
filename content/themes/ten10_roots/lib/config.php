@@ -135,19 +135,6 @@ function custom_metaboxes( $meta_boxes ) {
         'show_on' => array( 'key' => 'page-template', 'value' => 'templates/template-home.php' ),
 //        'show_on' => array( 'key' => 'id', 'value' => array( 86 ) ),
         'fields' => array(
-
-//            array(
-//                'name' => 'Choose Slider Images:',
-//                'desc' => 'Home slider gallery.',
-//                'id' => $prefix . 'slider_home',
-//                'type' => 'file_list',
-//                'allow' => array( 'attachment' ) // limit to just attachments with array( 'attachment' )
-//            ),
-
-
-
-
-
             array(
                 'id'          => $prefix . 'repeat_group',
                 'type'        => 'group',
@@ -203,6 +190,61 @@ function custom_metaboxes( $meta_boxes ) {
             ),
 
 
+        ),
+    );
+
+
+
+
+
+
+
+    $meta_boxes['metabox_slider_full'] = array(
+        'id' => 'metabox_slider_full',
+        'title' => 'Full Width Slider Images',
+        'pages' => array('page'), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => true, // Show field names on the left
+        'show_on' => array( 'key' => 'page-template', 'value' => 'templates/template-slider-full-width.php' ),
+//        'show_on' => array( 'key' => 'id', 'value' => array( 86 ) ),
+        'fields' => array(
+            array(
+                'id'          => $prefix . 'repeat_group',
+                'type'        => 'group',
+                'description' => __( 'Generates reusable form entries', 'cmb' ),
+                'options'     => array(
+                    'group_title'   => __( 'Entry {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+                    'add_button'    => __( 'Add Another Entry', 'cmb' ),
+                    'remove_button' => __( 'Remove Entry', 'cmb' ),
+                    'sortable'      => true, // beta
+                ),
+                // Fields array works the same, except id's only need to be unique for this group. Prefix is not needed.
+                'fields'      => array(
+                    array(
+                        'name' => 'Entry Title',
+                        'id'   => 'title',
+                        'type' => 'text',
+                        // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+                    ),
+                    array(
+                        'name' => 'Description',
+                        'description' => 'Write a short description for this entry',
+                        'id'   => 'description',
+                        'type' => 'textarea_small',
+                    ),
+                    array(
+                        'name' => 'Entry Image',
+                        'id'   => 'image',
+                        'type' => 'file',
+                    ),
+                    array(
+                        'name' => 'Image Caption',
+                        'id'   => 'image_caption',
+                        'type' => 'text',
+                    ),
+                ),
+            ),
         ),
     );
 
@@ -293,8 +335,8 @@ function init_custom_meta_boxes() {
 function fb_move_admin_bar() { ?>
     <style type="text/css">
         body {
-            margin-top: -28px;
-            padding-bottom: 28px;
+            /*margin-top: -28px;*/
+            /*padding-bottom: 28px;*/
         }
         body.admin-bar #wphead {
             padding-top: 0;
@@ -362,34 +404,6 @@ function wpc_dashboard_widgets() {
 
 
 
-
-function my_custom_post_product() {
-    $labels = array(
-        'name'               => _x( 'Products', 'post type general name' ),
-        'singular_name'      => _x( 'Product', 'post type singular name' ),
-        'add_new'            => _x( 'Add New', 'book' ),
-        'add_new_item'       => __( 'Add New Product' ),
-        'edit_item'          => __( 'Edit Product' ),
-        'new_item'           => __( 'New Product' ),
-        'all_items'          => __( 'All Products' ),
-        'view_item'          => __( 'View Product' ),
-        'search_items'       => __( 'Search Products' ),
-        'not_found'          => __( 'No products found' ),
-        'not_found_in_trash' => __( 'No products found in the Trash' ),
-        'parent_item_colon'  => '',
-        'menu_name'          => 'Products'
-    );
-    $args = array(
-        'labels'        => $labels,
-        'description'   => 'Holds our products and product specific data',
-        'public'        => true,
-        'menu_position' => 5,
-        'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
-        'has_archive'   => true,
-    );
-    register_post_type( 'product', $args );
-}
-add_action( 'init', 'my_custom_post_product' );
 
 
 
