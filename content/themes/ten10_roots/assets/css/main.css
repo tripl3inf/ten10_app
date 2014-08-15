@@ -6292,6 +6292,14 @@ figure.alignnone {
     margin-left: 10px;
   }
 }
+/*
+*  MIXINS
+*/
+.helvetica-md-cond {
+  font-family: "HelveticaNeueMediumCondensed", "HelveticaNeue-Medium-Condensed", "Helvetica Neue Medium Condensed", "HelveticaNeueMedium", "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnRegular', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+  font-weight: 500;
+  font-stretch: condensed;
+}
 body {
   background: #d3d3d3;
 }
@@ -6310,8 +6318,8 @@ body {
     width: 100%;
   }
 }
-.navbar .navbar-nav > li > a {
-  padding: 0 10px 0;
+.navbar .navbar-nav > li:last-child a:after {
+  content: unset;
 }
 .navbar .navbar-nav > li > a:after {
   content: '|';
@@ -6322,14 +6330,6 @@ body {
   color: #00aeef;
   font-weight: bold;
   font-size: 0.9em;
-}
-.navbar .navbar-nav > li > a:focus,
-.navbar .navbar-nav > li > a:hover {
-  color: #60b6f2;
-  background: transparent;
-}
-.navbar .navbar-nav > li:last-child a:after {
-  content: unset;
 }
 /*
 *  Main content area
@@ -6445,7 +6445,7 @@ body {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  padding: 0 30px 0;
+  padding: 0 20px 0;
   text-align: center;
   list-style: none;
   display: inline-block;
@@ -6480,12 +6480,12 @@ body {
   top: 40px;
 }
 .menu_featured ul > li:first-child {
-  margin-right: -15px;
-  margin-left: 15px;
+  margin-right: -10px;
+  margin-left: 10px;
 }
 .menu_featured ul > li:last-child {
-  margin-right: 15px;
-  margin-left: -15px;
+  margin-right: 10px;
+  margin-left: -10px;
 }
 header.wrap {
   position: relative;
@@ -6529,8 +6529,8 @@ header.wrap .main > .navbar-collapse {
 header.wrap .main .banner {
   margin-left: -15px;
   margin-right: -15px;
-  height: 76px;
-  margin-bottom: 12px;
+  height: 68px;
+  margin-bottom: 18px;
 }
 header.wrap .main .banner .logo {
   position: relative;
@@ -6554,6 +6554,13 @@ header.wrap .main .banner .mod_featured {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  line-height: 26px;
+  font-family: "HelveticaNeueMediumCondensed", "HelveticaNeue-Medium-Condensed", "Helvetica Neue Medium Condensed", "HelveticaNeueMedium", "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnRegular', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+  font-weight: 500;
+  font-stretch: condensed;
+  text-transform: uppercase;
+  color: #fff;
+  height: 100%;
 }
 @media (min-width: 992px) {
   header.wrap .main .banner .mod_featured {
@@ -6561,30 +6568,31 @@ header.wrap .main .banner .mod_featured {
     width: 33.33333333%;
   }
 }
-header.wrap .main .mod_featured {
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #fff;
-  height: 100%;
+header.wrap .main .banner .mod_featured:after {
+  content: '';
+  display: block;
+  background: no-repeat 0 0 url("../img/cam_on_boom.png") transparent;
+  position: absolute;
+  right: -36px;
+  top: -34px;
+  width: 134px;
+  height: 107px;
 }
-header.wrap .main .mod_featured > div {
-  padding: 4px 6px;
+header.wrap .main .banner .mod_featured .content {
+  padding: 6px;
   height: inherit;
   border: 2px solid #fff;
-  background: no-repeat right -12px url("../img/featured_widget/featured_img1.png") #3490d3;
+  background: #3490D3;
 }
-header.wrap .main .mod_featured > div p {
+header.wrap .main .banner .mod_featured .content p {
+  /* Helvetica Neue Medium Condensed Font Stack */
   margin: 0;
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 24px;
 }
 header.wrap .main .navbar {
   margin: 0;
   position: absolute;
   bottom: 0;
-}
-header.wrap .main .navbar .navbar-nav > li > a {
-  padding: 0 10px 5px 10px;
 }
 header.wrap .main .navbar .navbar-nav > li.active:after {
   content: '';
@@ -6595,6 +6603,14 @@ header.wrap .main .navbar .navbar-nav > li.active:after {
   height: 18px;
   width: 28px;
   background: url("../img/menu_tri.png") transparent 0 0 no-repeat;
+}
+header.wrap .main .navbar .navbar-nav > li > a {
+  padding: 0 10px 5px 10px;
+}
+header.wrap .main .navbar .navbar-nav > li > a:focus,
+header.wrap .main .navbar .navbar-nav > li > a:hover {
+  color: #60b6f2;
+  background: transparent;
 }
 footer {
   position: relative;
@@ -6608,6 +6624,7 @@ footer .content {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  padding: 0 35px;
 }
 @media (min-width: 768px) {
   footer .content {
@@ -6664,19 +6681,20 @@ footer .content nav {
     width: 100%;
   }
 }
-footer .content nav ul li {
+footer .content nav ul > li {
   font-size: 12px;
 }
-footer .content nav ul li a {
-  color: #FDFDFD;
+footer .content nav ul > li:first-child a {
+  padding-left: 0;
 }
-footer .content nav ul li > a:focus,
-footer .content nav ul li > a:hover {
+footer .content nav ul > li > a {
+  color: #FDFDFD;
+  padding: 0 8px;
+}
+footer .content nav ul > li > a:focus,
+footer .content nav ul > li > a:hover {
   color: #000000;
   background: transparent;
-}
-footer .content nav ul li:first-child a {
-  padding-left: 0;
 }
 footer .content nav .social_media {
   font-size: 9px;

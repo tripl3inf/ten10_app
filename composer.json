@@ -22,7 +22,9 @@
 
     "require-dev" : {
         "wpackagist-plugin/a-fresher-cache": "*",
-        "wpackagist-plugin/theme-check": "20131213.1"
+        "wpackagist-plugin/theme-check": "20131213.1",
+        "wpackagist-plugin/wp-slimstat": "3.6.9"
+
     },
 
     "autoload": {

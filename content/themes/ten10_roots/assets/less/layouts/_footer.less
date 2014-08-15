@@ -2,65 +2,67 @@
 }
 
 footer {
-  position: relative;
-  bottom: 0;
-  //  height: 80px;
-  width: 100%;
-  border-top: 2px solid #fff;
-  background: @brand-success;
+    position: relative;
+    bottom: 0;
+    //  height: 80px;
+    width: 100%;
+    border-top: 2px solid #fff;
+    background: @brand-success;
 
-  .content {
-    .container();
+    .content {
+        .container();
+        padding: 0 35px;
 
-    .disclaimer {
-      .make-md-column(12);
-      margin: 15px 0 5px;
-      font-size: 10px;
-      display: inline-block;
-      color: #fff;
+        .disclaimer {
+            .make-md-column(12);
+            margin: 15px 0 5px;
+            font-size: 10px;
+            display: inline-block;
+            color: #fff;
+        }
+
+        nav {
+            .make-md-column(12);
+
+            ul {
+                > li {
+                    font-size: 12px;
+
+                    &:first-child a {
+                        padding-left: 0;
+                    }
+
+                    > a {
+                        color: #FDFDFD;
+                        padding: 0 8px;
+                        &:focus,
+                        &:hover {
+                            color: darken(@brand-primary, 60%);
+                            background: transparent;
+                        }
+                    }
+
+                }
+
+            }
+
+            .social_media {
+                font-size: 9px;
+
+                li {
+                    //margin: -0.2em 0.8em 0 0;
+                    width: 40px;
+                    height: 40px;
+
+                    a:after {
+                        content: none;
+                    }
+
+                }
+
+            }
+
+        }
     }
-
-    nav {
-      .make-md-column(12);
-
-      ul {
-        li {
-          font-size: 12px;
-
-          a {
-            color: #FDFDFD;
-          }
-
-          > a:focus,
-          > a:hover {
-            color: darken(@brand-primary, 60%);
-            background: transparent;
-          }
-
-        }
-        
-        li:first-child a {
-          padding-left: 0;
-        }
-      }
-
-      .social_media {
-        font-size: 9px;
-
-        li {
-          //margin: -0.2em 0.8em 0 0;
-          width: 40px;
-          height: 40px;
-
-          a:after {
-            content: none;
-          }
-
-        }
-
-      }
-
-    }
-  }
 }
 

@@ -9,9 +9,9 @@
                 </div>
 
                 <div class="mod_featured">
-                    <div>
+                    <div class="content">
                         <p>Invest in a Dessert Wind<br/>
-                            Studio Production</p>
+                            Studios Production</p>
                     </div>
                 </div>
 
@@ -26,7 +26,7 @@
 
         </div>
 ˜
-            
+
 
 </header>
 

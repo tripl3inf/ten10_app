@@ -1,79 +1,95 @@
 header.wrap {
-  position: relative;
-  background: @brand-primary;
-  padding-top: 10px;
-  border-bottom: 2px solid #fff;
+    position: relative;
+    background: @brand-primary;
+    padding-top: 10px;
+    border-bottom: 2px solid #fff;
 
-  .main {
-    .container();
+    .main {
+        .container();
 
-    .banner {
-      .make-row();
-      height: 76px;
-      margin-bottom: 12px;
+        .banner {
+            .make-row();
+            height: 68px;
+            margin-bottom: 18px;
 
-      .logo {
-        .make-md-column(8);
-        height: 75px;
-        
-        img {
-          height: 100%;
-          margin-top: -2px;
+            .logo {
+                .make-md-column(8);
+                height: 75px;
+
+                img {
+                    height: 100%;
+                    margin-top: -2px;
+                }
+            }
+
+            .mod_featured {
+                .make-md-column(4);
+                line-height: 26px;
+                .helvetica-md-cond();
+                text-transform: uppercase;
+                color: #fff;
+                height: 100%;
+
+                &:after {
+                    content: '';
+                    display: block;
+                    background: no-repeat 0 0 url("../img/cam_on_boom.png") transparent;
+                    position: absolute;
+                    right: -36px;
+                    top: -34px;
+                    width: 134px;
+                    height: 107px;
+                }
+
+                .content {
+                    padding: 6px;
+                    height: inherit;
+                    border: 2px solid #fff;
+                    background: #3490D3;
+
+                    p {
+                        /* Helvetica Neue Medium Condensed Font Stack */
+                        margin: 0;
+                        font-size: 24px;
+                    }
+                }
+
+            }
+
         }
-      }
 
+        .navbar {
+            margin: 0;
+            position: absolute;
+            bottom: 0;
 
-      .mod_featured {
-        .make-md-column(4);
-        //.make-md-column-offset(1);
-      }
+            .navbar-nav {
+                > li {
+                    &.active:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        margin: 1px 0 0 50%;
+                        left: -15px;
+                        height: 18px;
+                        width: 28px;
+                        background: url("../img/menu_tri.png") transparent 0 0 no-repeat;
+                    }
+
+                    > a {
+                        padding: 0 10px 5px 10px;
+
+                        &:focus,
+                        &:hover {
+                            color: lighten(@brand-primary, 30%);
+                            background: transparent;
+                        }
+                    }
+                }
+
+            }
+        }
     }
-
-    .mod_featured {
-      line-height: 20px;
-      text-transform: uppercase;
-      color: #fff;
-      height: 100%;
-
-      > div {
-        padding: 4px 6px;
-        height: inherit;
-        border: 2px solid #fff;
-        background: no-repeat right -12px url("../img/featured_widget/featured_img1.png") #3490D3;
-        p {
-          margin: 0;
-          font-size: 22px;
-          font-weight: bold;
-        }
-      }
-    }
-
-    .navbar {
-      margin: 0;
-      position: absolute;
-      bottom: 0;
-
-      .navbar-nav {
-        > li {
-          > a {
-            padding: 0 10px 5px 10px;
-          }
-        }
-
-        > li.active:after {
-          content: '';
-          display: block;
-          position: absolute;
-          margin: 1px 0 0 50%;
-          left: -15px;
-          height: 18px;
-          width: 28px;
-          background: url("../img/menu_tri.png") transparent 0 0 no-repeat;
-        }
-
-      }
-    }
-  }
 
 }
 

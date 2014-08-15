@@ -75,14 +75,14 @@ function roots_scripts() {
   wp_enqueue_style('roots_css', get_template_directory_uri() . $assets['css'], false, null);
 
   wp_enqueue_script('jquery');
-  wp_enqueue_script('theme_js', get_template_directory_uri() . $assets['js'], array(), null, true);
+  wp_enqueue_script('roots_js', get_template_directory_uri() . $assets['js'], array(), null, true);
 
   wp_enqueue_script('bootstrap', get_template_directory_uri() . $assets['bootstrap'], array(), null, false);
-  wp_enqueue_script('bootstrap-tooltip', get_template_directory_uri() . $assets['bootstrap-tooltip'], array(), null, false);
-  wp_enqueue_script('bootstrap-dropdown', get_template_directory_uri() . $assets['bootstrap-dropdown'], array(), null, false);
+ // wp_enqueue_script('bootstrap-tooltip', get_template_directory_uri() . $assets['bootstrap-tooltip'], array(), null, false);
+ // wp_enqueue_script('bootstrap-dropdown', get_template_directory_uri() . $assets['bootstrap-dropdown'], array(), null, false);
 
   // DEV ONLY
-    wp_enqueue_script('overlay_tool');
+    wp_enqueue_script('overlay_tool', get_template_directory_uri() . '/assets/js/overlay_tool.js');
 
  // wp_enqueue_script('bootstrap-carousel', get_template_directory_uri() . $assets['bootstrap-carousel'], array(), null, false);
 }

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "488e2fb743f1abe4bcd5a82fac6aad6d",
+    "hash": "ae6595d94b2e9be394d94fc36765ba46",
     "packages": [
         {
             "name": "composer/installers",
@@ -230,6 +230,29 @@
             },
             "type": "wordpress-plugin",
             "homepage": "http://wordpress.org/plugins/theme-check/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-slimstat",
+            "version": "3.6.9",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wp-slimstat/",
+                "reference": "tags/3.6.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/wp-slimstat.3.6.9.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/wp-slimstat": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/wp-slimstat/"
         }
     ],
     "aliases": [
