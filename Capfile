@@ -19,3 +19,4 @@ Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
 
 
 require 'capistrano/bower'
+require 'capistrano/grunt'

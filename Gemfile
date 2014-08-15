@@ -1,8 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'capistrano', '~> 3.0'
+#TODO: may have to roll back to 3.0
+#gem 'capistrano', '~> 3.0'
+
+gem 'capistrano', '~> 3.1'
 gem 'capistrano-slackify'
 gem 'capistrano-bower'
+gem 'capistrano-grunt', github: 'roots/capistrano-grunt'
 
 
 

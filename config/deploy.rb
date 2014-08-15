@@ -46,6 +46,9 @@ set :bower_roles, :all
 #set :bower_target_path, "#{fetch(:release_path)}srv/client/ten10/current/content/themes/ten10_roots"
 # or
 set :bower_target_path, -> { "#{release_path}/content/themes/ten10_roots" }
+set :grunt_target_path, -> { release_path.join('content/themes/ten10_roots') }
+
+set :grunt_tasks, 'build'
 #set :bower_target_path, "#{release_path}/content/themes/ten10_roots"
 
 
@@ -117,7 +120,7 @@ namespace :deploy do
 
 
 
-
+  before 'deploy:updated', 'grunt'
   after :finished, :create_robots
   after :finishing, "deploy:cleanup"
 
