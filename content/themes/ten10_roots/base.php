@@ -23,15 +23,11 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
   ?>
 
 
-     <div class="container">
-     <!--  <div class="content"dd> -->
-      <main class="main row<?php echo roots_main_class(); ?>" role="main">
+      <main class="<?php echo roots_main_class(); ?>" role="main">
         <?php include roots_template_path(); ?>
 
       </main>
 
-        <!--   </div> /.content -->
-     </div>
 
 
 
@@ -39,7 +35,9 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
 
   <?php get_template_part('templates/footer'); ?>
 
-
+<div id="overlay_toolz_container">
+    <img style="width:100%; height:100%;" src="<?php echo get_template_directory_uri(); ?>/assets/img/mockup_1.jpg" />
+</div>
 
  </div><!-- /.wrap -->
 </body>

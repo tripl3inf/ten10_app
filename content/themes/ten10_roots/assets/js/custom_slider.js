@@ -19,5 +19,12 @@ function custom_slider(){
 
 custom_slider();
 
+
+
+
+
 });
+
+
+
 

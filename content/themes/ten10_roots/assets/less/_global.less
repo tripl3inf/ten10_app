@@ -2,92 +2,59 @@
    Media queries for different screen sizes
    ========================================================================== */
 
-.nav > li > a:hover, .nav > li > a:focus {
-  text-decoration: none;
-  background-color: transparent;
+#overlay_toolz_container {
+  opacity:0.75;
+  width:1140px;
+  position:absolute;
+  top:0;
+  left:50%;
+  margin-left:-570px;
+
+  display: none;
 }
 
-.navbar {
-  margin-bottom: 0;
+.overlay_tool_options {
+  position: fixed;
+  right: 0;
+  top: 45%;
+  height: 20px;
+  width: 20px;
 }
 
-.dropdown-menu {
-  border: none;
-  background: rgba(255, 255, 255, 0.6);
+
+
+
+main {
+  .container();
+
+  section {
+    .make-row();
+  }
 }
 
-.navbar-nav {
-  margin-bottom: 0;
-  li {
-    a {
-      color: #FFF;
-      padding: 10px 13px;
-    }
 
-    a:focus,
-    a:hover {
-      background: transparent;
-      //color: #333;
-    }
 
-    a:after {
-      content: '|';
-      display: inline-block;
-      position: relative;
-      left: 15px;
-      color: #3399cc;
-    }
 
-    a:focus:after,
-    a:hover:after {
-      color: #fff;
-    }
 
-  }
 
-  li:first-child a {
-   // padding-left: 0;
-  }
 
-  li:last-child a:after {
-    content: none;
-  }
 
-  li.active {
-    > a {
-      color: #66ccff;
-      font-weight: bold;
-    }
 
-    a:after {
-      color: #fff;
-    }
-  }
 
   .dropdown-toggle {
     .caret {
       display: none;
     }
   }
-}
-
-#menu-primary-navigation.navbar-nav {
-  > li.active:after {
-    content: '';
-    display: block;
-    position: absolute;
-    margin: 1px 0 0 50%;
-    left: -15px;
-    height: 18px;
-    width: 28px;
-    background: url("../img/menu_tri.png") transparent 0 0 no-repeat;
-  }
-}
 
 
 
 
 
+//.dropdown-menu {
+//  border: none;
+//  background: rgba(255, 255, 255, 0.6);
+//}
 
 
 

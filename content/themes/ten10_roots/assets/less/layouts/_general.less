@@ -1,40 +1,197 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900);
+//@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900);
 
 
 
-
-
-
-
+body {
+  background: @gray-light;
+}
 
 //Content wrapper
 .wrap {
 }
 
-//Main content area
+/*
+*  Navbar
+*/
+.navbar {
+  .make-md-column(12);
+
+  .navbar-nav {
+
+    > li {
+      > a {
+        padding: 0 10px 0;
+      }
+
+      > a:after {
+        content: '|';
+        display: inline-block;
+        position: relative;
+        left: 0.8em;
+        top: -0.1em;
+        color: @brand-success;
+        font-weight: bold;
+        font-size: 0.9em;
+      }
+
+      > a:focus,
+      > a:hover {
+        color: lighten(@brand-primary, 30%);
+        background: transparent;
+      }
+    }
+
+    > li:last-child a:after {
+      content: unset;
+    }
+
+  }
+}
+
+/*
+*  Main content area
+*/
 .main {
   .featured {
     padding: 0;
   }
 
   .entry-content {
-        -moz-column-count: 2;
-        -moz-column-gap: 20px;
-        -webkit-column-count: 2;
-        -webkit-column-gap: 20px;
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
 
- }
+  }
 }
 
+/*
+* Home slider/gallery widget
+*/
+.widget_home {
+  .make-row();
+  height: 350px;
+  max-height: 350px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 
+  .carousel {
+    .make-md-column(8);
+    padding: 0;
 
+    .carousel-control {
+      background: none;
+    }
 
+    .carousel-inner {
 
+      img {
+        height: 350px;
+        width: 100%;
+      }
 
-//h1 {
-  ////  font-family: 'Source Sans Pro', sans-serif;
-  //  font-weight: bold;
-  //  font-size: 80px;
-  //
-//}
-//
+      .slider_desc {
+        text-align: left;
+        position: absolute;
+        bottom: 30px;
+        width: 60%;
+        left: 40%;
+
+        padding: 0 20px;
+
+        .title {
+          font-size: 32px;
+          text-shadow: 0 0 10px #999;
+        }
+        .caption {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .feat_img_wrap {
+    .make-md-column(4);
+    padding: 0;
+    border-left: 1px solid #fff;
+
+    img {
+      width: 100%;
+    }
+  }
+
+}
+
+/*
+*  Featured Content Menu
+*/
+
+.menu_featured {
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+
+  background: #0e6aab;
+  padding: 15px 0 25px 0;
+  margin: 0;
+
+  h4 {
+    .make-md-column(12);
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  ul > li {
+    .make-md-column(4);
+    padding: 0 30px 0;
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+
+    a {
+      display: inline-block;
+      color: #000;
+      text-align: center;
+      height: 200px;
+      width: 100%;
+      font-size: 24px;
+      font-weight: bold;
+      background: url("../img/film_strip_BG.jpg") transparent no-repeat center;
+      border: 2px solid #fff;
+
+      span {
+        position: relative;
+        top: 40px;
+      }
+    }
+
+     a:before {
+        content: 'select';
+        display: inline-block;
+        font-size: 18px;
+       width: 100%;
+       position: relative;
+       top: 40px;
+      }
+  }
+
+  ul > li:first-child {
+    margin-right: -15px;
+    margin-left: 15px;
+  }
+
+  ul > li:last-child {
+    margin-right: 15px;
+    margin-left: -15px;
+  }
+}

@@ -23,32 +23,32 @@ function roots_scripts() {
     $assets = array(
       'livereload' => '//192.168.1.134:35729/livereload.js?snipver=1',
       'font-awesome' => '/assets/vendor/font-awesome/css/font-awesome.css',
-      'mob_nav' => 'responsive-nav.css',
-     // 'font-awesome-more' => '/assets/vendor/font-awesome-more/css/font-awesome.css',
       'css'       => '/assets/css/main.css',
       'js'        => '/assets/js/scripts.js',
       'modernizr' => '/assets/vendor/modernizr/modernizr.js',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js',
       'bootstrap' => '/assets/vendor/bootstrap/dist/js/bootstrap.min.js',
-      'bootstrap-carousel' => '/assets/vendor/bootstrap/js/carousel.js',
-      'bootstrap-dropdown' => '/assets/vendor/bootstrap/js/dropdown.js',
-      'bootstrap-tooltip' => '/assets/vendor/bootstrap/js/tooltip.js'
+      'overlay_tool' => '/assets/js/overlay_tool.js',
+//      'bootstrap-carousel' => '/assets/vendor/bootstrap/js/carousel.js',
+//      'bootstrap-dropdown' => '/assets/vendor/bootstrap/js/dropdown.js',
+//      'bootstrap-tooltip' => '/assets/vendor/bootstrap/js/tooltip.js'
     );
   } else {
  //   $get_assets = file_get_contents(get_template_directory() . '/assets/manifest.json');
  //   $assets     = json_decode($get_assets, true);
     $assets     = array(
-      'font-awesome' => '/assets/vendor/font-awesome/css/font-awesome.css',
-        'css'       => '/assets/css/main.css',
-        'js'        => '/assets/js/scripts.js',
+//      'font-awesome' => '/assets/vendor/font-awesome/css/font-awesome.css',
+//        'css'       => '/assets/css/main.css',
+//        'js'        => '/assets/js/scripts.js',
 //      'css'       => '/assets/css/main.min.css' . '?' . $assets['assets/css/main.min.css']['hash'],
 //      'js'        => '/assets/js/scripts.min.js' . '?' . $assets['assets/js/scripts.min.js']['hash'],
-      'modernizr' => '/assets/js/vendor/modernizr.min.js',
-      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
-      'bootstrap' => '/assets/vendor/bootstrap/dist/js/bootstrap.min.js',
-      'bootstrap-carousel' => '/assets/vendor/bootstrap/js/carousel.js',
-      'bootstrap-dropdown' => '/assets/vendor/bootstrap/js/dropdown.js',
-      'bootstrap-tooltip' => '/assets/vendor/bootstrap/js/tooltip.js'
+//      'modernizr' => '/assets/js/vendor/modernizr.min.js',
+//      'mobile-nav' => '/assets/vendor/responsive-nav/responsive-nav.js',
+//      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
+//      'bootstrap' => '/assets/vendor/bootstrap/dist/js/bootstrap.min.js',
+//      'bootstrap-carousel' => '/assets/vendor/bootstrap/js/carousel.js',
+//      'bootstrap-dropdown' => '/assets/vendor/bootstrap/js/dropdown.js',
+//      'bootstrap-tooltip' => '/assets/vendor/bootstrap/js/tooltip.js'
     );
   }
 
@@ -80,6 +80,9 @@ function roots_scripts() {
   wp_enqueue_script('bootstrap', get_template_directory_uri() . $assets['bootstrap'], array(), null, false);
   wp_enqueue_script('bootstrap-tooltip', get_template_directory_uri() . $assets['bootstrap-tooltip'], array(), null, false);
   wp_enqueue_script('bootstrap-dropdown', get_template_directory_uri() . $assets['bootstrap-dropdown'], array(), null, false);
+
+  // DEV ONLY
+    wp_enqueue_script('overlay_tool');
 
  // wp_enqueue_script('bootstrap-carousel', get_template_directory_uri() . $assets['bootstrap-carousel'], array(), null, false);
 }

@@ -2,7 +2,6 @@
 /*
 Template Name: Home Template 
 */
-
 global $post;
 if (!empty($post)) {
     $slider_imgs = get_post_meta(get_the_ID(), '_cmb_slider_home', true);
@@ -11,12 +10,8 @@ if (!empty($post)) {
 
 
 <?php while (have_posts()) : the_post(); ?>
-    <section id="widget_home" class="row">
-        <div id="home_carousel" class="col-sm-8 carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ul class="carousel-indicators">
-            </ul>
-
+    <section class="widget_home">
+        <div class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <!-- Wrapper for slides -->
                 <?php
@@ -38,7 +33,7 @@ if (!empty($post)) {
                     ?>
 
                     <div class="item">
-                        <img src="<?php echo $img; ?>" class="slider_img"/>
+                        <img src="<?php echo $img; ?>" />
                         <a href="#" alt="<?php echo $title ?>">
                             <div class="slider_desc">
                                 <p class="title"><?php echo $title; ?></p>
@@ -61,48 +56,55 @@ if (!empty($post)) {
             </a>
         </div>
 
-        <div class="feat_img_container col-sm-4">
+
+        <div class="feat_img_wrap">
             <?php
-            global $post;
             $home_img1 = get_post_meta($post->ID, '_cmb_home_img_1', true);
             $home_img2 = get_post_meta($post->ID, '_cmb_home_img_2', true);
             ?>
-            <img src="<?php echo $home_img1; ?>"/>
 
-            <img src="<?php echo $home_img2; ?>"/>
+            <div class="img-responsive">
+                <img src="<?php echo $home_img1; ?>"/>
+            </div>
+
+            <div class="img-responsive">
+                <img src="<?php echo $home_img2; ?>"/>
+            </div>
         </div>
     </section>
 
 
 
     <section class="menu_featured">
-        <div class="row">
-            <h4 class="col-sm-12">TEN10 Entertainment - A Global Film & Television Fund - Leaders in Customizing
+
+            <h4>TEN10 Entertainment - A Global Film & Television Fund - Leaders in Customizing
                 Entertainment Portfolios - Offers Three Divisions of Investment</h4>
 
+            <ul>
+                <li>
+                    <a href="#">
+                        <span>secular films</span>
+<!--                        <img src="--><?php //echo get_template_directory_uri(); ?><!--/assets/img/film_strip_BG.jpg"-->
+<!--                             class="img_responsive"/>-->
+                    </a>
+                </li>
 
-        <ul>
-            <li class="col-sm-4">
-                <a href="#">
-                    <span>secular films</span>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/film_strip_BG.jpg" class="img_responsive"/>
-                </a>
-            </li>
+                <li>
+                    <a href="#">
+                        <span>faith-based films</span>
+<!--                        <img src="--><?php //echo get_template_directory_uri(); ?><!--/assets/img/film_strip_BG.jpg"-->
+<!--                             class="img_responsive"/>-->
+                    </a>
+                </li>
 
-            <li class="col-sm-4">
-                <a href="#">
-                    <span>faith-based films</span>
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/film_strip_BG.jpg" class="img_responsive"/>
-                </a>
-            </li>
-
-            <li class="col-sm-4">
-                <a href="#">
-                    <span>television development & production</span>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/film_strip_BG.jpg" class="img_responsive"/>
-                </a>
-            </li>
-        </ul>
+                <li>
+                    <a href="#">
+                        <span>television development <br> & production</span>
+<!--                        <img src="--><?php //echo get_template_directory_uri(); ?><!--/assets/img/film_strip_BG.jpg"-->
+<!--                             class="img_responsive"/>-->
+                    </a>
+                </li>
+            </ul>
 
 
     </section>
