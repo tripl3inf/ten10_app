@@ -29,7 +29,7 @@ set :branch, :wp_deploy
 # Setup Capistrano
 ############################################
 
-set :log_level, :debug
+set :log_level, :info ### or :debug
 set :use_sudo, false
 
 set :ssh_options, {
@@ -62,17 +62,18 @@ set :grunt_tasks, 'build'
 
 
 
-#namespace :composer do
-#    desc "Install composer dependencies"
-#    task :install do
-#        on roles (:app) do
-#            within release_path do
-#                execute "composer", "install", "--no-dev --prefer-dist --no-scripts --quiet"
-#            end
-#        end
-#    end
-#end
-#    before "deploy:started", "composer:install"
+namespace :composer do
+    desc "Install composer dependencies"
+    task :install do
+        on roles (:app) do
+            within release_path do
+                execute "composer", "install", "--no-dev --prefer-dist --no-scripts --quiet"
+            end
+        end
+    end
+end
+
+    before "deploy:started", "composer:install"
 #namespace :deploy do
 #    desc 'install asset dependencies'
 #        task :install, roles: [:assets] do
@@ -128,8 +129,8 @@ namespace :deploy do
 
 
 
-
-  before 'deploy:updated', 'grunt'
+  before "deploy:started", "composer:install"
+  before "deploy:updated", "grunt"
   
   after :finished, :create_robots
   after :finishing, "deploy:cleanup"

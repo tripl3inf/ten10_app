@@ -17,14 +17,13 @@
         "composer/installers": "~1.0",
         "fancyguy/webroot-installer": "1.*",
         "wpackagist-plugin/wp-migrate-db": "*",
-        "wpackagist-plugin/clean-and-simple-contact-form-by-meg-nicholas": "4.3.4"
+        "wpackagist-plugin/clean-and-simple-contact-form-by-meg-nicholas": "4.3.4",
+        "wpackagist-plugin/a-fresher-cache": "*",
+        "wpackagist-plugin/wp-slimstat": "3.6.9"
     },
 
     "require-dev" : {
-        "wpackagist-plugin/a-fresher-cache": "*",
-        "wpackagist-plugin/theme-check": "20131213.1",
-        "wpackagist-plugin/wp-slimstat": "3.6.9"
-
+        "wpackagist-plugin/theme-check": "20131213.1"
     },
 
     "autoload": {

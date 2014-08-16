@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ae6595d94b2e9be394d94fc36765ba46",
+    "hash": "cf572f2369ccc35bcb0dca209c493a43",
     "packages": [
         {
             "name": "composer/installers",
@@ -138,6 +138,29 @@
             "time": "2013-03-15 17:51:14"
         },
         {
+            "name": "wpackagist-plugin/a-fresher-cache",
+            "version": "0.1.2",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/a-fresher-cache/",
+                "reference": "tags/0.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/a-fresher-cache.0.1.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/a-fresher-cache": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/a-fresher-cache/"
+        },
+        {
             "name": "wpackagist-plugin/clean-and-simple-contact-form-by-meg-nicholas",
             "version": "4.3.4",
             "source": {
@@ -182,54 +205,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "http://wordpress.org/plugins/wp-migrate-db/"
-        }
-    ],
-    "packages-dev": [
-        {
-            "name": "wpackagist-plugin/a-fresher-cache",
-            "version": "0.1.2",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/a-fresher-cache/",
-                "reference": "tags/0.1.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/a-fresher-cache.0.1.2.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "replace": {
-                "wpackagist/a-fresher-cache": "self.version"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/a-fresher-cache/"
-        },
-        {
-            "name": "wpackagist-plugin/theme-check",
-            "version": "20131213.1",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/theme-check/",
-                "reference": "tags/20131213.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/theme-check.20131213.1.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "replace": {
-                "wpackagist/theme-check": "self.version"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/theme-check/"
         },
         {
             "name": "wpackagist-plugin/wp-slimstat",
@@ -253,6 +228,31 @@
             },
             "type": "wordpress-plugin",
             "homepage": "http://wordpress.org/plugins/wp-slimstat/"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "wpackagist-plugin/theme-check",
+            "version": "20131213.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/theme-check/",
+                "reference": "tags/20131213.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/theme-check.20131213.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/theme-check": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/theme-check/"
         }
     ],
     "aliases": [
