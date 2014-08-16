@@ -74,6 +74,29 @@ set :grunt_tasks, 'build'
 #set :bower_target_path, "#{release_path}/content/themes/ten10_roots"
 
 
+
+
+
+#namespace :deploy do
+#    desc 'install asset dependencies'
+#        task :install, roles: [:assets] do
+#            run "cd #{latest_release}/content/themes/ten10_roots && bower install --no-color"
+#        end
+#end
+
+#after 'deploy:install'
+#namespace :grunt do
+#    desc "Build Grunt"
+#    task :build do
+#        on roles (:app) do
+#            within release_path do
+#                execute "grunt", "build"
+#            end
+#        end
+#    end
+#end
+#  after :finishing, "grunt:build"
+
 ############################################
 # Composer
 ############################################

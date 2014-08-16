@@ -22,7 +22,6 @@ custom_slider();
 
 
 
-
 });
 
 

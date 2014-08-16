@@ -6,12 +6,12 @@ module.exports = {
 			]
 		},
 		options: {
-			compress: false
+			compress: false,
 			// LESS source map
 			// To enable, set sourceMap to true and update sourceMapRootpath based on your install
-			//sourceMap: true,
-			//sourceMapFilename: 'assets/css/main.css.map',
-			//sourceMapRootpath: '/app/themes/roots/'
+			sourceMap: true,
+			sourceMapFilename: 'assets/css/main.css.map',
+			sourceMapRootpath: '/content/themes/ten10_roots/'
 		}
 	},
 	build: {
