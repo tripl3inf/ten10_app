@@ -10,6 +10,6 @@ readme.md
 
 **/node_modules/**
 **vendor/**
-content/plugins/**
+#content/plugins/**
 content/mu-plugins/**
 content/uploads/**

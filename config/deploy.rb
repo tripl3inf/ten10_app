@@ -39,20 +39,8 @@ set :ssh_options, {
 set :keep_releases, 5
 
 
-############################################
-# Composer
-############################################
-namespace :composer do
-    desc "Install composer dependencies"
-    task :install do
-        on roles (:app) do
-            within release_path do
-                execute "composer", "install", "--require-dev --prefer-dist --no-scripts --quiet"
-            end
-        end
-    end
-end
-before "deploy:started", "composer:install"
+
+
 
 
 ############################################
@@ -86,7 +74,20 @@ set :grunt_tasks, 'build'
 #set :bower_target_path, "#{release_path}/content/themes/ten10_roots"
 
 
-
+############################################
+# Composer
+############################################
+namespace :composer do
+    desc "Install composer dependencies"
+    task :install do
+        on roles (:app) do
+            within release_path do
+                execute "composer", "install", "--prefer-dist --no-scripts --quiet"
+            end
+        end
+    end
+end
+before "deploy:started", "composer:install"
 
 ############################################
 # Linked files and directories (symlinks)
@@ -135,29 +136,3 @@ end
 
 
 
-
-
-
-
-
-
-####
-#### EXTRA STUFF - Leaving for syntax reference
-####
-#namespace :deploy do
-#    desc 'install asset dependencies'
-#        task :install, roles: [:assets] do
-#            run "cd #{latest_release}/content/themes/ten10_roots && bower install --no-color"
-#        end
-#end
-#namespace :grunt do
-#    desc "Build Grunt"
-#    task :build do
-#        on roles (:app) do
-#            within release_path do
-#                execute "grunt", "build"
-#            end
-#        end
-#    end
-#end
-#  after :finishing, "grunt:build"
