@@ -6,9 +6,10 @@ Gemfile.lock
 readme.md
 .gitattributes
 .gitignore
-#.gitmodules
+.gitmodules
 
 **/node_modules/**
 **vendor/**
 content/plugins/**
 content/mu-plugins/**
+content/uploads/**
