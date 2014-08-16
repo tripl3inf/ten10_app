@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 
 gem 'capistrano', '~> 3.1'
 gem 'capistrano-slackify'
+gem 'capistrano-npm'
 gem 'capistrano-bower'
 gem 'capistrano-grunt', github: 'roots/capistrano-grunt'
 

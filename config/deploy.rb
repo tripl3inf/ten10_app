@@ -38,16 +38,25 @@ set :ssh_options, {
 
 set :keep_releases, 5
 
-### set path for bower
-set :default_env, { path: "~/local/bin/bower:~/local/bin:$PATH" }
-##### bower ####
+#set :npm_target_path, -> { release_path.join('content/themes/ten10_roots') }
+set :npm_target_path, -> { "#{release_path}/content/themes/ten10_roots" }
+set :npm_flags, '--silent'           # default
+set :npm_roles, :all                              # default
+
+### Bower
+set :default_env, { path: "~/local/bin:~/local/bin:$PATH" }
 set :bower_flags, '--quiet --config.interactive=false'
 set :bower_roles, :all
 #set :bower_target_path, "#{fetch(:release_path)}srv/client/ten10/current/content/themes/ten10_roots"
 # or
 set :bower_target_path, -> { "#{release_path}/content/themes/ten10_roots" }
-set :grunt_target_path, -> { release_path.join('content/themes/ten10_roots') }
 
+
+### Grunt
+#set :grunt_file, -> { release_path.join('content/themes/ten10_roots/Gruntfile.js') }
+#set :grunt_target_path, -> { release_path.join('content/themes/ten10_roots') }
+set :grunt_roles, :all
+set :grunt_target_path, -> { "#{release_path}/content/themes/ten10_roots" }
 set :grunt_tasks, 'build'
 #set :bower_target_path, "#{release_path}/content/themes/ten10_roots"
 
@@ -121,6 +130,7 @@ namespace :deploy do
 
 
   before 'deploy:updated', 'grunt'
+  
   after :finished, :create_robots
   after :finishing, "deploy:cleanup"
 

@@ -18,5 +18,6 @@ require 'capistrano/slackify'
 Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
 
 
+require 'capistrano/npm'
 require 'capistrano/bower'
 require 'capistrano/grunt'
