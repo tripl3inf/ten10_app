@@ -38,6 +38,22 @@ set :ssh_options, {
 
 set :keep_releases, 5
 
+
+namespace :composer do
+    desc "Install composer dependencies"
+    task :install do
+        on roles (:app) do
+            within release_path do
+                execute "composer", "install", "--prefer-dist --no-scripts --quiet"
+            end
+        end
+    end
+end
+before "deploy:started", "composer:install"
+
+
+
+
 #set :npm_target_path, -> { release_path.join('content/themes/ten10_roots') }
 set :npm_target_path, -> { "#{release_path}/content/themes/ten10_roots" }
 set :npm_flags, '--silent'           # default
@@ -62,18 +78,8 @@ set :grunt_tasks, 'build'
 
 
 
-namespace :composer do
-    desc "Install composer dependencies"
-    task :install do
-        on roles (:app) do
-            within release_path do
-                execute "composer", "install", "--no-dev --prefer-dist --no-scripts --quiet"
-            end
-        end
-    end
-end
 
-    before "deploy:started", "composer:install"
+
 #namespace :deploy do
 #    desc 'install asset dependencies'
 #        task :install, roles: [:assets] do
@@ -129,8 +135,8 @@ namespace :deploy do
 
 
 
-  before "deploy:started", "composer:install"
-  before "deploy:updated", "grunt"
+
+  before 'deploy:updated', 'grunt'
   
   after :finished, :create_robots
   after :finishing, "deploy:cleanup"

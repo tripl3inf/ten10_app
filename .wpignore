@@ -6,7 +6,7 @@ Gemfile.lock
 readme.md
 .gitattributes
 .gitignore
-.gitmodules
+#.gitmodules
 
 **/node_modules/**
 **vendor/**
