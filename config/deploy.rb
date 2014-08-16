@@ -39,12 +39,15 @@ set :ssh_options, {
 set :keep_releases, 5
 
 
+############################################
+# Composer
+############################################
 namespace :composer do
     desc "Install composer dependencies"
     task :install do
         on roles (:app) do
             within release_path do
-                execute "composer", "install", "--prefer-dist --no-scripts --quiet"
+                execute "composer", "install", "--require-dev --prefer-dist --no-scripts --quiet"
             end
         end
     end
@@ -52,14 +55,18 @@ end
 before "deploy:started", "composer:install"
 
 
-
-
+############################################
+# NPM/NODE
+############################################
 #set :npm_target_path, -> { release_path.join('content/themes/ten10_roots') }
 set :npm_target_path, -> { "#{release_path}/content/themes/ten10_roots" }
 set :npm_flags, '--silent'           # default
 set :npm_roles, :all                              # default
 
-### Bower
+
+############################################
+# Bower
+############################################
 set :default_env, { path: "~/local/bin:~/local/bin:$PATH" }
 set :bower_flags, '--quiet --config.interactive=false'
 set :bower_roles, :all
@@ -68,7 +75,9 @@ set :bower_roles, :all
 set :bower_target_path, -> { "#{release_path}/content/themes/ten10_roots" }
 
 
-### Grunt
+############################################
+# Grunt
+############################################
 #set :grunt_file, -> { release_path.join('content/themes/ten10_roots/Gruntfile.js') }
 #set :grunt_target_path, -> { release_path.join('content/themes/ten10_roots') }
 set :grunt_roles, :all
@@ -76,29 +85,6 @@ set :grunt_target_path, -> { "#{release_path}/content/themes/ten10_roots" }
 set :grunt_tasks, 'build'
 #set :bower_target_path, "#{release_path}/content/themes/ten10_roots"
 
-
-
-
-
-#namespace :deploy do
-#    desc 'install asset dependencies'
-#        task :install, roles: [:assets] do
-#            run "cd #{latest_release}/content/themes/ten10_roots && bower install --no-color"
-#        end
-#end
-
-#after 'deploy:install'
-#namespace :grunt do
-#    desc "Build Grunt"
-#    task :build do
-#        on roles (:app) do
-#            within release_path do
-#                execute "grunt", "build"
-#            end
-#        end
-#    end
-#end
-#  after :finishing, "grunt:build"
 
 
 
@@ -149,3 +135,29 @@ end
 
 
 
+
+
+
+
+
+
+####
+#### EXTRA STUFF - Leaving for syntax reference
+####
+#namespace :deploy do
+#    desc 'install asset dependencies'
+#        task :install, roles: [:assets] do
+#            run "cd #{latest_release}/content/themes/ten10_roots && bower install --no-color"
+#        end
+#end
+#namespace :grunt do
+#    desc "Build Grunt"
+#    task :build do
+#        on roles (:app) do
+#            within release_path do
+#                execute "grunt", "build"
+#            end
+#        end
+#    end
+#end
+#  after :finishing, "grunt:build"
