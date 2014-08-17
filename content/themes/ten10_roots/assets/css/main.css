@@ -6748,6 +6748,9 @@ footer .content .disclaimer {
     width: 100%;
   }
 }
+footer .content .disclaimer h3 {
+  margin-top: 0;
+}
 footer .content nav {
   position: relative;
   min-height: 1px;

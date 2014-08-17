@@ -35,15 +35,16 @@ module.exports = function (grunt) {
 
 
     // Register tasks
-//	grunt.registerTask('default', [
-//		'dev'
-//	]);
-//	grunt.registerTask('dev', [
-//		'jshint',
-//		'less:dev',
-//		'autoprefixer:dev',
-//		'concat'
-//	]);
+	grunt.registerTask('default', [
+		'dev'
+	]);
+	grunt.registerTask('dev', [
+		'jshint',
+		'less:dev',
+		'autoprefixer:dev',
+		'concat',
+        'watch'
+	]);
     grunt.registerTask('build', [
         'jshint',
         'less:build',
