@@ -1,9 +1,16 @@
 module.exports = {
 	less: {
+
+        options: {
+			livereload: true,
+		    hostname: '*'
+        },
+
 		files: [
 			'assets/less/*.less',
 			'assets/less/**/*.less'
 		],
+
 		tasks: ['less:dev', 'autoprefixer:dev']
 	},
 	js: {
@@ -22,12 +29,14 @@ module.exports = {
         },
 		files: [
             'assets/less/layouts/*.less',
-
             'assets/less/_global.less',
             //'assets/less/**/*.less',
-//			'assets/js/scripts.js',
+			'assets/js/scripts.js',
+            'assets/js/plugins/*.js',
 //			'templates/*.php',
 			'*.php'
 		]
 	}
 }
+
+

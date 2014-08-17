@@ -14,6 +14,7 @@ if(!empty($post)) {
 
 
 
+<section class="content-wrap template-thirds">
 <?php while (have_posts()) : the_post();?>
     <div class="featured col-sm-4">
         <img src="<?php echo $img; ?>" class="img-responsive">
@@ -24,7 +25,7 @@ if(!empty($post)) {
         </div>
     </div>
 <?php endwhile; ?>
-
+</section>
 
 
 

@@ -14,43 +14,32 @@ if (!empty($post)) {
 
 
 
-<?php while (have_posts()) : the_post(); ?>
-    <div class="featured col-sm-4">
-        <img src="<?php echo $img; ?>" class="img-responsive">
-    </div>
-    <div class="col-sm-8">
-        <div class="entry-content">
-
-
-    <div>
-        <h2>Floating point boundaries</h2>
-        <input type="range" min="0" max="10" step="1" value="5" data-rangeslider>
-        <output></output>
-    </div>
-
-
-
-
-
-
-
-
-
-            <?php the_content(); ?>
+<section class="content-wrap template-thirds">
+    <?php while (have_posts()) : the_post(); ?>
+        <div class="featured">
+            <img src="<?php echo $img; ?>" class="img-responsive">
         </div>
-    </div>
-<?php endwhile; ?>
+        <div class="content">
+            <div>
+                <h2>Floating point boundaries</h2>
+                <input type="range" min="0" max="10" step="1" value="5" data-rangeslider>
+                <output></output>
+            </div>
+
+            <article class="entry-content">
+                <?php the_content(); ?>
+            </article>
+        </div>
+    <?php endwhile; ?>
+</section>
 
 
+<script>
+    $(function () {
 
-
-
-    <script>
-    $(function() {
-
-        var $document   = $(document),
-            selector    = '[data-rangeslider]',
-            $element    = $(selector);
+        var $document = $(document),
+            selector = '[data-rangeslider]',
+            $element = $(selector);
 
         // Example functionality to demonstrate a value feedback
         function valueOutput(element) {
@@ -58,10 +47,12 @@ if (!empty($post)) {
                 output = element.parentNode.getElementsByTagName('output')[0];
             output.innerHTML = value;
         }
+
         for (var i = $element.length - 1; i >= 0; i--) {
             valueOutput($element[i]);
-        };
-        $document.on('change', 'input[type="range"]', function(e) {
+        }
+        ;
+        $document.on('change', 'input[type="range"]', function (e) {
             valueOutput(e.target);
         });
 
@@ -73,20 +64,21 @@ if (!empty($post)) {
             polyfill: false,
 
             // Callback function
-            onInit: function() {},
+            onInit: function () {
+            },
 
             // Callback function
-            onSlide: function(position, value) {
+            onSlide: function (position, value) {
                 console.log('onSlide');
                 console.log('position: ' + position, 'value: ' + value);
             },
 
             // Callback function
-            onSlideEnd: function(position, value) {
+            onSlideEnd: function (position, value) {
                 console.log('onSlideEnd');
                 console.log('position: ' + position, 'value: ' + value);
             }
         });
 
     });
-    </script>
+</script>

@@ -11,16 +11,20 @@ if(!empty($post)) {
 ?>
 
 
+
+
+<section class="content-wrap template-split">
 <?php while (have_posts()) : the_post(); ?>
-    <div class="featured col-lg-6">
+    <div class="featured">
         <img src="<?php echo $img; ?>" class="img-responsive">
     </div>
-
-    <article class="col-lg-6">
-        <div class="entry-content">
+    <div class="content">
+        <article class="entry-content">
             <?php the_content(); ?>
-        </div>
-    </article>
+        </article>
+    </div>
 <?php endwhile; ?>
+</section>
+
 
 
