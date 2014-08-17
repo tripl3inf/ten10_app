@@ -29,7 +29,7 @@ set :branch, :wp_deploy
 # Setup Capistrano
 ############################################
 
-set :log_level, :info ### or :debug
+set :log_level,  :debug ### or :info
 set :use_sudo, false
 
 set :ssh_options, {

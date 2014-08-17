@@ -6229,6 +6229,17 @@ footer .content:after {
   height: 20px;
   width: 20px;
 }
+/*
+*  MIXINS
+*/
+.helvetica-md-cond {
+  font-family: "HelveticaNeueMediumCondensed", "HelveticaNeue-Medium-Condensed", "Helvetica Neue Medium Condensed", "HelveticaNeueMedium", "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnRegular', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+  font-weight: 500;
+  font-stretch: condensed;
+}
+.impact {
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+}
 main {
   margin-right: auto;
   margin-left: auto;
@@ -6298,14 +6309,6 @@ figure.alignnone {
     margin-left: 10px;
   }
 }
-/*
-*  MIXINS
-*/
-.helvetica-md-cond {
-  font-family: "HelveticaNeueMediumCondensed", "HelveticaNeue-Medium-Condensed", "Helvetica Neue Medium Condensed", "HelveticaNeueMedium", "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnRegular', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
-  font-weight: 500;
-  font-stretch: condensed;
-}
 body .wrap {
   background: #d3d3d3;
 }
@@ -6315,6 +6318,12 @@ body .wrap main section.content-wrap {
 }
 body .wrap main section.content-wrap .featured {
   padding: 0;
+}
+body .wrap main section.content-wrap article h3 {
+  margin-top: 10px;
+}
+body .wrap main section.content-wrap article p {
+  font-size: 12px;
 }
 /*
 *  Navbar
@@ -6503,8 +6512,7 @@ body .wrap main section.content-wrap .featured {
 /*
 *  Range Slider
 */
-.rangeslider,
-.rangeslider__fill {
+.rangeslider {
   background-image: -webkit-linear-gradient(left, #8ed0ff, #00aeef 50%, #094772);
   background-image: -o-linear-gradient(left, #8ed0ff, #00aeef 50%, #094772);
   background-image: -webkit-gradient(linear, left top, right top, from(#8ed0ff), color-stop(50%, #00aeef), to(#094772));
@@ -6527,44 +6535,31 @@ body .wrap main section.content-wrap .featured {
 }
 .rangeslider__fill {
   background: transparent;
+  display: none;
   position: absolute;
   top: 0;
 }
 .rangeslider__handle {
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   cursor: pointer;
   display: inline-block;
   position: absolute;
   top: -6px;
-  background: url("../img/ui/UI_slider_handle.png") transparent no-repeat center;
-  -webkit-box-shadow: 0 0 3px #3D3D3D, inset 0 0 1px #000;
-          box-shadow: 0 0 3px #3D3D3D, inset 0 0 1px #000;
-  border-radius: 50%;
-  border: none;
+  padding: 0 40px;
 }
 .rangeslider__handle:after {
   content: "";
   display: block;
-  width: 18px;
-  height: 18px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  -o-border-radius: 50%;
+  width: 43px;
+  height: 45px;
+  background: url("../img/ui/UI_slider_handle.png") transparent no-repeat center;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border-radius: 50%;
-}
-.rangeslider__handle:active {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, rgba(0, 0, 0, 0.12)));
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.12));
-  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.12));
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.12)));
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.12));
-}
-input[type="range"]:focus + .rangeslider .rangeslider__handle {
-  -webkit-box-shadow: 0 0 8px rgba(255, 0, 255, 0.9);
-  box-shadow: 0 0 8px rgba(255, 0, 255, 0.9);
+  border: none;
 }
 header.wrap {
   position: relative;
@@ -6841,6 +6836,95 @@ footer .content nav .social_media li a:after {
     float: left;
     width: 50%;
   }
+}
+/*
+*  Template - Risk Tolerance
+*/
+.template-risk .featured {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .template-risk .featured {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.template-risk .content {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 0 22px;
+}
+@media (min-width: 992px) {
+  .template-risk .content {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+.template-risk .content .range_slider_wrap {
+  width: 100%;
+  margin: 20px 0 0 0;
+  padding: 22px;
+  border: 1px solid #d3d3d3;
+}
+.template-risk .content .range_slider_wrap .range_ticks {
+  list-style: none;
+  padding: 0 0 0 36px;
+}
+.template-risk .content .range_slider_wrap .range_ticks > li {
+  display: inline-block;
+  color: #0e6aab;
+  padding: 0 0 0 52px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.template-risk .content .range_slider_wrap .range_ticks > li:first-child {
+  padding: 0;
+}
+.template-risk .content .range_slider_wrap .range_ticks > li:after {
+  content: '|';
+  display: block;
+  position: relative;
+  left: 3px;
+}
+.template-risk .content .range_slider_wrap .range_ticks > li:last-child:after {
+  left: 6px;
+}
+.template-risk .content .range_slider_wrap .display_boxes {
+  list-style: none;
+  padding: 0;
+}
+.template-risk .content .range_slider_wrap .display_boxes > li {
+  display: inline-block;
+  width: 31.5%;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  padding: 12px;
+}
+.template-risk .content .range_slider_wrap .display_boxes > li:first-child {
+  margin-right: 10px;
+}
+.template-risk .content .range_slider_wrap .display_boxes > li:last-child {
+  margin-left: 10px;
+}
+.template-risk .content .range_slider_wrap .display_boxes > li h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0;
+}
+.template-risk .content .range_slider_wrap .display_boxes > li h6 {
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+  font-size: 64px;
+  font-size: bold;
+  color: #0e6aab;
+}
+.template-risk .content .range_slider_wrap .display_boxes > li p {
+  font-size: 11px;
+  text-align: left;
 }
 .slider_home .slider_container {
   padding-right: 0;

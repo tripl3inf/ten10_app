@@ -12,11 +12,6 @@
     }
 }
 
-
-
-
-
-
 /*
 *  Template - split
 */
@@ -28,5 +23,111 @@
 
     .content {
         .make-md-column(6);
+    }
+}
+
+
+
+
+/*
+*  Template - Risk Tolerance
+*/
+.template-risk {
+
+    .featured {
+        .make-md-column(4);
+        
+    }
+
+    .content {
+        .make-md-column(8);
+        padding: 0 22px;
+
+        .range_slider_wrap {
+            width: 100%;
+            margin: 20px 0 0 0;
+            padding: 22px;
+
+            border: 1px solid @gray-light;
+
+            .range_ticks {
+                list-style: none;
+                padding: 0 0 0 36px;
+
+                > li {
+                    display: inline-block;
+                    color: @brand-primary;
+                    padding: 0 0 0 52px;
+                    font-size: 16px;
+                    font-weight: bold;
+
+                    //&:last-child,
+                    &:first-child {
+                        padding: 0;
+                    }
+                    
+                    &:after {
+                        content: '|';
+                        display: block;
+                        position: relative;
+                        left: 3px;
+
+                    }
+
+                    &:last-child:after {
+                        left: 6px;
+                    }
+                }
+
+            }
+
+
+            .rangeslider,
+            .rangeslider__fill {
+//                width: 400px;
+//                padding: 0 40px;
+            }
+            
+            .display_boxes {
+                list-style: none;
+                padding: 0;
+                
+                > li {
+                    display: inline-block;
+                    width: 31.5%;
+                    border: 1px solid @gray-light;
+                    text-align: center;
+                    padding: 12px;
+                    
+                    &:first-child {
+                        margin-right: 10px;
+                    }
+                    
+                    &:last-child {
+                        margin-left: 10px;
+                    }
+                    
+                    h5 {
+                        font-size: 16px;
+                        font-weight: bold;
+                        margin-top: 0;
+                    }
+                    
+                    h6 {
+                        .impact();
+                        font-size: 64px;
+                        font-size: bold;
+                        color: @brand-primary;
+                    }
+                    
+                    p {
+                        font-size: 11px;
+                        text-align: left;
+                        
+                    }
+                }
+                
+            }
+        }
     }
 }
