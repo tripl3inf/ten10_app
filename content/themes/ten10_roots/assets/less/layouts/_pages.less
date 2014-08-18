@@ -12,6 +12,9 @@
     }
 }
 
+
+
+
 /*
 *  Template - split
 */
@@ -36,7 +39,7 @@
 
     .featured {
         .make-md-column(4);
-        
+
     }
 
     .content {
@@ -47,6 +50,7 @@
             width: 100%;
             margin: 20px 0 0 0;
             padding: 22px;
+            min-height: 500px;
 
             border: 1px solid @gray-light;
 
@@ -57,76 +61,94 @@
                 > li {
                     display: inline-block;
                     color: @brand-primary;
-                    padding: 0 0 0 52px;
+                    padding: 0 56px 0 0;
+                    width: 6px;
                     font-size: 16px;
                     font-weight: bold;
+                    text-align: center;
 
-                    //&:last-child,
-                    &:first-child {
+                    &:last-child {
+                    //&:first-child {
                         padding: 0;
                     }
-                    
+
                     &:after {
                         content: '|';
                         display: block;
                         position: relative;
-                        left: 3px;
+                        left: 2px;
 
                     }
 
                     &:last-child:after {
-                        left: 6px;
+                        //left: 6px;
                     }
                 }
 
             }
-
 
             .rangeslider,
             .rangeslider__fill {
-//                width: 400px;
-//                padding: 0 40px;
+                //                width: 400px;
+                //                padding: 0 40px;
             }
-            
-            .display_boxes {
-                list-style: none;
-                padding: 0;
-                
+
+            .display_box_panels {
+                margin-top: 30px;
+
                 > li {
-                    display: inline-block;
-                    width: 31.5%;
-                    border: 1px solid @gray-light;
-                    text-align: center;
-                    padding: 12px;
-                    
+                    display: none;
+
                     &:first-child {
-                        margin-right: 10px;
+                        display: block;
                     }
-                    
-                    &:last-child {
-                        margin-left: 10px;
-                    }
-                    
-                    h5 {
-                        font-size: 16px;
-                        font-weight: bold;
-                        margin-top: 0;
-                    }
-                    
-                    h6 {
-                        .impact();
-                        font-size: 64px;
-                        font-size: bold;
-                        color: @brand-primary;
-                    }
-                    
-                    p {
-                        font-size: 11px;
-                        text-align: left;
-                        
+
+                    .display_boxes {
+                        list-style: none;
+                        padding: 0;
+
+                        > li {
+                            display: inline-block;
+                            width: 31.5%;
+                            min-height: 300px;
+                            border: 1px solid @gray-light;
+                            text-align: center;
+                            padding: 12px;
+
+                            &:first-child {
+                                margin-right: 10px;
+                            }
+
+                            &:last-child {
+                                margin-left: 10px;
+                            }
+
+                            h5 {
+                                font-size: 16px;
+                                font-weight: bold;
+                                margin-top: 0;
+                            }
+
+                            h6 {
+                                .impact();
+                                font-size: 64px;
+                                font-size: bold;
+                                color: @brand-primary;
+
+                                &:after {
+                                    content: '%';
+                                    display: inline-block;
+                                }
+                            }
+
+                            p {
+                                font-size: 11px;
+                                text-align: left;
+
+                            }
+                        }
                     }
                 }
-                
             }
         }
     }

@@ -44,4 +44,8 @@ vendor/**
 content/plugins/**
 content/mu-plugins/**
 
+content/themes/ten10_theme/**
+content/themes/ten10_roots/vendor/**
+content/themes/ten10_roots/assets/vendor/** 
+
 .buildpath

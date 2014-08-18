@@ -4,49 +4,55 @@
 
 
 
-    $(function () {
-
-        var $document = $(document),
-            selector = '[data-rangeslider]',
-            $element = $(selector);
-
-        // Example functionality to demonstrate a value feedback
-        function valueOutput(element) {
-            var value = element.value,
-                output = element.parentNode.getElementsByTagName('output')[0];
-            output.innerHTML = value;
-        }
-
-        for (var i = $element.length - 1; i >= 0; i--) {
-            valueOutput($element[i]);
-        }
-
-        $document.on('change', 'input[type="range"]', function (e) {
-            valueOutput(e.target);
-        });
+$(function () {
 
 
-        // Basic rangeslider initialization
-        $element.rangeslider({
+    var risk_panels = $('.display_box_panels'),
+    panel = risk_panels.children('li'),
+    range_ticks = $('ul.range_ticks');
 
-            // Deactivate the feature detection
-            polyfill: false,
 
-            // Callback function
-            onInit: function () {
-            },
+    panel.each(function( index ) {
 
-            // Callback function
-            onSlide: function (position, value) {
-                console.log('onSlide');
-                console.log('position: ' + position, 'value: ' + value);
-            },
-
-            // Callback function
-            onSlideEnd: function (position, value) {
-                console.log('onSlideEnd');
-                console.log('position: ' + position, 'value: ' + value);
-            }
-        });
-
+        var tick_index = ++index;
+        range_ticks.append('<li>' + tick_index + '</li>');
+//        range_ticks.append('<li>' +index + '</li>');
     });
+
+    console.log(risk_panels[1]);
+    console.log('#of panels ' + panel.length);
+
+
+    // Basic rangeslider initialization
+    $('#risk_range_slider').rangeslider({
+
+        // Deactivate the feature detection
+        polyfill: false,
+
+        // Callback function
+        onInit: function () {
+        },
+
+        // Callback function
+        onSlide: function (position, value) {
+            //console.log('position: ' + position, 'value: ' + value);
+        },
+
+        // Callback function
+        onSlideEnd: function (position, value) {
+            //console.log('position: ' + position, 'value: ' + value);
+            var currentPanel = $(panel[value]);
+
+            risk_panels.fadeOut("fast", function () {
+                panel.hide('fast', function() {
+                    currentPanel.show('fast', function() {
+                        risk_panels.fadeIn();
+                    });
+                });
+            });
+
+
+        }
+    });
+
+});
