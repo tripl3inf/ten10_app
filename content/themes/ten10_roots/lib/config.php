@@ -125,6 +125,7 @@ add_action( 'admin_head', 'ds_hide_stuff'  );
 
 function custom_metaboxes( $meta_boxes ) {
     $prefix = '_cmb_'; // Prefix for all fields
+
     $meta_boxes['metabox_home'] = array(
         'id' => 'metabox_home_imgs',
         'title' => 'Home Page Featured Images',
@@ -188,8 +189,61 @@ function custom_metaboxes( $meta_boxes ) {
                 // 'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
             ),
 
+
+	/*        array(
+		        'name' => __( 'Website URL', 'cmb' ),
+		        'id'   => $prefix . 'fetured_',
+		        'type' => 'text_url',
+		        // 'protocols' => array( 'http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet' ), // Array of allowed protocols
+	        ),
+	*/
+
         ),
     );
+
+
+
+
+
+
+
+	$meta_boxes['metabox_film_page'] = array(
+		'id' => 'metabox_film_page',
+		'title' => 'Film Page Media',
+		'pages' => array('page'), // post type
+		'context' => 'normal',
+		'priority' => 'high',
+		'show_names' => true, // Show field names on the left
+		'show_on' => array( 'key' => 'page-template', 'value' => 'templates/template-film-page.php' ),
+//        'show_on' => array( 'key' => 'id', 'value' => array( 86 ) ),
+		'fields' => array(
+
+			array(
+				'name' => 'Choose Image 1:',
+				'desc' => 'the TOP right static image on home page.',
+				'id' => $prefix . 'featured_img_full',
+				'type' => 'file',
+				// 'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
+			),
+
+			array(
+				'name' => 'oEmbed1',
+				'desc' => 'Enter a youtube, twitter, or instagram URL. Supports services listed at <a href="http://codex.wordpress.org/Embeds">http://codex.wordpress.org/Embeds</a>.',
+				'id' => $prefix . 'video1_embed',
+				'type' => 'oembed',
+			),
+
+			array(
+				'name' => 'oEmbed2',
+				'desc' => 'Enter a youtube, twitter, or instagram URL. Supports services listed at <a href="http://codex.wordpress.org/Embeds">http://codex.wordpress.org/Embeds</a>.',
+				'id' => $prefix . 'video2_embed',
+				'type' => 'oembed',
+			),
+		),
+	);
+
+
+
 
 
 

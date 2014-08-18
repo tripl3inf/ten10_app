@@ -19,6 +19,7 @@
     "respond": "1.4.2",
     "font-awesome": "~4.1.0",
     "rangeslider.js": "~0.3.2",
-    "greensock": "~1.13.1"
+    "greensock": "~1.13.1",
+    "jquery-colorbox": "~1.5.13"
   }
 }
