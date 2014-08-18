@@ -172,7 +172,6 @@ function custom_metaboxes( $meta_boxes ) {
                 ),
             ),
 
-
             array(
                 'name' => 'Choose Image 1:',
                 'desc' => 'the TOP right static image on home page.',
@@ -189,10 +188,116 @@ function custom_metaboxes( $meta_boxes ) {
                 // 'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
             ),
 
-
         ),
     );
 
+
+
+
+	$meta_boxes['metabox_risk_panel'] = array(
+		'id' => 'metabox_risk_panel',
+		'title' => 'Risk Panel Widget',
+		'pages' => array('page'), // post type
+		'context' => 'normal',
+		'priority' => 'low',
+		'show_names' => true, // Show field names on the left
+		'show_on' => array( 'key' => 'page-template', 'value' => 'templates/template-risk-tolerance.php' ),
+//        'show_on' => array( 'key' => 'id', 'value' => array( 86 ) ),
+		'fields' => array(
+			array(
+				'id'          => $prefix . 'repeat_group_risk_template',
+				'type'        => 'group',
+				'description' => __( 'Panels for Risk Tolerance Widget', 'cmb' ),
+				'options'     => array(
+					'group_title'   => __( 'Panel {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+					'add_button'    => __( 'Add Another Entry', 'cmb' ),
+					'remove_button' => __( 'Remove Entry', 'cmb' ),
+					'sortable'      => false, // beta
+				),
+				// Fields array works the same, except id's only need to be unique for this group. Prefix is not needed.
+				'fields' => array(
+					// left box
+					array(
+						'name' => 'Left Box',
+						'id'   => 'lb_header',
+						'type' => 'title',
+						// 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+					),
+					array(
+						'name' => 'Left Box Title',
+						'id'   => 'lb_title',
+						'type' => 'text_medium',
+					),
+					array(
+						'name' => 'Left Box %',
+						'description' => '%',
+						'id'   => 'lb_percent',
+					//	'sanitization_cb' => 'false',
+						'type' => 'text_small',
+					),
+					array(
+						'name' => 'Left Box Copy',
+						'id'   => 'lb_copy',
+						'type' => 'textarea_small',
+					),
+
+
+					// center box
+					array(
+						'name' => 'Center Box',
+						'id'   => 'cb_header',
+						'type' => 'title',
+						// 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+					),
+					array(
+						'name' => 'Center Box Title',
+						'id'   => 'cb_title',
+						'type' => 'text_medium',
+					),
+					array(
+						'name' => 'Center Box %',
+						'description' => '%',
+						'id'   => 'cb_percent',
+						'type' => 'text_small',
+					),
+					array(
+						'name' => 'Center Box Copy',
+						'id'   => 'cb_copy',
+						'type' => 'textarea_small',
+					),
+
+
+					// right box
+					array(
+						'name' => 'Right Box',
+						'id'   => 'rb_header',
+						'type' => 'title',
+						// 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+					),
+					array(
+						'name' => 'Right Box Title',
+						'id'   => 'rb_title',
+						'type' => 'text_medium',
+					),
+					array(
+						'name' => 'Right Box %',
+						'description' => '%',
+						'id'   => 'rb_percent',
+						'type' => 'text_small',
+					),
+					array(
+						'name' => 'Right Box Copy',
+						'id'   => 'rb_copy',
+						'type' => 'textarea_small',
+					),
+
+
+				),
+			),
+
+
+		),
+	);
 
 
 
@@ -301,7 +406,7 @@ function custom_metaboxes( $meta_boxes ) {
         'title' => 'Featured Image',
         'pages' => array('page'), // post type
         'context' => 'normal',
-        'priority' => 'high',
+        'priority' => 'default',
         'show_names' => true, // Show field names on the left
         'show_on' => array( 'key' => 'page-template', 'value' => array('templates/template-feature-third.php','templates/template-risk-tolerance.php' ) ),
         'fields' => array(

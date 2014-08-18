@@ -4,7 +4,7 @@ Template Name: Home Template
 */
 global $post;
 if (!empty($post)) {
-    $slider_imgs = get_post_meta(get_the_ID(), '_cmb_slider_home', true);
+//    $slider_imgs = get_post_meta(get_the_ID(), '_cmb_slider_home', true);
 }
 ?>
 
