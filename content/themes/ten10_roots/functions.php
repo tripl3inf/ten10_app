@@ -22,7 +22,6 @@ $roots_includes = array(
   'lib/comments.php',        // Custom comments modifications
   'lib/scripts.php',         // Scripts and stylesheets
   'lib/info_widget.php',
-	'lib/custom_gallery.php'     // Theme support info
   //'slider-type.php'
 //  'templates/template-gallery.php'
 );
