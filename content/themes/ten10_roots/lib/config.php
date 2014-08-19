@@ -25,6 +25,9 @@ $footer_nav_id = wp_create_nav_menu(__('Footer Navigation', 'roots'), array('slu
 $roots_nav_theme_mod['footer_nav'] = $footer_nav_id;
 
 
+$film_nav_id = wp_create_nav_menu(__('Film Menu', 'roots'), array('slug' => 'film_nav'));
+$roots_nav_theme_mod['film_nav'] = $film_nav_id;
+
 
 
 
@@ -65,6 +68,11 @@ function is_cpt_return(){
         return true;
     else return false;
 }
+
+
+
+
+
 
 function roots_display_sidebar() {
   $sidebar_config = new Roots_Sidebar(
@@ -508,10 +516,10 @@ add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
 
 
 // Use your custom URL logo link
-function wpc_url_login(){
-    return "http://t3inf.com/"; // your URL here
-}
-add_filter('login_headerurl', 'wpc_url_login');
+//function wpc_url_login(){
+//    return "http://t3inf.com/"; // your URL here
+//}
+//add_filter('login_headerurl', 'wpc_url_login');
 
 
 // Custom WordPress Login Logo
@@ -520,11 +528,16 @@ function login_css() {
 }
 add_action('login_head', 'login_css');
 
+
+
+
 // Custom WordPress Footer
 function remove_footer_admin () {
     echo '&copy; 2014 - tripl3infinity Design &copy Dev';
 }
 add_filter('admin_footer_text', 'remove_footer_admin');
+
+
 
 // Remove dashboard widgets
 add_action('wp_dashboard_setup', 'wpc_dashboard_widgets');

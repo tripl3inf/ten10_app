@@ -77,34 +77,14 @@ if (!empty($post)) {
 
     <section class="menu_featured">
 
-            <h4>TEN10 Entertainment - A Global Film & Television Fund - Leaders in Customizing
+	    <h4>TEN10 Entertainment - A Global Film & Television Fund - Leaders in Customizing
                 Entertainment Portfolios - Offers Three Divisions of Investment</h4>
 
-            <ul>
-                <li>
-                    <a href="#">
-                        <span>secular films</span>
-<!--                        <img src="--><?php //echo get_template_directory_uri(); ?><!--/assets/img/film_strip_BG.jpg"-->
-<!--                             class="img_responsive"/>-->
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <span>faith-based films</span>
-<!--                        <img src="--><?php //echo get_template_directory_uri(); ?><!--/assets/img/film_strip_BG.jpg"-->
-<!--                             class="img_responsive"/>-->
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <span>television development <br> & production</span>
-<!--                        <img src="--><?php //echo get_template_directory_uri(); ?><!--/assets/img/film_strip_BG.jpg"-->
-<!--                             class="img_responsive"/>-->
-                    </a>
-                </li>
-            </ul>
+	    <?php
+	    if (has_nav_menu('film_pages_navigation')) :
+		    wp_nav_menu(array('theme_location' => 'film_pages_navigation', 'menu_class' => 'nav'));
+	    endif;
+	    ?>
 
 
     </section>

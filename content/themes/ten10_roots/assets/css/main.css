@@ -6495,18 +6495,16 @@ body .wrap main section.content-wrap article p {
   font-weight: bold;
   background: url("../img/film_strip_BG.jpg") transparent no-repeat center;
   border: 2px solid #fff;
-}
-.menu_featured ul > li a span {
-  position: relative;
-  top: 40px;
+  padding-top: 54px;
+  line-height: 26px;
 }
 .menu_featured ul > li a:before {
   content: 'select';
   display: inline-block;
   font-size: 18px;
+  font-weight: normal;
   width: 100%;
   position: relative;
-  top: 40px;
 }
 .menu_featured ul > li:first-child {
   margin-right: -10px;
@@ -6865,6 +6863,7 @@ footer .content nav .social_media li a:after {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 20px;
 }
 @media (min-width: 992px) {
   .template-film .left_rail {
@@ -6875,13 +6874,14 @@ footer .content nav .social_media li a:after {
 .template-film .left_rail .vid_holder iframe {
   width: 100%;
   overflow: hidden;
-  margin: 20px 0 0 0;
+  margin: 0 0 20px 0;
 }
 .template-film .content {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 15px;
 }
 @media (min-width: 992px) {
   .template-film .content {
