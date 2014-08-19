@@ -1,6 +1,6 @@
-[submodule "ten10_theme"]
-	path = content/themes/ten10_theme
-    url = git@github.com:tripl3inf/ten10_theme.git
+#[submodule "ten10_theme"]
+#	path = content/themes/ten10_theme
+#    url = git@github.com:tripl3inf/ten10_theme.git
 
 
 #[submodule "metabox"]
