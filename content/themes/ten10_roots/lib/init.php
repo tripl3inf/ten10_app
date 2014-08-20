@@ -57,8 +57,8 @@ function roots_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Side Rail - Left', 'roots' ),
 		'id'            => 'sidebar-left-rail',
-		'before_widget' => '<section class="widget %1$s %2$s">',
-		'after_widget'  => '</section>',
+		'before_widget' => '<aside class="widget %1$s">',
+		'after_widget'  => '</aside>',
 	) );
 }
 

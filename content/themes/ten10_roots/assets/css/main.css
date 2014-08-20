@@ -6905,6 +6905,47 @@ footer .content nav .social_media li a:after {
   -webkit-column-gap: 20px;
 }
 /*
+*  widget - film page
+*/
+.theme-film-page-widget {
+  border: 1px solid #d3d3d3;
+  padding: 0 15px 10px 15px;
+  margin-bottom: 20px;
+}
+.theme-film-page-widget .headline,
+.theme-film-page-widget .list_headline,
+.theme-film-page-widget ul li {
+  color: #0e6aab;
+  font-weight: bold;
+}
+.theme-film-page-widget .headline {
+  font-size: 26px;
+}
+.theme-film-page-widget .list_headline {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.theme-film-page-widget ul {
+  padding-left: 18px;
+}
+.theme-film-page-widget ul li {
+  list-style: square;
+}
+.theme-film-page-widget .copy {
+  font-size: 12px;
+}
+.theme-film-page-widget .btn_wrap {
+  text-align: center;
+  margin: 10px 0;
+}
+.theme-film-page-widget .btn_wrap button {
+  font-size: 16px;
+  padding: 4px 16px;
+}
+.theme-film-page-widget .btn_wrap button i {
+  padding-right: 3px;
+}
+/*
 *  Template - Risk Tolerance
 */
 .template-risk .featured {

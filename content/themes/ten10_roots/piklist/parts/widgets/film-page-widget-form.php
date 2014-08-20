@@ -62,12 +62,12 @@ piklist('field', array(
 		'multiple'
 	),
 	'choices' => array(
-		'Secular Films' => 'Option 1',
-		'Faith-based Films' => 'Option 2',
-		'TV Dev & Prod' => 'Optiibon 3'
+	'1' => 'Secular Films',
+	'2' => 'Faith-based Films',
+	'3' => 'TV Dev & Prod',
 	)
 ));
 
 
 // END widget
->
+?>
