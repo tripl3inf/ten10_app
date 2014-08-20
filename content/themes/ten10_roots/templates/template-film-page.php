@@ -7,10 +7,9 @@ if ( ! empty( $post ) ) {
 //    $slider_imgs = get_post_meta(get_the_ID(), '_cmb_slider_home', true);
 	$featured_img_full = get_post_meta( $post->ID, '_cmb_featured_img_full', true );
 	$url               = get_post_meta( $post->ID, '_cmb_video1_embed', true );
-	$url2               = get_post_meta( $post->ID, '_cmb_video2_embed', true );
+	$url2              = get_post_meta( $post->ID, '_cmb_video2_embed', true );
 
 //	$url = esc_html( cmb_get_option( 'cmb_options', 'video1_embed' ) );
-
 }
 ?>
 
@@ -29,6 +28,13 @@ if ( ! empty( $post ) ) {
 			<div class="vid_holder">
 				<?php echo wp_oembed_get( $url2 , array('width'=>350)); ?>
 			</div>
+
+
+			<?php
+			dynamic_sidebar('sidebar-left-rail'); ?>
+
+
+
 		</div>
 
 		<div class="content">

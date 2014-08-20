@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "269080e778a7ef02ab2f9b664827ac8a",
+    "hash": "f174ac96470b3cb42bda54c293305530",
     "packages": [
         {
             "name": "composer/installers",
@@ -185,16 +185,39 @@
             "homepage": "http://wordpress.org/plugins/clean-and-simple-contact-form-by-meg-nicholas/"
         },
         {
-            "name": "wpackagist-plugin/wp-migrate-db",
-            "version": "0.5",
+            "name": "wpackagist-plugin/piklist",
+            "version": "0.9.4.11",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/wp-migrate-db/",
-                "reference": "tags/0.5"
+                "url": "http://plugins.svn.wordpress.org/piklist/",
+                "reference": "tags/0.9.4.11"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/wp-migrate-db.0.5.zip",
+                "url": "http://downloads.wordpress.org/plugin/piklist.0.9.4.11.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/piklist": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/piklist/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-migrate-db",
+            "version": "0.6",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wp-migrate-db/",
+                "reference": "tags/0.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/wp-migrate-db.0.6.zip",
                 "reference": null,
                 "shasum": null
             },

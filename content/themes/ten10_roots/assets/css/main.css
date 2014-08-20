@@ -6229,6 +6229,15 @@ footer .content:after {
   height: 20px;
   width: 20px;
 }
+#wpadminbar {
+  bottom: 0 !important;
+  top: unset !important;
+}
+#wpadminbar .ab-top-secondary .menupop .ab-sub-wrapper {
+  position: relative !important;
+  top: -130px !important;
+  right: -25px;
+}
 /*
 *  MIXINS
 */
