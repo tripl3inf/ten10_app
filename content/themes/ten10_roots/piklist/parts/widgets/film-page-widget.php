@@ -26,7 +26,7 @@ foreach ( $list as $item ) {
 </ul>
 
 <div class="btn_wrap">
-	<button type="button" class="btn btn-primary"><i class="fa fa-caret-right"></i><?php echo $headline; ?></button>
+	<a class="btn btn-primary" href="<?php echo $link; ?>"><i class="fa fa-caret-right"></i>Investment Opportunities</a>
 </div>
 
 <?php echo $after_widget; ?>

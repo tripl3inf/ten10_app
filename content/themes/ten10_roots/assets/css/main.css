@@ -6938,11 +6938,11 @@ footer .content nav .social_media li a:after {
   text-align: center;
   margin: 10px 0;
 }
-.theme-film-page-widget .btn_wrap button {
+.theme-film-page-widget .btn_wrap a {
   font-size: 16px;
   padding: 4px 16px;
 }
-.theme-film-page-widget .btn_wrap button i {
+.theme-film-page-widget .btn_wrap a i {
   padding-right: 3px;
 }
 /*
