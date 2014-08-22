@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f174ac96470b3cb42bda54c293305530",
+    "hash": "3477035e71755ddf85446bd6a0b5c671",
     "packages": [
         {
             "name": "composer/installers",
@@ -206,6 +206,29 @@
             },
             "type": "wordpress-plugin",
             "homepage": "http://wordpress.org/plugins/piklist/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-helpers",
+            "version": "1.5.7",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wp-helpers/",
+                "reference": "tags/1.5.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/wp-helpers.1.5.7.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/wp-helpers": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/wp-helpers/"
         },
         {
             "name": "wpackagist-plugin/wp-migrate-db",

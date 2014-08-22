@@ -20,6 +20,8 @@ module.exports = function (grunt) {
                     'assets/vendor/bootstrap/js/tab.js',
                     'assets/vendor/bootstrap/js/affix.js',
                     'assets/vendor/rangeslider.js/dist/rangeslider.js',
+                    'assets/vendor/svg.js/dist/svg.js',
+                    'assets/vendor/svg.filter.js/svg.filter.js',
                     'assets/js/plugins/*.js',
                     'assets/js/_*.js'
                 ]
