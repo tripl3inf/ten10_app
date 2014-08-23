@@ -1,3 +1,13 @@
+// Media queries
+@screen-xss-max: 480px;
+@xss: ~'(max-width: @{screen-xss-max})';
+@xs: ~'(min-width: @{screen-xs-max}) and (max-width: @{screen-xs-max})';
+@sm: ~'(min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})';
+@md: ~'(min-width: @{screen-md-min}) and (max-width: @{screen-md-max})';
+@lg: ~'(min-width: @{screen-lg-min})';
+//You then call it without brackets such as:  //@media @xs { ... }
+
+
 //Brand colors
 // -------------------------
 @gray-darker:            lighten(#000, 13.5%); // #222

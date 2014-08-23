@@ -12,10 +12,10 @@ header.wrap {
       height: 5em;
       margin-bottom: 0.5em;
       /* Extra Small */
-      @media (max-width: 767px) {
+      @media @md  {
         height: unset;
       }
-      @media (min-width: 768px) and (max-width: 991px) {
+      @media @lg {
         height: 4em;
         margin-bottom: 1em;
       }
@@ -81,7 +81,7 @@ header.wrap {
             margin: 0;
             font-size: 1.1em;
             width: 75%;
-            
+
             /* Extra Small */
             @media (max-width: 767px) {
               font-size: 100%;

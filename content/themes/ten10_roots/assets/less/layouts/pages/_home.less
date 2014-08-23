@@ -1,23 +1,170 @@
-.slider_home {
+/*
+* Home slider/gallery widget
+*/
+.widget_home {
+  .make-row();
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 
+  .carousel {
+    .make-md-column(8);
+    padding: 0;
+    @media(max-width:767px){
+      border-bottom: 2px solid #fff;
+    }
+    /* Medium */
+    @media (max-width: 1199px) {
+      max-height: 288px;
+    }
 
-  .slider_container {
-    padding-right: 0;
-    height: 355px;
-  }
+    /* Large */
+    @media (min-width: 1200px) {
+      max-height: 25em;
+    }
+    .carousel-control {
+      background: none;
+    }
 
-  .feat_img_container {
-    padding-left: 0;
+    .carousel-inner {
+      overflow: hidden;
+      border-left: 2px solid #fff;
+      border-right: 2px solid #fff;
+      // max-height: inherit;
 
-    img {
-      width: 100%;
+      //      @media (min-width: 768px) and (max-width: 991px) {
+      //        border-bottom: 2px solid #fff;
+      //      }
+      img {
+        //  height: 350px;
+        height: 100%;
+        width: 100%;
+      }
 
+      .slider_desc {
+        text-align: left;
+        position: absolute;
+        bottom: 30px;
+        width: 60%;
+        left: 40%;
+
+        padding: 0 20px;
+
+        .title {
+          font-size: 32px;
+          text-shadow: 0 0 10px #999;
+        }
+        .caption {
+          font-size: 16px;
+        }
+      }
     }
   }
 
+  .feat_img_wrap {
+    .make-sm-column(12);
+    .make-md-column(4);
+    border-right: 2px solid #fff;
+
+    @media (min-width: 0) and (max-width: 991px) {
+      border-left: 2px solid #fff;
+    }
+    border-right: 2px solid #fff;
+
+    padding: 0;
+
+    > div {
+      /* Small */
+      @media (min-width: 0) and (max-width: 991px) {
+        width: 50%;
+        float: left;
+      }
+      &:first-child {
+        @media (max-width: 991px) {
+          border-right: 2px solid #fff;
+        }
+      }
+      img {
+        &:first-child {
+          /* Medium */
+          @media (min-width: 992px) {
+            //border-bottom: 2px solid #fff;
+          }
+        }
+      }
+    }
+  }
 
 }
 
 
 
 
+
+/*
+*  Featured Content Menu
+*/
+.menu_featured {
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-top:  2px solid #fff;
+
+  background: #0e6aab;
+  padding: 15px 0 25px 0;
+  margin: 0;
+
+  h4 {
+    .make-md-column(12);
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px
+  }
+
+  ul.menu-film-menu {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+
+   > li {
+     .make-md-column(4);
+     padding: 0 20px 0;
+     text-align: center;
+     list-style: none;
+     display: inline-block;
+
+         a {
+           display: inline-block;
+           color: #000;
+           text-align: center;
+           height: 200px;
+           //width: 100%;
+           font-size: 24px;
+           font-weight: bold;
+           background: url("../img/film_strip_BG.jpg") transparent no-repeat center;
+           border: 2px solid #fff;
+           padding-top: 54px;
+           line-height: 26px;
+         }
+
+         a:before {
+           content: 'select';
+           display: inline-block;
+           font-size: 18px;
+           font-weight: normal;
+           //width: 100%;
+           position: relative;
+         }
+
+   }
+  }
+
+//  ul > li:first-child {
+//    margin-right: -10px;
+//    margin-left: 10px;
+//  }
+//
+//  ul > li:last-child {
+//    margin-right: 10px;
+//    margin-left: -10px;
+//  }
+}
