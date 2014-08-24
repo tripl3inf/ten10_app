@@ -77,8 +77,8 @@ if (!empty($post)) {
 
     <section class="menu_featured">
 
-	    <h4>TEN10 Entertainment - A Global Film & Television Fund - Leaders in Customizing
-                Entertainment Portfolios - Offers Three Divisions of Investment</h4>
+	    <h5>TEN10 Entertainment - A Global Film & Television Fund - Leaders in Customizing
+                Entertainment Portfolios - Offers Three Divisions of Investment</h5>
 
 	    <?php
 	    if (has_nav_menu('film_pages_navigation')) :

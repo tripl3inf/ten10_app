@@ -13,5 +13,11 @@ var svg = SVG('svg');
 //image.x(0);
 
 $('.mobile-btn').click( function() {
-  $('#menu-primary-navigation').slideToggle("slow");
+  //$('#menu-primary-navigation').slideToggle("slow");
 });
+
+
+
+
+
+

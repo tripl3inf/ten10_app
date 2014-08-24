@@ -1,9 +1,16 @@
 // Media queries
-@screen-xss-max: 480px;
-@xss: ~'(max-width: @{screen-xss-max})';
-@xs: ~'(min-width: @{screen-xs-max}) and (max-width: @{screen-xs-max})';
-@sm: ~'(min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})';
-@md: ~'(min-width: @{screen-md-min}) and (max-width: @{screen-md-max})';
+@screen-xxs-max: 480px;
+@xxs: ~'(max-width: @{screen-xxs-max})';
+
+//@xs: ~'(min-width: @{screen-xs-max}) and (max-width: @{screen-xs-max})';
+//@sm: ~'(min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})';
+//@md: ~'(min-width: @{screen-md-min}) and (max-width: @{screen-md-max})';
+//@lg: ~'(min-width: @{screen-lg-min})';
+
+
+@xs: ~'(min-width: @{screen-xs-max}) and (max-width: @{screen-lg-min})';
+@sm: ~'(min-width: @{screen-sm-min}) and (max-width: @{screen-lg-min})';
+@md: ~'(min-width: @{screen-md-min}) and (max-width: @{screen-lg-min})';
 @lg: ~'(min-width: @{screen-lg-min})';
 //You then call it without brackets such as:  //@media @xs { ... }
 
@@ -13,7 +20,7 @@
 @gray-darker:            lighten(#000, 13.5%); // #222
 @gray-dark:              lighten(#000, 20%);   // #333
 @gray:                   lighten(#000, 33.5%); // #555
-@gray-light:             lighten(#000, 82.7%); // #777
+@gray-light:             lighten(#000, 82.7%); // #777}
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 
 @brand-primary:         #0E6AAB;
@@ -49,32 +56,7 @@
 //@navbar-default-link-active-color: transparent;
 
 
-//@screen-xs:                  480px;
-////** Deprecated `@screen-xs-min` as of v3.2.0
-//@screen-xs-min:              @screen-xs;
-////** Deprecated `@screen-phone` as of v3.0.1
-//@screen-phone:               @screen-xs-min;
 
-// Small screen / tablet
-//** Deprecated `@screen-sm` as of v3.0.1
-//@screen-sm:                  480px;
-//@screen-sm-min:              @screen-sm;
-//** Deprecated `@screen-tablet` as of v3.0.1
-//@screen-tablet:              @screen-sm-min;
-
-// Medium screen / desktop
-//** Deprecated `@screen-md` as of v3.0.1
-//@screen-md:                  480px;
-//@screen-md-min:              @screen-md;
-//** Deprecated `@screen-desktop` as of v3.0.1
-//@screen-desktop:             @screen-md-min;
-
-// Large screen / wide desktop
-//** Deprecated `@screen-lg` as of v3.0.1
-//@screen-lg:                  480px;
-//@screen-lg-min:              @screen-lg;
-//** Deprecated `@screen-lg-desktop` as of v3.0.1
-//@screen-lg-desktop:          @screen-lg-min;
 
 //@screen-xs:                  1px;
 //@screen-xs-min:              @screen-xs;
