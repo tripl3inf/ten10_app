@@ -11441,9 +11441,7 @@ var UTIL = {
 $(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.
-;
-
-function mobile_nav_btn() {
+;function mobile_nav_btn() {
   var mobile_open_BTN = $('#mobile_open_BTN');
   var mobile_close_BTN = $('#mobile_close_BTN');
   var mBtn_TL = new TimelineLite();
@@ -11453,12 +11451,16 @@ function mobile_nav_btn() {
     source: '#nav-main',
     side: 'right',
     onOpen: function () {
-      mBtn_TL.to(mobile_open_BTN, 0.5, {autoAlpha: 0});
-      mBtn_TL.to(mobile_close_BTN, 0.5, {autoAlpha: 1});
+      function close_btn() {
+        mBtn_TL.to(mobile_close_BTN, 0.5, {autoAlpha: 1});
+      }
+      mBtn_TL.to(mobile_open_BTN, 0.5, {autoAlpha: 0, onComplete:close_btn});
     },
     onClose: function () {
-      mBtn_TL.to(mobile_close_BTN, 0.5, {autoAlpha: 0});
-      mBtn_TL.to(mobile_open_BTN, 0.5, {autoAlpha: 1});
+      function open_btn() {
+        mBtn_TL.to(mobile_open_BTN, 0.5, {autoAlpha: 1});
+      }
+      mBtn_TL.to(mobile_close_BTN, 0.5, {autoAlpha: 0, onComplete:open_btn});
     }
   });
 
@@ -11473,7 +11475,7 @@ function mobile_nav_btn() {
     swipeRight: function (event, distance, duration, fingerCount, fingerData) {
       $.sidr('close', 'sidr-main');
     },
-    threshold: 0,
+    threshold: 65,
     fingers: 'all'
   });
 }

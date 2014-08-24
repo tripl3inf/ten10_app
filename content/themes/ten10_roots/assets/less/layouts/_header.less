@@ -114,21 +114,20 @@ header {
 
         .mobile_BTN {
           position: absolute;
+          display: none;
           right: 0;
           top: 3px;
           font-size: 1.5em;
           color: #fff;
           z-index: 0;
-          @media @md {
-            display: none;
-          }
-          @media @lg {
-            display: none;
-          }
         }
 
         #mobile_open_BTN {
           z-index: 9;
+        }
+
+        #mobile_close_BTN {
+          //opacity: 0
         }
 
         > ul {
@@ -173,6 +172,7 @@ header {
               }
               @media @lg {
                 font-size: 1em;
+                padding: 0 1em .5em .5em;
 
               }
               &:focus,

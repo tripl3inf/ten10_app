@@ -56,38 +56,41 @@
       <div class="mod_featured">
         <div class="content">
           <p>Invest in a Dessert Wind Studios Production</p>
+
           <div class="img"></div>
         </div>
       </div>
     </div>
   </div>
 
-   <div class="nav-wrap">
-      <nav>
-        <div id="nav-main" class="navbar navbar-static-top" role="navigation">
+  <div class="nav-wrap">
+    <nav>
+      <div id="nav-main" class="navbar navbar-static-top" role="navigation">
 
-          <i id="mobile_open_BTN" class="mobile_BTN fa fa-bars"></i>
-          <i id="mobile_close_BTN" class="mobile_BTN fa fa-times-circle-o" style="visibility: hidden"></i>
+        <i id="mobile_open_BTN" class="mobile_BTN fa fa-bars"></i>
+        <i id="mobile_close_BTN" class="mobile_BTN fa fa-times-circle-o" style="visibility: hidden"></i>
 
-          <?php
-          if ( has_nav_menu( 'primary_navigation' ) ) :
-            wp_nav_menu( array(
-              'theme_location' => 'primary_navigation',
-              'menu_class'     => 'col-xs-12 nav navbar-nav'
-            ) );
-          endif;
-          ?>
-        </div>
-      </nav>
-    </div>
+        <?php
+        if ( has_nav_menu( 'primary_navigation' ) ) :
+          wp_nav_menu( array(
+            'theme_location' => 'primary_navigation',
+            'menu_class'     => 'nav navbar-nav'
+          ) );
+        endif;
+        ?>
+      </div>
+    </nav>
+  </div>
 
 
 </header>
-<?php ?>
+<?php if ( wp_is_mobile() ) { ?>
+    <script>
+      window.onload = function () {
+        var mNav_btn = $('.mobile_BTN').show();
+        mobile_nav_btn();
+      }
+    </script>
+<?php } ?>
 
 
-<script>
-  window.onload = function(){
-    mobile_nav_btn();
-  }
-</script>
