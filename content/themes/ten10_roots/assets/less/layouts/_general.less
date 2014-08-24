@@ -2,8 +2,8 @@
 
 body {
   //Content wrapper
+  background: @gray-light;
   .wrap {
-    background: @gray-light;
 
     main {
       section.content-wrap {
@@ -17,11 +17,11 @@ body {
 
         article {
           h3 {
-            margin-top: 10px;
+            //margin-top: 10px;
           }
 
           p {
-            font-size: 12px;
+            //font-size: 12px;
           }
         }
 
@@ -29,36 +29,6 @@ body {
     }
   }
 }
-
-/*
-*  Navbar
-*/
-.navbar {
-  .make-xs-column(12);
-
-
-  .navbar-nav {
-    > li {
-
-      /* Medium */
-      a {
-        @media (min-width: 992px) and (max-width: 1199px) {
-          font-size: 0.8em;
-        }
-      }
-
-    }
-  }
-}
-
-/* Portrait tablets and medium desktops */
-
-
-
-
-
-
-
 
 
 /*
@@ -77,7 +47,6 @@ body {
 
   }
 }
-
 
 /*
 *  Range Slider

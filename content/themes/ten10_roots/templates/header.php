@@ -1,42 +1,22 @@
-<!--<header id="mainBanner" class="container navbar navbar-default navbar-static-bottom" role="banner">-->
-<header class="wrap">
+<script type="text/javascript" charset="utf-8">
+  less.env = "development";
+  less.watch();
+</script>
 
-
-  <nav class="mobile">
-
-         <?php
-        if ( has_nav_menu( 'primary_navigation' ) ) :
-          wp_nav_menu( array( 'theme_location' => 'primary_navigation', 'menu_class' => 'list-unstyled' ) );
-        endif;
-        ?>
-
-
-
-<!--    <ul class="list-unstyled main-menu">-->
-<!---->
-<!--      <!--Include your navigation here-->-->
-<!--      <li class="text-right"><a href="#" id="nav-close">X</a></li>-->
-<!--      <li><a href="#">Menu One <span class="icon"></span></a></li>-->
-<!--      <li><a href="#">Menu Two <span class="icon"></span></a></li>-->
-<!--      <li><a href="#">Menu Three <span class="icon"></span></a></li>-->
-<!--      <li><a href="#">Dropdown</a>-->
-<!--        <ul class="list-unstyled">-->
-<!--          <li class="sub-nav"><a href="#">Sub Menu One <span class="icon"></span></a></li>-->
-<!--          <li class="sub-nav"><a href="#">Sub Menu Two <span class="icon"></span></a></li>-->
-<!--          <li class="sub-nav"><a href="#">Sub Menu Three <span class="icon"></span></a></li>-->
-<!--          <li class="sub-nav"><a href="#">Sub Menu Four <span class="icon"></span></a></li>-->
-<!--          <li class="sub-nav"><a href="#">Sub Menu Five <span class="icon"></span></a></li>-->
-<!--        </ul>-->
-<!--      </li>-->
-<!--      <li><a href="#">Menu Four <span class="icon"></span></a></li>-->
-<!--      <li><a href="#">Menu Five <span class="icon"></span></a></li>-->
-<!--    </ul>-->
+<?php
+if ( wp_is_mobile() ) {
+  ?>
+  <nav id="sidr">
+    <?php
+    wp_nav_menu( array( 'menu_class' => 'nav-mobile list-unstyled' ) );
+    ?>
   </nav>
+<?php
+}
+?>
 
-
-
-
-  <div class="main">
+<header>
+  <div class="banner-wrap">
     <div class="banner">
       <div class="logo">
 
@@ -98,21 +78,24 @@
         </div>
       </div>
     </div>
-
   </div>
 
-  <nav>
-    <div class="nav-wrap">
-      <div class="navbar navbar-static-top" role="navigation">
-        <i id="nav-expander" class="mobile-btn fa fa-bars"></i>
-        <?php
-        if ( has_nav_menu( 'primary_navigation' ) ) :
-          wp_nav_menu( array( 'theme_location' => 'primary_navigation', 'menu_class' => 'col-xs-12 nav navbar-nav' ) );
-        endif;
-        ?>
-      </div>
+   <div class="nav-wrap">
+      <nav>
+        <div class="navbar navbar-static-top" role="navigation">
+          <i id="mobile_BTN" class="mobile-btn fa fa-bars"></i>
+          <?php
+          if ( has_nav_menu( 'primary_navigation' ) ) :
+            wp_nav_menu( array(
+              'theme_location' => 'primary_navigation',
+              'menu_class'     => 'col-xs-12 nav navbar-nav'
+            ) );
+          endif;
+          ?>
+        </div>
+      </nav>
     </div>
-  </nav>
+
 </header>
 <?php
 
@@ -121,34 +104,33 @@
 
 <script>
   $(document).ready(function () {
+    $('#mobile_BTN').sidr();
 
     //Navigation Menu Slider
-    $('#nav-expander').on('click', function (e) {
-      e.preventDefault();
-      $('body').toggleClass('nav-expanded');
-    });
-    $('#nav-close').on('click', function (e) {
-      e.preventDefault();
-      $('body').removeClass('nav-expanded');
-    });
+//    $('#nav-expander').on('click', function (e) {
+//      e.preventDefault();
+//      $('body').toggleClass('nav-expanded');
+//    });
+//    $('#nav-close').on('click', function (e) {
+//      e.preventDefault();
+//      $('body').removeClass('nav-expanded');
+//    });
 
-
-    // Initialize navgoco with default options
-    $(".main-menu").navgoco({
-      caret: '<span class="caret"></span>',
-      accordion: false,
-      openClass: 'open',
-      save: true,
-      cookie: {
-        name: 'navgoco',
-        expires: false,
-        path: '/'
-      },
-      slide: {
-        duration: 300,
-        easing: 'swing'
-      }
-    });
+//    $(".nav-mobile").navgoco({
+//      caret: '<span class="caret"></span>',
+//      accordion: false,
+//      openClass: 'open',
+//      save: true,
+//      cookie: {
+//        name: 'navgoco',
+//        expires: false,
+//        path: '/'
+//      },
+//      slide: {
+//        duration: 300,
+//        easing: 'swing'
+//      }
+//    });
 
 
   });

@@ -6,7 +6,7 @@ module.exports = function (grunt) {
     data: { //data passed into config.  Can use with <%= test %>
       src: {
         bootstrap: [
-//                'assets/vendor/bootstrap/js/*.js',
+//        'assets/vendor/bootstrap/js/*.js',
           'assets/vendor/bootstrap/js/transition.js',
           'assets/vendor/bootstrap/js/alert.js',
           'assets/vendor/bootstrap/js/button.js',
@@ -20,7 +20,7 @@ module.exports = function (grunt) {
           'assets/vendor/bootstrap/js/tab.js',
           'assets/vendor/bootstrap/js/affix.js',
           'assets/vendor/rangeslider.js/dist/rangeslider.js',
-          'assets/vendor/navgoco/src/jquery.navgoco.js',
+          'assets/vendor/sidr/jquery.sidr.min.js',
           'assets/js/plugins/*.js',
           'assets/js/_*.js'
         ]

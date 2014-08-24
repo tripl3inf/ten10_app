@@ -25,11 +25,14 @@ function roots_setup() {
 	// http://codex.wordpress.org/Post_Formats
 	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio' ) );
 
-	// Tell the TinyMCE editor to use a custom stylesheet
-	add_editor_style( '/assets/css/editor-style.css' );
-}
+  // Add HTML5 markup for captions
+  // http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
+  add_theme_support('html5', array('caption'));
 
-add_action( 'after_setup_theme', 'roots_setup' );
+  // Tell the TinyMCE editor to use a custom stylesheet
+  add_editor_style('/assets/css/editor-style.css');
+}
+add_action('after_setup_theme', 'roots_setup');
 
 /**
  * Register sidebars
@@ -61,15 +64,4 @@ function roots_widgets_init() {
 		'after_widget'  => '</aside>',
 	) );
 }
-
-add_action( 'widgets_init', 'roots_widgets_init' );
-
-
-
-
-
-
-
-
-
-
+add_action('widgets_init', 'roots_widgets_init');

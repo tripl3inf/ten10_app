@@ -8,8 +8,8 @@ add_theme_support('soil-nice-search');      // Enable /?s= to /search/ redirect 
 add_theme_support('bootstrap-gallery');     // Enable Bootstrap's thumbnails component on [gallery]
 add_theme_support('jquery-cdn');            // Enable to load jQuery from the Google CDN
 
-add_image_size( 'featured_img_split', 600, 665, true );
-add_image_size( 'img_gallery_home', 785, 355, true ); // Permalink thumbnail size
+//add_image_size( 'featured_img_split', 600, 665, true );
+//add_image_size( 'img_gallery_home', 785, 355, true ); // Permalink thumbnail size
 
 
 
