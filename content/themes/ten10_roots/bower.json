@@ -21,10 +21,7 @@
     "rangeslider.js": "~0.3.2",
     "greensock": "~1.13.1",
     "jquery-colorbox": "~1.5.13",
-    "svg.js": "~1.0.0-rc.9",
-    "svg.filter": "https://github.com/wout/svg.filter.js",
-    "svg.filter.js": "git@github.com:wout/svg.filter.js.git",
-    "navgoco": "git@github.com:tefra/navgoco.git#~0.2.1",
-    "sidr": "~1.2.1"
+    "sidr": "~1.2.1",
+    "jquery-touchswipe": "~1.6.6"
   }
 }

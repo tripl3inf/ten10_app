@@ -33,6 +33,6 @@ $(document).ready(function () {
         });
     }
 
-    overlay_tool();
+   // overlay_tool();
 
 });

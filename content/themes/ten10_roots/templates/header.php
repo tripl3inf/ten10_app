@@ -1,20 +1,3 @@
-<script type="text/javascript" charset="utf-8">
-  less.env = "development";
-  less.watch();
-</script>
-
-<?php
-if ( wp_is_mobile() ) {
-  ?>
-  <nav id="sidr">
-    <?php
-    wp_nav_menu( array( 'menu_class' => 'nav-mobile list-unstyled' ) );
-    ?>
-  </nav>
-<?php
-}
-?>
-
 <header>
   <div class="banner-wrap">
     <div class="banner">
@@ -73,7 +56,6 @@ if ( wp_is_mobile() ) {
       <div class="mod_featured">
         <div class="content">
           <p>Invest in a Dessert Wind Studios Production</p>
-
           <div class="img"></div>
         </div>
       </div>
@@ -82,8 +64,11 @@ if ( wp_is_mobile() ) {
 
    <div class="nav-wrap">
       <nav>
-        <div class="navbar navbar-static-top" role="navigation">
-          <i id="mobile_BTN" class="mobile-btn fa fa-bars"></i>
+        <div id="nav-main" class="navbar navbar-static-top" role="navigation">
+
+          <i id="mobile_open_BTN" class="mobile_BTN fa fa-bars"></i>
+          <i id="mobile_close_BTN" class="mobile_BTN fa fa-times-circle-o" style="visibility: hidden"></i>
+
           <?php
           if ( has_nav_menu( 'primary_navigation' ) ) :
             wp_nav_menu( array(
@@ -96,42 +81,13 @@ if ( wp_is_mobile() ) {
       </nav>
     </div>
 
-</header>
-<?php
 
-?>
+</header>
+<?php ?>
 
 
 <script>
-  $(document).ready(function () {
-    $('#mobile_BTN').sidr();
-
-    //Navigation Menu Slider
-//    $('#nav-expander').on('click', function (e) {
-//      e.preventDefault();
-//      $('body').toggleClass('nav-expanded');
-//    });
-//    $('#nav-close').on('click', function (e) {
-//      e.preventDefault();
-//      $('body').removeClass('nav-expanded');
-//    });
-
-//    $(".nav-mobile").navgoco({
-//      caret: '<span class="caret"></span>',
-//      accordion: false,
-//      openClass: 'open',
-//      save: true,
-//      cookie: {
-//        name: 'navgoco',
-//        expires: false,
-//        path: '/'
-//      },
-//      slide: {
-//        duration: 300,
-//        easing: 'swing'
-//      }
-//    });
-
-
-  });
+  window.onload = function(){
+    mobile_nav_btn();
+  }
 </script>

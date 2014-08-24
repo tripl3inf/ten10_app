@@ -33,6 +33,7 @@ header {
         }
         svg {
           width: 100%;
+          height: 100%;
         }
       }
 
@@ -99,7 +100,7 @@ header {
       position: absolute;
       top: 0;
       height: 2em;
-      background: #999;
+      background: #054069;
       width: 100%;
     }
     nav {
@@ -109,14 +110,29 @@ header {
         margin: 0;
         padding: 0;
         bottom: 0;
-        #mobile_BTN {
+
+
+        .mobile_BTN {
+          position: absolute;
+          right: 0;
+          top: 3px;
+          font-size: 1.5em;
+          color: #fff;
+          z-index: 0;
           @media @md {
+            display: none;
+          }
+          @media @lg {
             display: none;
           }
         }
 
+        #mobile_open_BTN {
+          z-index: 9;
+        }
+
         > ul {
-          .row();
+          .make-row();
           .make-xs-column(12);
           li {
             &:last-child > a {
@@ -148,10 +164,17 @@ header {
               }
             }
             > a {
-              padding: 0 10px 5px 10px;
-              //            @media (min-width: 992px) and (max-width: 1199px) {
-              //            padding: 0 9px 5px 10px;
-              //            }
+              padding: 0 1em .5em .5em;
+              font-size: 1em;
+
+              @media @md {
+                font-size: .88em;
+                padding: 0 .8em .5em .4em;
+              }
+              @media @lg {
+                font-size: 1em;
+
+              }
               &:focus,
               &:hover {
                 color: lighten(@brand-primary, 30%);

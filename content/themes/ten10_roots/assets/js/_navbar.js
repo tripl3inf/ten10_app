@@ -1,20 +1,37 @@
-var svg = SVG('svg');
-//var ten10 = svg.ten10;
-//var logo_ten10 = draw.logo_ten10;
-//var circle = svg.circle(100).fill('#fff');
-//var image = svg.image('/assets/img/logo_lense.png', 50, 50);
+function mobile_nav_btn() {
+  var mobile_open_BTN = $('#mobile_open_BTN');
+  var mobile_close_BTN = $('#mobile_close_BTN');
+  var mBtn_TL = new TimelineLite();
 
-//var blur = document.getElementById("f1"); // id of filter type inside '<filter>' tag
-//blur.setAttribute( "stdDeviation", "10" );
-//svg.attr( 'filter', 'url(#f1)' ); // id of parent filter element!
+  mobile_open_BTN.sidr({
+    name: 'sidr-main',
+    source: '#nav-main',
+    side: 'right',
+    onOpen: function () {
+      mBtn_TL.to(mobile_open_BTN, 0.5, {autoAlpha: 0});
+      mBtn_TL.to(mobile_close_BTN, 0.5, {autoAlpha: 1});
+    },
+    onClose: function () {
+      mBtn_TL.to(mobile_close_BTN, 0.5, {autoAlpha: 0});
+      mBtn_TL.to(mobile_open_BTN, 0.5, {autoAlpha: 1});
+    }
+  });
 
-//var rect = svg.rect(100, 100);
-//image.y(0);
-//image.x(0);
+  mobile_close_BTN.click(function () {
+    $.sidr('close', 'sidr-main');
+  });
 
-$('.mobile-btn').click( function() {
-  //$('#menu-primary-navigation').slideToggle("slow");
-});
+  $(window).swipe({
+    swipeLeft: function (event, distance, duration, fingerCount, fingerData) {
+      $.sidr('open', 'sidr-main');
+    },
+    swipeRight: function (event, distance, duration, fingerCount, fingerData) {
+      $.sidr('close', 'sidr-main');
+    },
+    threshold: 0,
+    fingers: 'all'
+  });
+}
 
 
 
