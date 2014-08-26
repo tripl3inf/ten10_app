@@ -29,3 +29,6 @@ function cpt_staff( $post_types ) {
 
   return $post_types;
 }
+
+add_image_size( 'archive-staff-thumb', 82, 95 );
+

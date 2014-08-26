@@ -3,39 +3,52 @@
 Template Name: Staff-Members
 */
 global $post;
-if(!empty($post)) {
-    $img = get_post_meta( $post->ID, '_cmb_img_split', true );
+if ( ! empty( $post ) ) {
+  $img = get_post_meta( $post->ID, '_cmb_img_split', true );
 
-    }
+}
 ?>
 
 
 <?php //query_posts( 'post_type=cpt_staff'); ?>
 
-<section class="content-wrap template-split">
-<?php while (have_posts()) : the_post(); ?>
+<section class="content-wrap archive-staff">
+  <?php while ( have_posts() ) : the_post();
+    $args = array( 'post_type' => 'cpt_staff', 'posts_per_page' => 10 );
+    $loop = new WP_Query( $args );
+    ?>
     <div class="featured">
-        <img src="<?php echo $img; ?>" class="img-responsive">
+      <img src="<?php echo $img; ?>" class="img-responsive">
     </div>
 
     <div class="content">
-        <article class="entry-content">
-          <?php //the_content(); ?>
-
-<?php
-          $args = array( 'post_type' => 'cpt_staff', 'posts_per_page' => 10 );
-          $loop = new WP_Query( $args );
-          while ( $loop->have_posts() ) : $loop->the_post();
-          the_title(); ?>
-          <a href="<?php echo the_permalink(); ?>">Link</a>
+      <article class="entry-content">
+        <ul class="staff_list">
           <?php
+          while ( $loop->have_posts() ) :
+            $loop->the_post();
+            ?>
+            <li class="staff_info">
+              <div class="thumb_wrap">
+                <?php the_post_thumbnail( 'archive-staff-thumb' ); ?>
+              </div>
+              <ul>
+                <li>
+                  <?php the_title(); ?>
+                </li>
+                <li>
+                  <a href="<?php echo the_permalink(); ?>">more about&nbsp;<?php the_title() ?></a>
+                </li>
+              </ul>
+            </li>
+            <?php
             the_excerpt();
           endwhile;
-?>
-
-        </article>
+          ?>
+        </ul>
+      </article>
     </div>
-<?php endwhile; ?>
+  <?php endwhile; ?>
 </section>
 
 

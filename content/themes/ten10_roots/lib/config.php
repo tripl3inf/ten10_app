@@ -11,6 +11,20 @@ add_theme_support( 'jquery-cdn' );            // Enable to load jQuery from the 
 //add_image_size( 'featured_img_split', 600, 665, true );
 //add_image_size( 'img_gallery_home', 785, 355, true ); // Permalink thumbnail size
 
+// THUMBNAILS TO ADMIN POST VIEW
+add_filter('manage_posts_columns', 'posts_columns', 5);
+add_action('manage_posts_custom_column', 'posts_custom_columns', 5, 2);
+
+function posts_columns($defaults){
+  $defaults['custom_post_thumbs'] = __('Preview');
+  return $defaults;
+}
+
+function posts_custom_columns($column_name, $id){
+  if($column_name === 'custom_post_thumbs'){
+    echo the_post_thumbnail( 'admin-thumb' );
+  }
+}
 
 /**
  * Configuration values
@@ -110,18 +124,7 @@ if ( ! isset( $content_width ) ) {
 }
 
 
-// remove standard featured img metabox
-function ds_hide_stuff() {
-  global $post_type;
-  //remove_action( 'media_buttons', 'media_buttons' );
-  //remove_meta_box('slugdiv', $post_type, 'normal');
-  remove_meta_box( 'postimagediv', $post_type, 'side' );
 
-  //$ds_hide_postdiv = "<style type=\"text/css\"> #postdiv, #postdivrich { display: none; }</style>";
-  //print($ds_hide_postdiv);
-}
-
-add_action( 'admin_head', 'ds_hide_stuff' );
 
 
 // remove comments tab from admin menubar
@@ -186,6 +189,7 @@ add_filter( 'show_admin_bar', 'hide_admin_bar_from_front_end' );
 
 
 // Bug testing only. Not to be used on a production site!!
+/*
 add_action( 'wp_footer', 'roots_wrap_info' );
 
 function roots_wrap_info() {
@@ -196,6 +200,6 @@ function roots_wrap_info() {
   printf( $format, 'Main', $main );
   printf( $format, 'Base', $template );
 }
-
+*/
 
 

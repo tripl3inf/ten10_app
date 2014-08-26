@@ -7,6 +7,7 @@
         echo get_post_meta($post->ID, 'cpt_staff', true);
         echo get_post_meta($post->ID, 'staff_name', true);
         echo get_post_meta($post->ID, 'staff_position', true);
+      the_post_thumbnail();
       ?>
 
     </header>
