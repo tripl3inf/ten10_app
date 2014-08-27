@@ -1,0 +1,77 @@
+// studio template styles
+
+.archive-projects {
+
+  .slider_full_width {
+    margin: 0 !important;
+    padding: 0;
+    overflow: hidden;
+
+    .carousel {
+      .make-md-column(12);
+      padding: 0;
+
+      .carousel-control {
+        display: table;
+        background: none;
+        box-shadow: none;
+        font-size: 6em;
+        span {
+          display: table-cell;
+          height: 4.5em;
+          vertical-align: middle;
+          text-shadow: 0 0 6px #000;
+        }
+      }
+
+    }
+
+  }
+
+  .content {
+    .make-md-column(12);
+    padding: 20px;
+
+    .project_list {
+      .project_info {
+        position: relative;
+        width: 50%;
+        height: 16em;
+        padding-right: 2em;
+        font-size: .8em;
+        display: inline-block;
+        margin-bottom: 2em;
+        float: left;
+
+        .thumb_wrap {
+          float: left;
+          clear: left;
+          height: 100%;
+          margin-right: 1em;
+          > img {
+            border: 1px solid @gray-darker;
+          }
+        }
+        > ul {
+          .project_title,
+          span {
+            font-weight: bold;
+          }
+          .project_trailer_link {
+            position: absolute;
+            top: 1em;
+            right: 2em;
+          }
+
+
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+

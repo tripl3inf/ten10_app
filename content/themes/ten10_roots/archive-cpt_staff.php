@@ -12,9 +12,9 @@ if ( ! empty( $post ) ) {
 
 <?php //query_posts( 'post_type=cpt_staff'); ?>
 
-<section class="content-wrap archive-staff">
+  <section class="content-wrap archive-staff">
   <?php while ( have_posts() ) : the_post();
-    $args = array( 'post_type' => 'cpt_staff', 'posts_per_page' => 10 );
+    $args = array( 'post_type' => 'cpt_staff', 'posts_per_page' => -1 );
     $loop = new WP_Query( $args );
     ?>
     <div class="featured">
@@ -30,9 +30,7 @@ if ( ! empty( $post ) ) {
             ?>
             <li class="staff_info">
               <div class="thumb_wrap">
-                <?php the_post_thumbnail( 'archive-staff-thumb' );
-                echo get_post_meta($post->ID, 'project_director', true);
-                ?>
+                <?php the_post_thumbnail( 'archive-staff-thumb' ); ?>
               </div>
               <ul>
                 <li>

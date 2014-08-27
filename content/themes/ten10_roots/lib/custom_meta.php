@@ -250,7 +250,7 @@ function custom_metaboxes( $meta_boxes ) {
 		'context' => 'normal',
 		'priority' => 'high',
 		'show_names' => true, // Show field names on the left
-		'show_on' => array( 'key' => 'page-template', 'value' => 'templates/template-slider-full-width.php' ),
+    'show_on' => array( 'key' => 'page-template', 'value' => array('templates/template-slider-full-width.php','archive-cpt_project.php' ) ),
 //        'show_on' => array( 'key' => 'id', 'value' => array( 86 ) ),
 		'fields' => array(
 			array(

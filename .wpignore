@@ -8,6 +8,9 @@ readme.md
 .gitignore
 .gitmodules
 
+db_backups
+
+
 **/node_modules/**
 **vendor/**
 content/mu-plugins/**

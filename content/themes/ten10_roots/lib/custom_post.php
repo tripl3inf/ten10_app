@@ -3,7 +3,7 @@
 
 
 add_image_size( 'archive-staff-thumb', 82, 95 );
-add_image_size( 'archive-project-thumb', 125, 175 );
+add_image_size( 'archive-project-thumb', 122, 170 );
 
 add_filter( 'piklist_post_types', 'custom_post_types' );
 function custom_post_types( $post_types ) {
@@ -36,6 +36,7 @@ function custom_post_types( $post_types ) {
     'cpt_project' => array(
       'labels'        => piklist( 'post_type_labels', 'Projects' ),
       'title'         => __( 'Ten10 Projects' ),
+      'capability_type' => 'post',
       'supports'      => array(
         'title',
         'thumbnail',

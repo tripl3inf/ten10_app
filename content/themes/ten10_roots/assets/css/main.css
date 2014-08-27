@@ -6347,6 +6347,18 @@ body .wrap main section.content-wrap .featured {
   border-radius: 50%;
   border: none;
 }
+.carousel-control {
+  display: table;
+  background: none;
+  box-shadow: none;
+  font-size: 6em;
+}
+.carousel-control span {
+  display: table-cell;
+  height: 6em;
+  vertical-align: middle;
+  text-shadow: 0 0 6px #000;
+}
 @media (min-width: 0) and (max-width: 991px) {
   header {
     overflow: hidden;
@@ -6732,7 +6744,7 @@ footer .content nav .social_media li a:after {
 .widget_home {
   margin-left: -15px;
   margin-right: -15px;
-  margin: 0;
+  margin: 0 !important;
   padding: 0;
   overflow: hidden;
 }
@@ -7213,7 +7225,7 @@ footer .content nav .social_media li a:after {
   }
 }
 .archive-staff .content .staff_list .staff_info {
-  width: 15em;
+  width: 50%;
   height: 8em;
   padding-bottom: 2em;
 }
@@ -7225,6 +7237,77 @@ footer .content nav .social_media li a:after {
 }
 .archive-staff .content .staff_list .staff_info > ul a {
   color: #0e6aab;
+}
+.archive-projects .slider_full_width {
+  margin: 0 !important;
+  padding: 0;
+  overflow: hidden;
+}
+.archive-projects .slider_full_width .carousel {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .archive-projects .slider_full_width .carousel {
+    float: left;
+    width: 100%;
+  }
+}
+.archive-projects .slider_full_width .carousel .carousel-control {
+  display: table;
+  background: none;
+  box-shadow: none;
+  font-size: 6em;
+}
+.archive-projects .slider_full_width .carousel .carousel-control span {
+  display: table-cell;
+  height: 4.5em;
+  vertical-align: middle;
+  text-shadow: 0 0 6px #000;
+}
+.archive-projects .content {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 20px;
+}
+@media (min-width: 992px) {
+  .archive-projects .content {
+    float: left;
+    width: 100%;
+  }
+}
+.archive-projects .content .project_list .project_info {
+  position: relative;
+  width: 50%;
+  height: 16em;
+  padding-right: 2em;
+  font-size: .8em;
+  display: inline-block;
+  margin-bottom: 2em;
+  float: left;
+}
+.archive-projects .content .project_list .project_info .thumb_wrap {
+  float: left;
+  clear: left;
+  height: 100%;
+  margin-right: 1em;
+}
+.archive-projects .content .project_list .project_info .thumb_wrap > img {
+  border: 1px solid #222222;
+}
+.archive-projects .content .project_list .project_info > ul .project_title,
+.archive-projects .content .project_list .project_info > ul span {
+  font-weight: bold;
+}
+.archive-projects .content .project_list .project_info > ul .project_trailer_link {
+  position: absolute;
+  top: 1em;
+  right: 2em;
 }
 /*!
  *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome
