@@ -16,16 +16,17 @@
         "php": ">=5.3.0",
         "composer/installers": "~1.0",
         "fancyguy/webroot-installer": "1.*",
-        "wpackagist-plugin/wp-migrate-db": "*",
         "wpackagist-plugin/clean-and-simple-contact-form-by-meg-nicholas": "4.3.4",
         "wpackagist-plugin/a-fresher-cache": "*",
         "wpackagist-plugin/piklist": "*",
-        "wpackagist-plugin/wp-helpers": "1.5.*",
         "wpackagist-plugin/wp-slimstat": "3.6.9"
     },
 
     "require-dev" : {
-        "wpackagist-plugin/theme-check": "20131213.1"
+        "wpackagist-plugin/theme-check": "20131213.1",
+        "wpackagist-plugin/wordpress-importer": "*",
+        "wpackagist-plugin/wp-helpers": "1.5.*",
+        "wpackagist-plugin/wp-migrate-db": "*"
     },
 
     "autoload": {

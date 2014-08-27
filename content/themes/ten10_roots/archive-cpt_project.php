@@ -77,7 +77,9 @@ the_post(); ?>
             ?>
             <li class="project_info">
               <div class="thumb_wrap">
-                <?php the_post_thumbnail( 'archive-project-thumb' ); ?>
+                <a href="<?php echo the_permalink(); ?>">
+                  <?php the_post_thumbnail( 'archive-project-thumb' ); ?>
+                </a>
               </div>
 
               <ul>

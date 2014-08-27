@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3477035e71755ddf85446bd6a0b5c671",
+    "hash": "fd12d8b5b89648d29abab8571271172a",
     "packages": [
         {
             "name": "composer/installers",
@@ -208,52 +208,6 @@
             "homepage": "http://wordpress.org/plugins/piklist/"
         },
         {
-            "name": "wpackagist-plugin/wp-helpers",
-            "version": "1.5.7",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/wp-helpers/",
-                "reference": "tags/1.5.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/wp-helpers.1.5.7.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "replace": {
-                "wpackagist/wp-helpers": "self.version"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/wp-helpers/"
-        },
-        {
-            "name": "wpackagist-plugin/wp-migrate-db",
-            "version": "0.6",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/wp-migrate-db/",
-                "reference": "tags/0.6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/wp-migrate-db.0.6.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "replace": {
-                "wpackagist/wp-migrate-db": "self.version"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/wp-migrate-db/"
-        },
-        {
             "name": "wpackagist-plugin/wp-slimstat",
             "version": "3.6.9",
             "source": {
@@ -300,6 +254,75 @@
             },
             "type": "wordpress-plugin",
             "homepage": "http://wordpress.org/plugins/theme-check/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-importer",
+            "version": "0.6.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wordpress-importer/",
+                "reference": "tags/0.6.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/wordpress-importer.0.6.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/wordpress-importer": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/wordpress-importer/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-helpers",
+            "version": "1.5.7",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wp-helpers/",
+                "reference": "tags/1.5.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/wp-helpers.1.5.7.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/wp-helpers": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/wp-helpers/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-migrate-db",
+            "version": "0.6",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wp-migrate-db/",
+                "reference": "tags/0.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/wp-migrate-db.0.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/wp-migrate-db": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/wp-migrate-db/"
         }
     ],
     "aliases": [

@@ -6985,13 +6985,11 @@ footer .content nav .social_media li a:after {
 }
 .template-risk .content .range_slider_wrap .range_ticks {
   list-style: none;
-  padding: 0 0 0 36px;
 }
 .template-risk .content .range_slider_wrap .range_ticks > li {
   display: inline-block;
   color: #0e6aab;
-  padding: 0 56px 0 0;
-  width: 6px;
+  width: 50px;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
@@ -7020,17 +7018,13 @@ footer .content nav .social_media li a:after {
 }
 .template-risk .content .range_slider_wrap .display_box_panels > li .display_boxes > li {
   display: inline-block;
+  position: relative;
+  float: left;
   width: 31.5%;
-  min-height: 300px;
+  min-height: 320px;
   border: 1px solid #d3d3d3;
-  text-align: center;
+  text-align: left;
   padding: 12px;
-}
-.template-risk .content .range_slider_wrap .display_box_panels > li .display_boxes > li:first-child {
-  margin-right: 10px;
-}
-.template-risk .content .range_slider_wrap .display_box_panels > li .display_boxes > li:last-child {
-  margin-left: 10px;
 }
 .template-risk .content .range_slider_wrap .display_box_panels > li .display_boxes > li h5 {
   font-size: 16px;
@@ -7297,7 +7291,7 @@ footer .content nav .social_media li a:after {
   height: 100%;
   margin-right: 1em;
 }
-.archive-projects .content .project_list .project_info .thumb_wrap > img {
+.archive-projects .content .project_list .project_info .thumb_wrap > a {
   border: 1px solid #222222;
 }
 .archive-projects .content .project_list .project_info > ul .project_title,

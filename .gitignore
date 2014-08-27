@@ -52,5 +52,6 @@ content/themes/ten10_roots/vendor**
 content/themes/ten10_roots/assets/vendor** 
 
 
+db_backups/
 
 .buildpath

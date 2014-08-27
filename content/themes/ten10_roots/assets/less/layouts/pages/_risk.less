@@ -22,13 +22,13 @@
 
       .range_ticks {
         list-style: none;
-        padding: 0 0 0 36px;
+        //padding: 0 0 0 36px;
 
         > li {
           display: inline-block;
           color: @brand-primary;
-          padding: 0 56px 0 0;
-          width: 6px;
+          //padding: 0 56px 0 0;
+          width: 50px;
           font-size: 16px;
           font-weight: bold;
           text-align: center;
@@ -75,18 +75,20 @@
 
             > li {
               display: inline-block;
+              position: relative;
+              float: left;
               width: 31.5%;
-              min-height: 300px;
+              min-height: 320px;
               border: 1px solid @gray-light;
-              text-align: center;
+              text-align: left;
               padding: 12px;
 
               &:first-child {
-                margin-right: 10px;
+               // margin-right: 10px;
               }
 
               &:last-child {
-                margin-left: 10px;
+               // margin-left: 10px;
               }
 
               h5 {

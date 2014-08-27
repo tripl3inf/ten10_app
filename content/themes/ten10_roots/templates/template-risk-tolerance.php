@@ -22,7 +22,7 @@ if ( ! empty( $post ) ) {
 			<div class="range_slider_wrap">
 				<ul class="range_ticks"></ul>
 
-				<input id="risk_range_slider" type="range" min="0" max="10" step="1" value="1" data-rangeslider>
+				<input id="risk_range_slider" type="range" min="1" max="10" step="1" value="1" data-rangeslider>
 
 				<ul class="display_box_panels">
 
