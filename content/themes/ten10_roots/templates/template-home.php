@@ -47,10 +47,10 @@ if ( ! empty( $post ) ) {
 
       <!-- Controls -->
       <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="fa fa-angle-left"></span>
       </a>
       <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="fa fa-angle-right"></span>
       </a>
     </div>
 

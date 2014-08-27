@@ -24,7 +24,10 @@ $roots_includes = array(
 	'lib/extras.php',          // Custom functions
 	'lib/custom_meta.php',
   'lib/custom_post.php',
-	'lib/info_widget.php'
+  'lib/custom_tax.php',
+	'lib/info_widget.php',
+
+  //'lib/DEV_ONLY.php'
 );
 
 

@@ -17,7 +17,7 @@ header {
     }
     .banner {
       .make-row();
-      margin-bottom: 1em;
+      //margin-bottom: 1em;
       @media @md  {
         height: unset;
       }
@@ -28,6 +28,7 @@ header {
 
       .logo {
         .make-sm-column(8);
+        display: block;
         @media @sm-all {
           margin-bottom: 1em;
         }
@@ -43,48 +44,45 @@ header {
         text-transform: uppercase;
         color: #fff;
         height: 98%;
+        /*
+                .content {
+                  padding: 0.3em 1.5em 0.3em 0.5em;
+                  @media @lg {
+                    padding: 0.6em 1.5em 0.3em 0.5em;
+                  }
+                  height: inherit;
+                  border: 2px solid #fff;
+                  background: #3490D3;
+                  p {
+                    margin: 0;
+                    font-size: 1em;
+                    @media @md {
+                      font-size: 1.1em;
+                    }
+                    @media @lg {
+                      font-size: 1.5em;
+                    }
+                  }
+                }
+                .img {
+                  position: absolute;
+                  height: 8em;
+                  width: 8em;
+                  right: -2.5em;
+                  top: 50%;
+                  margin-top: -4.5em;
 
-        .content {
-          padding: 0.3em 1.5em 0.3em 0.5em;
-          @media @lg {
-            padding: 0.6em 1.5em 0.3em 0.5em;
-          }
-          height: inherit;
-          border: 2px solid #fff;
-          background: #3490D3;
-
-          p {
-            margin: 0;
-            font-size: 1em;
-            @media @md {
-              font-size: 1.1em;
-            }
-            @media @lg {
-              font-size: 1.5em;
-            }
-
-          }
-
-        }
-
-        .img {
-          position: absolute;
-          height: 8em;
-          width: 8em;
-          right: -2.5em;
-          top: 50%;
-          margin-top: -4.5em;
-
-          &:after {
-            content: '';
-            background: url("../img/cam_on_boom.png") no-repeat;
-            display: block;
-            background-size: 100%;
-            display: block;
-            width: 100%;
-            height: 100%;
-          }
-        }
+                  &:after {
+                    content: '';
+                    background: url("../img/cam_on_boom.png") no-repeat;
+                    display: block;
+                    background-size: 100%;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+        */
       }
     }
   }
@@ -110,7 +108,6 @@ header {
         margin: 0;
         padding: 0;
         bottom: 0;
-
 
         .mobile_BTN {
           position: absolute;

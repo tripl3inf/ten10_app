@@ -59,11 +59,12 @@ $url = home_url();
       </a>
 
       <div class="mod_featured">
-        <div class="content">
-          <p>Invest in a Dessert Wind Studios Production</p>
-
-          <div class="img"></div>
-        </div>
+<!--        <div class="content">-->
+          <img src="<?php bloginfo('template_url'); ?>/assets/img/banner/704X169_2x_Banner1.png"
+               class="img-responsive" alt="Invest in a Desert Wind Studio Production"/>
+<!--          <p>Invest in a Dessert Wind Studios Production</p>-->
+<!--          <div class="img"></div>-->
+<!--        </div>-->
       </div>
     </div>
   </div>
