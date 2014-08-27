@@ -1,7 +1,12 @@
+<?php
+$url = home_url();
+?>
+
+
 <header>
   <div class="banner-wrap">
     <div class="banner">
-      <div class="logo">
+      <a class="logo" href="<?php echo $url ?>">
 
         <svg style="overflow: unset;" id="svg" x="0px" y="0px" width="537.8px"
              height="60.2px" viewBox="0 0 537.8 60.2" preserveAspectRatio="xMinYMin meet">
@@ -51,7 +56,7 @@
                    xlink:href="<?php echo get_template_directory_uri(); ?>/assets/img/logo_lense.png"/>
           </g>
         </svg>
-      </div>
+      </a>
 
       <div class="mod_featured">
         <div class="content">
