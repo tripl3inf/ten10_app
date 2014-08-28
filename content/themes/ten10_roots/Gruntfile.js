@@ -19,8 +19,15 @@ module.exports = function (grunt) {
           'assets/vendor/bootstrap/js/scrollspy.js',
           'assets/vendor/bootstrap/js/tab.js',
           'assets/vendor/bootstrap/js/affix.js',
+
+          'assets/vendor/jquery-ui/ui/core.js',
+          'assets/vendor/jquery-ui/ui/widget.js',
+          'assets/vendor/jquery-ui/ui/slider.js',
+          'assets/vendor/jquery-ui-slider-pips/dist/jquery-ui-slider-pips.js',
+
           'assets/vendor/greensock/src/uncompressed/TweenMax.js',
-          'assets/vendor/rangeslider.js/dist/rangeslider.js',
+          'assets/vendor/greensock/src/uncompressed/plugins/CSSPlugin.js',
+
           'assets/vendor/sidr/jquery.sidr.min.js',
           'assets/vendor/jquery-touchswipe/jquery.touchSwipe.js',
 
