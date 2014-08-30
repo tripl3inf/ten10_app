@@ -1,7 +1,4 @@
 <?php
-/*
-Template Name: Studio Projects
-*/
 
 global $post;
 if ( ! empty( $post ) ) {

@@ -25,7 +25,7 @@ function custom_post_types( $post_types ) {
         'revisions'
       ),
       'hide_meta_box'   => array(
-        'slug',
+      //  'slug',
         'author',
         'revisions',
         'comments',
@@ -36,7 +36,7 @@ function custom_post_types( $post_types ) {
     'cpt_project' => array(
       'labels'        => piklist( 'post_type_labels', 'Projects' ),
       'title'         => __( 'Ten10 Projects' ),
-      'capability_type' => 'post',
+      'capability_type' => 'page',
       'supports'      => array(
         'title',
         'thumbnail',
@@ -46,10 +46,10 @@ function custom_post_types( $post_types ) {
       'public'        => true,
       'has_archive'   => true,
       'rewrite'       => array(
-        'slug' => 'project'
+        'slug' => 'projects_archive'
       ),
       'hide_meta_box' => array(
-        'slug',
+      //  'slug',
         'author',
         'revisions',
         'comments',
