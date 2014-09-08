@@ -44,7 +44,7 @@ ai-cache/*
 wordpress/**
 vendor/**
 **/vendor/**
-#content/plugins/**
+content/plugins/**
 #content/mu-plugins/**
 
 content/themes/ten10_theme/**
