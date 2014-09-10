@@ -9,6 +9,7 @@ if ( ! empty( $post ) ) {
 ?>
 
 
+<?php dynamic_sidebar('sidebar-subhead'); ?>
 <?php //query_posts( 'post_type=cpt_staff'); ?>
 
   <section class="content-wrap archive-staff">

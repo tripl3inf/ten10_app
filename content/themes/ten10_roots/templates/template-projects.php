@@ -2,7 +2,6 @@
 /*
 Template Name: Projects Page
 */
-header('Content-Type: image/jpg');
 
 global $post;
 if ( ! empty( $post ) ) {
@@ -16,8 +15,6 @@ if ( ! empty( $post ) ) {
 ?>
 
 
-<?php while (have_posts()) :the_post(); ?>
-<?php endwhile; ?>
 
 
 

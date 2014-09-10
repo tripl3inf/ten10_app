@@ -1,6 +1,7 @@
 <?php
 /*
-
+Title: Slider Gallery (full-width) Widget Backup
+Description: Slider Gallery For Sub-Head Area
 */
 
 // headline field
@@ -30,7 +31,7 @@ piklist('field', array(
 // list-header
 piklist('field', array(
 	'type' => 'text',
-	'field' => 'list_headline',
+	'field' => 'list_headline2',
 	'label' => __('List Headline'),
 	'description' => __('Sub-headline for bullet list'),
 	'attributes' => array(
@@ -41,7 +42,7 @@ piklist('field', array(
 // list-header
 piklist('field', array(
 	'type' => 'text',
-	'field' => 'list_item',
+	'field' => 'list_item2',
 	'label' => __('List Item'),
 	'description' => __('Repeatable bullet / list item'),
 	'add_more' => true,
@@ -68,27 +69,5 @@ piklist('field', array(
 ));
 
 
-
-// link selector
-piklist('field', array(
-	'type' => 'select',
-  'scope' => 'post_meta', // Not used for settings sections
-	'field' => 'project_select',
-//	'value' => 'option1', // Sets default to Option 2
-	'label' => 'Project Type',
-	'description' => 'Select the Project Type/Category that will populate the slider',
-//	'attributes' => array(
-//		'multiple'
-//	),
-  'choices' => piklist(
-    get_terms('project_type', array(
-      'hide_empty' => false
-    )),
-    array(
-      'term_id',
-    'name'
-    )
-	)
-));
-
 // END widget
+?>

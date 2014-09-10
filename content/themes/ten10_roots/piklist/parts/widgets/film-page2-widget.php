@@ -1,9 +1,8 @@
 <?php
 /*
-Title: Slider Gallery (full-width) Widget 
+Title: Slider Gallery (full-width) Widget Backup
 Description: Slider Gallery For Sub-Head Area
 */
-
 
 global $post;
 if ( ! empty( $post ) ) {
@@ -16,6 +15,7 @@ if ( ! empty( $post ) ) {
 
 
 <?php echo $before_widget; ?>
+<h1>TEST</h1>
 <section id="widget_home" class="row">
   <div id="projects_carousel" class="col-sm-12 carousel slide" data-ride="carousel">
     <!-- Slider Content (Wrapper for slides )-->
@@ -34,7 +34,8 @@ if ( ! empty( $post ) ) {
         }
         // END Widget
       endwhile;
-      wp_reset_postdata(); ?>
+      ?>
+      <?php wp_reset_postdata(); ?>
     </div>
 
     <!-- Controls -->
@@ -46,13 +47,4 @@ if ( ! empty( $post ) ) {
     </a>
   </div>
 </section>
-
-
-
-
-
-
-
-
-
 
