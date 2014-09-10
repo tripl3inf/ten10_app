@@ -90,6 +90,7 @@
           visibility: hidden;
           position: absolute;
           height: 325px;
+          width: 100%;
 
           &:first-child {
            visibility: visible;
@@ -101,7 +102,7 @@
             height: 100%;
 
             > li {
-              display: block;
+              display: inline-block;
               float: left;
               position: relative;
               width: 30%;
@@ -113,12 +114,10 @@
 
               &:first-child {
                 margin-right: 0;
-                float: left;
               }
 
               &:last-child {
                 margin-left: 0;
-                float: right;
               }
 
               h5 {
