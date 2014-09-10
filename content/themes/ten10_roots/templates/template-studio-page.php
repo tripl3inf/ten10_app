@@ -1,34 +1,56 @@
 <?php
 /*
-Template Name: Studio Page/Employee Roster
+Template Name: Studio Page - Staff Roster
 */
 global $post;
-//if ( ! empty( $post ) ) {
-  $name = get_post_meta($post->ID, 'cpt_staff_text', true);
-//  $position = get_post_meta($post->ID, 'position', true);
-//  $staff_photo =  get_post_meta($post->ID, 'staff_photo', true);
-//}
+if ( ! empty( $post ) ) {
+
+}
 ?>
 
 
+<?php //query_posts( 'post_type=cpt_staff'); ?>
 
-<section class="content-wrap template-studio">
-	<?php while ( have_posts() ) : the_post(); ?>
-		<div class="featured_img_full">
-			<img src="<?php //echo $staff_photo; ?>" class="img-responsive">
-		</div>
+  <section class="content-wrap archive-staff">
+  <?php while ( have_posts() ) : the_post();
+    $args = array( 'post_type' => 'cpt_staff', 'posts_per_page' => -1 );
+    $loop = new WP_Query( $args );
+    ?>
+    <div class="featured">
+      <img src="<?php echo $img; ?>" class="img-responsive">
+    </div>
 
-			<?php //dynamic_sidebar('sidebar-left-rail'); ?>
-
-
-		<div class="content">
-			<div class="entry-content">
-
-				<p><?php echo $name; ?></p>
-			</div>
-		</div>
-	<?php endwhile; ?>
+    <div class="content">
+      <article class="entry-content">
+        <ul class="staff_list">
+          <?php
+          while ( $loop->have_posts() ) :
+            $loop->the_post();
+            ?>
+            <li class="staff_info">
+              <div class="thumb_wrap">
+                <?php the_post_thumbnail( 'archive-staff-thumb' ); ?>
+              </div>
+              <ul>
+                <li>
+                  <?php the_title(); ?>
+                </li>
+                <li>
+                  <a href="<?php echo the_permalink(); ?>">more about&nbsp;<?php the_title() ?></a>
+                </li>
+              </ul>
+            </li>
+            <?php
+            the_excerpt();
+          endwhile;
+          ?>
+        </ul>
+      </article>
+    </div>
+  <?php endwhile; ?>
 </section>
+
+
 
 
 

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fd12d8b5b89648d29abab8571271172a",
+    "hash": "7d449ff80c82ec9addbb86a3757905b9",
     "packages": [
         {
             "name": "composer/installers",
@@ -186,15 +186,15 @@
         },
         {
             "name": "wpackagist-plugin/piklist",
-            "version": "0.9.4.12",
+            "version": "0.9.4.15",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/piklist/",
-                "reference": "tags/0.9.4.12"
+                "reference": "tags/0.9.4.15"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/piklist.0.9.4.12.zip",
+                "url": "http://downloads.wordpress.org/plugin/piklist.0.9.4.15.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -209,15 +209,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-slimstat",
-            "version": "3.6.9",
+            "version": "3.7",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/wp-slimstat/",
-                "reference": "tags/3.6.9"
+                "reference": "tags/3.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/wp-slimstat.3.6.9.zip",
+                "url": "http://downloads.wordpress.org/plugin/wp-slimstat.3.7.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -232,29 +232,6 @@
         }
     ],
     "packages-dev": [
-        {
-            "name": "wpackagist-plugin/theme-check",
-            "version": "20131213.1",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/theme-check/",
-                "reference": "tags/20131213.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/theme-check.20131213.1.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "replace": {
-                "wpackagist/theme-check": "self.version"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/theme-check/"
-        },
         {
             "name": "wpackagist-plugin/wordpress-importer",
             "version": "0.6.1",
@@ -277,29 +254,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "http://wordpress.org/plugins/wordpress-importer/"
-        },
-        {
-            "name": "wpackagist-plugin/wp-helpers",
-            "version": "1.5.7",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/wp-helpers/",
-                "reference": "tags/1.5.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/wp-helpers.1.5.7.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "replace": {
-                "wpackagist/wp-helpers": "self.version"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/wp-helpers/"
         },
         {
             "name": "wpackagist-plugin/wp-migrate-db",
