@@ -1,6 +1,6 @@
 <?php
 /*
-Title: Film Page Widget
+Title: Film Page Widget 2
 Description: Sidebar widget for film pages
 */
 

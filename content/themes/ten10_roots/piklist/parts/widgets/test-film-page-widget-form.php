@@ -1,14 +1,12 @@
 <?php
 /*
-Title: Widget - Slider (full width) BE-Form
-Description: Full width Slider gallery for sub-head widget area
+
 */
 
 // headline field
 piklist('field', array(
 	'type' => 'text',
-	'field' => 'headline',
-  'scope' => 'post_meta', // Not used for settings sections
+	'field' => 'headline2',
 	'label' => __('Headline'),
 	'value' => 'Headline!',
 	'description' => __('Headline at top of widget'),
@@ -20,9 +18,8 @@ piklist('field', array(
 // copy
 piklist('field', array(
 	'type' => 'textarea',
-  'scope' => 'post_meta', // Not used for settings sections
-  'label' => __('Headline'),
-	'field' => 'copy',
+	//'scope' => 'post_meta', // Not used for settings sections
+	'field' => 'copy2',
 	'label' => 'Copy',
 	'description' => 'Body copy / text',
 	'attributes' => array(
@@ -30,21 +27,46 @@ piklist('field', array(
 	)
 ));
 
+// list-header
 piklist('field', array(
-  'type' => 'select',
-'scope' => 'post_meta', // Not used for settings sections
-'field' => 'select_test',
-'value' => 'option_1', // Sets default to Option 2
-'label' => 'Select Member Team',
-'description' => 'Select either studio or financial team',
-'attributes' => array(
-    'class' => 'text'
-  ),
-'choices' => array(
-    'option_1' => 'Studio'
-  ,'option_2' => 'Financial'
-  )
+	'type' => 'text',
+	'field' => 'list_headline',
+	'label' => __('List Headline'),
+	'description' => __('Sub-headline for bullet list'),
+	'attributes' => array(
+		'class' => 'list_headline'
+	)
 ));
+
+// list-header
+piklist('field', array(
+	'type' => 'text',
+	'field' => 'list_item',
+	'label' => __('List Item'),
+	'description' => __('Repeatable bullet / list item'),
+	'add_more' => true,
+	'attributes' => array(
+		'class' => 'list_item'
+	)
+));
+
+// link selector
+piklist('field', array(
+	'type' => 'select',
+	'field' => 'link_select2',
+	'value' => 'option1', // Sets default to Option 2
+	'label' => 'Link Selector',
+	'description' => 'Select page for widget link',
+	'attributes' => array(
+		'multiple'
+	),
+	'choices' => array(
+	'1' => 'Secular Films',
+	'2' => 'Faith-based Films',
+	'3' => 'TV Dev & Prod',
+	)
+));
+
 
 
 // link selector
@@ -68,6 +90,5 @@ piklist('field', array(
     )
 	)
 ));
-
 
 // END widget
