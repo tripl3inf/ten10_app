@@ -58,5 +58,23 @@ piklist( 'field', array(
   )
 ));
 
+
+piklist('field', array(
+  'type' => 'file',
+  'field' => 'upload_slider_full_img',
+// 'field' => 'my_image',
+  'scope' => 'post_meta',
+  'label' => 'Upload Slider Image',
+  'description' => 'Choose an image for the full-width slider gallery.',
+  'options' => array(
+    'modal_title' => 'Add File(s)',
+    'button' => 'Add Slider Image',
+  )
+));
+
+
+
+
+
 // END
 

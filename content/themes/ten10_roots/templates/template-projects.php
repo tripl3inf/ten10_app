@@ -10,21 +10,20 @@ if ( ! empty( $post ) ) {
   $loop        = new WP_Query( $args );
 
 //  $img = get_post_meta( $post->ID, 'upload_slider_img', true );
-  $img = get_post_meta($post_id, 'upload_slider_img');
 
 }
+
 ?>
 
 
 <?php while (have_posts()) :the_post(); ?>
-<div class="archive-projects">
-
-
 <?php endwhile; ?>
 
-  <?php
-  dynamic_sidebar('sidebar-subhead'); ?>
 
+
+  <?php dynamic_sidebar('sidebar-subhead'); ?>
+
+<div class="archive-projects">
   <section class="content-wrap">
     <div class="content">
       <article class="entry-content">
@@ -34,11 +33,7 @@ if ( ! empty( $post ) ) {
         ?>
 
 
-
-
         <ul class="project_list">
-
-
             <li class="project_info">
               <div class="thumb_wrap">
                 <a href="<?php echo the_permalink(); ?>">

@@ -27,7 +27,7 @@ $roots_includes = array(
   'lib/custom_tax.php',
 	'lib/info_widget.php',
 
-  //'lib/DEV_ONLY.php'
+  'lib/DEV_ONLY.php'
 );
 
 
