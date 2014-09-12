@@ -1,10 +1,9 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
-        "This file is @generated automatically"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "7d449ff80c82ec9addbb86a3757905b9",
+    "hash": "222d4d88b8387ac49fd7ca71da3d17ba",
     "packages": [
         {
             "name": "composer/installers",
@@ -185,6 +184,29 @@
             "homepage": "http://wordpress.org/plugins/clean-and-simple-contact-form-by-meg-nicholas/"
         },
         {
+            "name": "wpackagist-plugin/display-widgets",
+            "version": "2.03",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/display-widgets/",
+                "reference": "tags/2.03"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/display-widgets.2.03.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/display-widgets": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/display-widgets/"
+        },
+        {
             "name": "wpackagist-plugin/piklist",
             "version": "0.9.4.15",
             "source": {
@@ -279,18 +301,11 @@
             "homepage": "http://wordpress.org/plugins/wp-migrate-db/"
         }
     ],
-    "aliases": [
-
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
-    "prefer-stable": false,
+    "stability-flags": [],
     "platform": {
         "php": ">=5.3.0"
     },
-    "platform-dev": [
-
-    ]
+    "platform-dev": []
 }

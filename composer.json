@@ -19,7 +19,8 @@
         "wpackagist-plugin/clean-and-simple-contact-form-by-meg-nicholas": "4.3.4",
         "wpackagist-plugin/a-fresher-cache": "*",
         "wpackagist-plugin/piklist": "*",
-        "wpackagist-plugin/wp-slimstat": "3.7"
+        "wpackagist-plugin/wp-slimstat": "3.7",
+        "wpackagist-plugin/display-widgets": "2.03"
     },
 
     "require-dev" : {
