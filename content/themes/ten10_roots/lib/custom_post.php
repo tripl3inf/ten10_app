@@ -60,14 +60,14 @@ function custom_post_types( $post_types ) {
     ),
 
 
-    // home slider
-    'cpt_slider_home'   => array(
-      'labels'          => piklist( 'post_type_labels', 'Slider Panel' ),
-      'title'           => __( 'Slide Name' ),
+    // sliders
+    'cpt-slider'   => array(
+      'labels'          => piklist( 'post_type_labels', 'Sliders' ),
+      'title'           => __( 'Slider Name' ),
       'public'          => true,
       'has_archive'     => true,
       'rewrite'         => array(
-        'slug' => 'cpt_slider_home'
+        'slug' => 'cpt-slider'
       ),
       'capability_type' => 'post',
       'supports'        => array(

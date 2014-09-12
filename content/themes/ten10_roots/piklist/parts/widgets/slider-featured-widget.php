@@ -6,7 +6,11 @@ Description: Slider Gallery Home Page
 
 global $post;
 if ( ! empty( $post ) ) {
-  $args = array( 'post_type' => 'cpt_slider_home', 'posts_per_page' => - 1 );
+  $args = array(
+    'post_type' => 'cpt_slider_home',
+    'name' => 'test-panel-1',
+    'posts_per_page' => - 1
+  );
   $loop = new WP_Query( $args );
 }
 
@@ -25,8 +29,9 @@ $temp_dir = get_template_directory();
 while ( $loop->have_posts() ) :
   $loop->the_post();
 
-  $pricing = get_post_meta($post->ID, 'pricing_tier_group', true);
-  piklist( get_template_directory() . '/piklist/pricing_tier_group_template', array('data' => $pricing, 'loop' => 'data'));
+  $pricing = get_post_meta($post->ID, 'slider-group', true);
+  piklist( get_template_directory() . '/piklist/parts/templates/slider-main-template', array('data' => $pricing,
+                                                                                     'loop' => 'data'));
   ?>
 
 
