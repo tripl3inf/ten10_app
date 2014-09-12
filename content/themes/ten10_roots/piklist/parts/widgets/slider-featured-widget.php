@@ -4,54 +4,34 @@ Title: Featured Content Slider/Static Image Widget
 Description: Slider Gallery Home Page
 */
 
+global $post;
+if ( ! empty( $post ) ) {
+  $args = array( 'post_type' => 'cpt_slider_home', 'posts_per_page' => - 1 );
+  $loop = new WP_Query( $args );
+}
 
-//$headline      = esc_html( $settings['headline'] );
-//$link      = $settings['cpt_link'];
-
-// Get field data
-//$slider_panels = get_post_meta($post->ID, 'slider_panels', true);
-
-//$exercise = get_post_meta($post->ID, 'exercise', true);
-
-//$exercise = $settings['exercise'];
-//$field_groups = $settings['field_groups'];
 $field_groups = $settings;
-
 $temp_dir = get_template_directory();
 ?>
 
 
 <?php echo $before_widget;
-//echo $temp_dir;
-//$slider_panels = $settings['slider_panels'];
-//echo var_dump($slider_panels);
-//piklist::pre($settings);
+
+// Get the post meta information
 ?>
+
+
+<?php
+while ( $loop->have_posts() ) :
+  $loop->the_post();
+
+  $pricing = get_post_meta($post->ID, 'pricing_tier_group', true);
+  piklist( get_template_directory() . '/piklist/pricing_tier_group_template', array('data' => $pricing, 'loop' => 'data'));
+  ?>
 
 
 
 <?php
-foreach ( (array) $field_groups as $key => $group ) {
-//  echo 'group var = ';
-//echo var_dump($group);
-
-  $page_links = $group['page_link'];
-  foreach ( $page_links as $link ) {
-
-    if ( ! empty( $link ) ) {
-      echo 'page link = ' . $link;
-    }
-    ?>
-    <a href="<?php echo get_permalink( $link ); ?>"><p>My link to a post or page</p></a>
-    <?php
-    echo '<br />';
-  }
-
-  echo 'END';
-
-}
-
+endwhile;
+echo $after_widget;
 ?>
-
-
-<?php echo $after_widget; ?>

@@ -5,6 +5,7 @@
 add_image_size( 'archive-staff-thumb', 82, 95 );
 add_image_size( 'archive-project-thumb', 122, 170 );
 
+
 add_filter( 'piklist_post_types', 'custom_post_types' );
 function custom_post_types( $post_types ) {
   $post_types = array_merge( $post_types, array(
@@ -32,6 +33,7 @@ function custom_post_types( $post_types ) {
         'commentstatus'
       )
     ),
+
     // projects
     'cpt_project' => array(
       'labels'        => piklist( 'post_type_labels', 'Projects' ),
@@ -55,7 +57,33 @@ function custom_post_types( $post_types ) {
         'comments',
         'commentstatus'
       )
+    ),
+
+
+    // home slider
+    'cpt_slider_home'   => array(
+      'labels'          => piklist( 'post_type_labels', 'Slider Panel' ),
+      'title'           => __( 'Slide Name' ),
+      'public'          => true,
+      'has_archive'     => true,
+      'rewrite'         => array(
+        'slug' => 'cpt_slider_home'
+      ),
+      'capability_type' => 'post',
+      'supports'        => array(
+        'title'
+        //'thumbnail',
+      ),
+      'hide_meta_box'   => array(
+        'slug',
+        'author',
+        'revisions',
+        'comments',
+        'commentstatus'
+      )
     )
+
+
   ) );
 
   return $post_types;
