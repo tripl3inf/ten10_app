@@ -2,23 +2,15 @@
 /*
 Template Name: Projects Page
 */
-
 global $post;
 if ( ! empty( $post ) ) {
-  $args        = array( 'post_type' => 'cpt_project', 'posts_per_page' => - 1 );
-  $loop        = new WP_Query( $args );
-
-//  $img = get_post_meta( $post->ID, 'upload_slider_img', true );
-
+  $args = array( 'post_type' => 'cpt_project', 'posts_per_page' => - 1 );
+  $loop = new WP_Query( $args );
 }
-
 ?>
 
 
-
-
-
-  <?php dynamic_sidebar('sidebar-subhead'); ?>
+<?php dynamic_sidebar( 'sidebar-subhead' ); ?>
 
 <div class="archive-projects">
   <section class="content-wrap">
@@ -26,11 +18,11 @@ if ( ! empty( $post ) ) {
       <article class="entry-content">
         <?php
         while ( $loop->have_posts() ) :
-        $loop->the_post();
-        ?>
+          $loop->the_post();
+          ?>
 
 
-        <ul class="project_list">
+          <ul class="project_list">
             <li class="project_info">
               <div class="thumb_wrap">
                 <a href="<?php echo the_permalink(); ?>">
@@ -65,7 +57,7 @@ if ( ! empty( $post ) ) {
               </ul>
 
             </li>
-        </ul>
+          </ul>
 
 
 

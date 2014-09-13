@@ -23,7 +23,8 @@ function roots_setup() {
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats
-  add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio' ) );
+  //add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio' ) );
+  add_theme_support( 'post-formats', array( 'link', 'image', 'video', 'audio' ) );
 
   // Add HTML5 markup for captions
   // http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
@@ -55,22 +56,29 @@ function roots_widgets_init() {
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>',
-  ) );
-
+  ));
 
   register_sidebar( array(
+    'name'          => __( 'Sub-Header', 'roots' ),
+    'id'            => 'sidebar-subhead',
+    'before_widget' => '<aside class="widget %1$s">',
+    'after_widget'  => '</aside>',
+  ));
+
+    register_sidebar( array(
     'name'          => __( 'Side Rail - Left', 'roots' ),
     'id'            => 'sidebar-left-rail',
     'before_widget' => '<aside class="widget %1$s">',
     'after_widget'  => '</aside>',
-  ) );
+  ));
 
   register_sidebar( array(
-    'name'          => __( 'Sub-Head Area', 'roots' ),
-    'id'            => 'sidebar-subhead',
+    'name'          => __( 'Side Rail - Right', 'roots' ),
+    'id'            => 'sidebar-right-rail',
     'before_widget' => '<aside class="widget %1$s">',
     'after_widget'  => '</aside>',
-  ) );
+  ));
+
 }
 
 add_action( 'widgets_init', 'roots_widgets_init' );

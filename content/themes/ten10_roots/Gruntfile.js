@@ -30,6 +30,7 @@ module.exports = function (grunt) {
 
           'assets/vendor/sidr/jquery.sidr.min.js',
           'assets/vendor/jquery-touchswipe/jquery.touchSwipe.js',
+          'assets/vendor/magnific-popup/dist/jquery.magnific-popup.js',
 
           'assets/js/plugins/*.js',
           'assets/js/_*.js'

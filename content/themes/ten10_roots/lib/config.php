@@ -11,6 +11,13 @@ add_theme_support( 'jquery-cdn' );            // Enable to load jQuery from the 
 //add_image_size( 'featured_img_split', 600, 665, true );
 //add_image_size( 'img_gallery_home', 785, 355, true ); // Permalink thumbnail size
 
+//add_image_size( 'video-placeholder-lrg', 768, 480, true ); // 220 pixels wide by 180 pixels tall, hard crop mod
+
+
+
+
+
+
 // THUMBNAILS TO ADMIN POST VIEW
 add_filter('manage_posts_columns', 'posts_columns', 5);
 add_action('manage_posts_custom_column', 'posts_custom_columns', 5, 2);
@@ -182,7 +189,7 @@ function hide_admin_bar_from_front_end() {
   return false;
 }
 
-add_filter( 'show_admin_bar', 'hide_admin_bar_from_front_end' );
+//add_filter( 'show_admin_bar', 'hide_admin_bar_from_front_end' );
 
 
 

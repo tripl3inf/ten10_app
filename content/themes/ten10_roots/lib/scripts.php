@@ -14,12 +14,15 @@
  * - An ID has been defined in config.php
  * - You're not logged in as an administrator
  */
+
+
 function roots_scripts()
 {
     /**
      * The build task in Grunt renames production assets with a hash
      * Read the asset names from assets-manifest.json
      */
+
     if (WP_ENV === 'development') {
 
         $assets = array(

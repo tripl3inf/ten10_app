@@ -22,11 +22,12 @@ function custom_post_types( $post_types ) {
       'supports'        => array(
         'title',
         'thumbnail',
+        'video',
         'author',
         'revisions'
       ),
       'hide_meta_box'   => array(
-      //  'slug',
+        'slug',
         'author',
         'revisions',
         'comments',
@@ -51,7 +52,7 @@ function custom_post_types( $post_types ) {
         'slug' => 'projects_archive'
       ),
       'hide_meta_box' => array(
-      //  'slug',
+        'slug',
         'author',
         'revisions',
         'comments',

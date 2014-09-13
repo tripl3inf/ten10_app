@@ -1,78 +1,115 @@
 <?php
 /*
-Title: Staff Member Information
+Title: Project Info
 Post Type: cpt_project
 */
 
 piklist( 'field', array(
   'type'        => 'text',
   'field'       => 'project_director',
-  'scope'       => 'post_meta',
   'label'       => 'Director',
   'description' => 'Enter the project directors first & last name',
   'value'       => 'director',
+  'columns'     => 12,
   'attributes'  => array(
     'class' => 'text'
   )
-));
-
+) );
 
 
 piklist( 'field', array(
   'type'        => 'text',
   'field'       => 'project_producer',
-  'scope'       => 'post_meta',
   'label'       => 'Producer',
   'description' => 'Enter the project producers first & last name',
   'value'       => 'producer',
+  'columns'     => 12,
   'attributes'  => array(
     'class' => 'text'
   )
-));
-
-
-
-piklist( 'field', array(
-  'type'        => 'text',
-  'field'       => 'project_trailer_url',
-  'scope'       => 'post_meta',
-  'label'       => 'Trailer URL',
-  'description' => 'Enter URL to the film trailer / preview',
-  'value'       => 'enter URL',
-  'attributes'  => array(
-    'class' => 'text'
-  )
-));
-
+) );
 
 
 piklist( 'field', array(
   'type'        => 'textarea',
-  'field'       => 'project_desc',
-  'scope'       => 'post_meta',
-  'label'       => 'Project Description',
-  'description' => 'Enter copy for the film description',
+  'field'       => 'project_desc_short',
+  'label'       => 'Project Short Description',
+  'description' => 'Enter a short film description to be used as a teaser/excerpt',
   'value'       => 'enter project description',
+  'columns'     => 12,
   'attributes'  => array(
     'class' => 'text'
   )
-));
+) );
 
 
-piklist('field', array(
-  'type' => 'file',
-  'field' => 'upload_slider_full_img',
+piklist( 'field', array(
+  'type'        => 'editor',
+  'field'       => 'project_desc_long',
+  'label'       => __( 'Project Long Description' ),
+  'description' => __( 'The complete description that will be used as the body copy on the project details page' ),
+  'options'     => array(
+    'media_buttons' => false,
+    'tinymce'       => true,
+    'quicktags'     => false,
+  ),
+  'attributes'  => array(
+    'class' => 'text',
+  )
+) );
+
+
+//piklist( 'field', array(
+//  'type'        => 'file',
+//  'field'       => 'vid_embed_url',
+//  'label'       => 'Add YouTube Video Link',
+//  'description' => 'Add a YouTube URL to embed a video in the post. only one main video can be selected.',
+//  'columns'     => 12,
+//  'options'     => array(
+//    'modal_title' => 'Add YouTube URL',
+//    'button'      => 'Add Video',
+//  )
+//,'validate' => array(
+//    array(
+//      'type' => 'limit',
+//      'options' => array(
+//        'min' => 0,
+//        'max' => 1
+//      )
+//    )
+//  )
+//) );
+
+
+
+
+
+piklist( 'field', array(
+  'type'        => 'file',
+  'field'       => 'upload_slider_full_img',
 // 'field' => 'my_image',
-  'scope' => 'post_meta',
-  'label' => 'Upload Slider Image',
+  'label'       => 'Upload Slider Image',
   'description' => 'Choose an image for the full-width slider gallery.',
-  'options' => array(
+  'columns'     => 12,
+  'options'     => array(
     'modal_title' => 'Add File(s)',
-    'button' => 'Add Slider Image',
+    'button'      => 'Add Slider Image',
+  )
+) );
+
+
+// Text field
+piklist( 'field', array(
+  'type'        => 'text',
+  'field'       => 'vid_embed_url',
+  'label'       => 'Add YouTube Video Link',
+  'description' => 'Add a YouTube URL to embed a video in the post. only one main video can be selected.',
+  'columns'     => 12,
+  'attributes'  => array(
+    'class' => 'text_class',
+    'placeholder' => 'enter youtube url'
   )
 ));
-
-
 
 
 
