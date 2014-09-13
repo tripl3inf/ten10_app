@@ -293,34 +293,6 @@ function custom_metaboxes( $meta_boxes ) {
 	);
 
 
-
-
-
-
-
-//    $meta_boxes['metabox_template_slider_full'] = array(
-//        'id' => 'metabox_template_slider_full',
-//        'title' => 'Featured Image',
-//        'pages' => array('page'), // post type
-//        'context' => 'normal',
-//        'priority' => 'high',
-//        'show_names' => true, // Show field names on the left
-//        'show_on' => array( 'key' => 'page-template', 'value' => 'templates/template-slider-full-width.php' ),
-//        'fields' => array(
-//
-//            array(
-//                'name' => 'Choose Image:',
-//                'desc' => 'LEFT side static featured image.',
-//                'id' => $prefix . 'img_slider_full',
-//                'type' => 'file_list',
-//                'allow' => array( 'attachment' ) // limit to just attachments with array( 'attachment' )
-//            ),
-//        ),
-//    );
-
-
-
-
 	$meta_boxes['metabox_template_split'] = array(
 		'id' => 'metabox_template_split',
 		'title' => 'Featured Image',

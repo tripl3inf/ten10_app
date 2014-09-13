@@ -28,13 +28,7 @@ if ( ! empty( $post ) ) {
 			<div class="vid_holder">
 				<?php echo wp_oembed_get( $url2 , array('width'=>350)); ?>
 			</div>
-
-
-			<?php
-			dynamic_sidebar('sidebar-left-rail'); ?>
-
-
-
+			<?php dynamic_sidebar('sidebar-left-rail'); ?>
 		</div>
 
 		<div class="content">

@@ -1,30 +1,46 @@
-<?php while (have_posts()) : the_post(); ?>
-  <article <?php post_class(); ?>>
-    <header>
-      <h1 class="entry-title"><?php the_title(); ?></h1>
-      <?php get_template_part('templates/entry-meta'); ?>
+<?php while (have_posts()) : the_post();
+  // fetch custom meta data
+  $vid_link = get_post_meta( $post->ID, 'vid_embed_url', true );
+  $vid_thumb = get_video_thumbnail();
+  $project_desc_long = get_post_meta( $post->ID, 'project_desc_long', true );
+
+  // get vid url from id
+  //$vid_url = wp_get_attachment_url( $vid_link );
+
+// look thru array to get to get url
+//  foreach ( $vid_link as $link ) {
+     //$vid_url = wp_get_attachment_url( $link );
+     //echo $vid_url;
+//  }
+
+?>
+  <?php //delete_post_meta_by_key( 'vid_embed_url' ); ?>
+
+  <section class="content-wrap template-single-project">
+    <div class="content">
       <?php
-        echo get_post_meta($post->ID, 'cpt_project', true);
-        echo get_post_meta($post->ID, 'project_trailer_url', true);
-        //echo get_post_meta($post->ID, 'staff_position', true);
-      the_post_thumbnail();
+        if ( !empty ($vid_link) ) {
+          echo "<div class='video_placeholder image-responsive'>
+            <a class='popup-youtube' href='" . $vid_link . "'>
+              <img src='" . $vid_thumb . "' width='100%' />
+            </a>
+          </div>";
+        }
       ?>
 
-    </header>
-    <div class="entry-content">
-      <?php //the_content(); ?>
-
-      <?php
-      $video_link = 'https://www.youtube.com/watch?v=q86u0bDE17w';
-      $video_embed_code = wp_oembed_get( $video_link, array( 'autoplay' => 1, 'rel' => 0) );
-      ?>
-
-
-
+      <div class="entry-content">
+        <?php echo $project_desc_long; ?>
+      </div>
     </div>
-    <footer>
-      <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>
-    </footer>
-    <?php comments_template('/templates/comments.php'); ?>
-  </article>
+
+    <div class="right_rail">
+      <?php dynamic_sidebar('sidebar-right-rail'); ?>
+    </div>
+  </section>
+
+
 <?php endwhile; ?>
+
+
+
+

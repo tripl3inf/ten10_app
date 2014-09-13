@@ -30,10 +30,20 @@
 </footer>
 
 
-<!-- DEV ONLY!!! -->
-<!--<script src="//localhost:35729/livereload.js"></script>-->
 
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+      disableOn: 700,
+      type: 'iframe',
+      mainClass: 'mfp-fade',
+      removalDelay: 160,
+      preloader: false,
 
+      fixedContentPos: false
+    });
+  });
+</script>
 
 
 <?php wp_footer(); ?>

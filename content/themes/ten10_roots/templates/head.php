@@ -10,11 +10,5 @@
 
   <script src="<?php bloginfo('template_url'); ?>/assets/vendor/jquery-ui/jquery-ui.js"></script>
 
-<script>document.write('<script src="http://'
-    + (location.host || 'localhost').split(':')[0]
-    + ':35729/assets/vendor/livereload/dist/livereload.js?snipver=1"></'
-    + 'script>')</script>
-
-
   <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo esc_url(get_feed_link()); ?>">
 </head>
