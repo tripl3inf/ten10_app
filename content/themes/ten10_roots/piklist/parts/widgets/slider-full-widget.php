@@ -1,6 +1,6 @@
 <?php
 /*
-Title: Slider Gallery (full-width) Widget 
+Title: Slider Gallery (full-width) Widget
 Description: Slider Gallery For Sub-Head Area
 */
 
@@ -34,7 +34,7 @@ if ( ! empty( $post ) ) {
         }
         // END Widget
       endwhile;
-      wp_reset_postdata(); ?>
+      ?>
     </div>
 
     <!-- Controls -->
@@ -48,7 +48,10 @@ if ( ! empty( $post ) ) {
 </section>
 
 
-
+<?php
+wp_reset_postdata();
+echo $after_widget;
+?>
 
 
 

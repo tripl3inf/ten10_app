@@ -4,17 +4,10 @@
   $vid_thumb = get_video_thumbnail();
   $project_desc_long = get_post_meta( $post->ID, 'project_desc_long', true );
 
-  // get vid url from id
-  //$vid_url = wp_get_attachment_url( $vid_link );
-
-// look thru array to get to get url
-//  foreach ( $vid_link as $link ) {
-     //$vid_url = wp_get_attachment_url( $link );
-     //echo $vid_url;
-//  }
-
 ?>
-  <?php //delete_post_meta_by_key( 'vid_embed_url' ); ?>
+
+  <?php //delete_post_meta_by_key( 'mw_director' );
+  ?>
 
   <section class="content-wrap template-single-project">
     <div class="content">

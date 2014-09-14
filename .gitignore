@@ -41,17 +41,52 @@ _assets
 node_modules
 ai-cache/*
 
-wordpress/**
-vendor/**
-**/vendor/**
-content/plugins/**
-#content/mu-plugins/**
-
-content/themes/ten10_roots/assets/css/**
-content/themes/ten10_roots/vendor**
-content/themes/ten10_roots/assets/vendor** 
-
+content/themes/ten10_roots/node_modules
+content/themes/ten10_roots/assets/css/main.css.map
+content/themes/ten10_roots/assets/css/*main*.css
+content/themes/ten10_roots/assets/js/*scripts*.js
+content/themes/ten10_roots/assets/js/vendor/modernizr.min.js
+content/themes/ten10_roots/assets/manifest.json
 
 db_backups/
 
 .buildpath
+
+
+
+
+# WordPress
+wordpress
+.htaccess
+
+# WP-CLI
+db-sync
+sql-dump-*.sql
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Application
+content/plugins/*
+!content/plugins/.gitkeep
+content/mu-plugins/*
+!content/mu-plugins/.gitkeep
+content/upgrade
+content/uploads/*
+!content/uploads/.gitkeep
+!content/mu-plugins/disallow-indexing.php
+!content/mu-plugins/register-theme-directory.php
+!content/mu-plugins/bedrock-autoloader.php
+
+# Vendor (e.g. Composer)
+vendor/*
+!vendor/.gitkeep
+
+# Node Package Manager
+node_modules
+
+# Vagrant
+bin
+.vagrant

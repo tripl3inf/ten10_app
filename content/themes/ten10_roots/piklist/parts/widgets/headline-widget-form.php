@@ -1,13 +1,9 @@
 <?php
-/*
-Title: Slider Gallery (full-width) Widget Backup
-Description: Slider Gallery For Sub-Head Area
-*/
 
 // headline field
 piklist('field', array(
 	'type' => 'text',
-	'field' => 'headline2',
+	'field' => 'headline',
 	'label' => __('Headline'),
 	'value' => 'Headline!',
 	'description' => __('Headline at top of widget'),
@@ -20,7 +16,7 @@ piklist('field', array(
 piklist('field', array(
 	'type' => 'textarea',
 	//'scope' => 'post_meta', // Not used for settings sections
-	'field' => 'copy2',
+	'field' => 'copy',
 	'label' => 'Copy',
 	'description' => 'Body copy / text',
 	'attributes' => array(
@@ -31,7 +27,7 @@ piklist('field', array(
 // list-header
 piklist('field', array(
 	'type' => 'text',
-	'field' => 'list_headline2',
+	'field' => 'list_headline',
 	'label' => __('List Headline'),
 	'description' => __('Sub-headline for bullet list'),
 	'attributes' => array(
@@ -42,7 +38,7 @@ piklist('field', array(
 // list-header
 piklist('field', array(
 	'type' => 'text',
-	'field' => 'list_item2',
+	'field' => 'list_item',
 	'label' => __('List Item'),
 	'description' => __('Repeatable bullet / list item'),
 	'add_more' => true,
@@ -54,7 +50,7 @@ piklist('field', array(
 // link selector
 piklist('field', array(
 	'type' => 'select',
-	'field' => 'link_select2',
+	'field' => 'link_select',
 	'value' => 'option1', // Sets default to Option 2
 	'label' => 'Link Selector',
 	'description' => 'Select page for widget link',

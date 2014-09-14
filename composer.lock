@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "222d4d88b8387ac49fd7ca71da3d17ba",
+    "hash": "d3a11e4afe193edea38d9faa85555b00",
     "packages": [
         {
             "name": "composer/installers",
@@ -138,29 +138,6 @@
             "time": "2013-03-15 17:51:14"
         },
         {
-            "name": "wpackagist-plugin/a-fresher-cache",
-            "version": "0.1.2",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/a-fresher-cache/",
-                "reference": "tags/0.1.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/a-fresher-cache.0.1.2.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "replace": {
-                "wpackagist/a-fresher-cache": "self.version"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/a-fresher-cache/"
-        },
-        {
             "name": "wpackagist-plugin/clean-and-simple-contact-form-by-meg-nicholas",
             "version": "4.3.4",
             "source": {
@@ -207,6 +184,29 @@
             "homepage": "http://wordpress.org/plugins/display-widgets/"
         },
         {
+            "name": "wpackagist-plugin/oembed-in-library",
+            "version": "1.0.2",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/oembed-in-library/",
+                "reference": "tags/1.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/oembed-in-library.1.0.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/oembed-in-library": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/oembed-in-library/"
+        },
+        {
             "name": "wpackagist-plugin/piklist",
             "version": "0.9.4.15",
             "source": {
@@ -228,6 +228,29 @@
             },
             "type": "wordpress-plugin",
             "homepage": "http://wordpress.org/plugins/piklist/"
+        },
+        {
+            "name": "wpackagist-plugin/video-thumbnails",
+            "version": "2.10.2",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/video-thumbnails/",
+                "reference": "tags/2.10.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/video-thumbnails.2.10.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/video-thumbnails": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/video-thumbnails/"
         },
         {
             "name": "wpackagist-plugin/wp-slimstat",
@@ -254,6 +277,52 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "wpackagist-plugin/debug-bar",
+            "version": "0.8.2",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/debug-bar/",
+                "reference": "tags/0.8.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/debug-bar.0.8.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/debug-bar": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/debug-bar/"
+        },
+        {
+            "name": "wpackagist-plugin/debug-bar-console",
+            "version": "0.3",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/debug-bar-console/",
+                "reference": "tags/0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/debug-bar-console.0.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/debug-bar-console": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/debug-bar-console/"
+        },
         {
             "name": "wpackagist-plugin/wordpress-importer",
             "version": "0.6.1",

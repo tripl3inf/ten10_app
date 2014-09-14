@@ -1,7 +1,7 @@
 <?php
 /*
-Title: Film Page Widget
-Description: Sidebar widget for film pages
+Title: Headline Widget
+Description: Headline / Featured Copy Widget for page sidebars
 */
 
 $headline      = esc_html( $settings['headline'] );
