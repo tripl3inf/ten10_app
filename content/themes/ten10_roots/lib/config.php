@@ -195,16 +195,23 @@ function hide_admin_bar_from_front_end() {
 
 
 
-function wp_get_attachment( $attachment_id ) {
-  $attachment = get_post( $attachment_id );
-  return array(
-    'alt' => get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true ),
-    'caption' => $attachment->post_excerpt,
-    'description' => $attachment->post_content,
-    'href' => get_permalink( $attachment->ID ),
-    'src' => $attachment->guid,
-    'title' => $attachment->post_title
-  );
-}
+//function wp_get_attachment( $attachment_id ) {
+//  $attachment = get_post( $attachment_id );
+//  return array(
+//    'alt' => get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true ),
+//    'caption' => $attachment->post_excerpt,
+//    'description' => $attachment->post_content,
+//    'href' => get_permalink( $attachment->ID ),
+//    'src' => $attachment->guid,
+//    'title' => $attachment->post_title
+//  );
+//}
 
-
+//add_filter('oembed_dataparse','test',10,3);
+//
+//function test($return, $data, $url) {
+//  if ($data->provider_name == 'YouTube') {
+//    return "<img src='{$data->thumbnail_url}'>";
+//  }
+//  else return $return;
+//}

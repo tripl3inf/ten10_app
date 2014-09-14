@@ -7,6 +7,15 @@ piklist( 'field', array(
   'label'    => __( 'Slider Panels' ),
 //  'columns'  => 12,
   'add_more' => true,
+  'validate' => array(
+    array(
+      'type' => 'limit',
+      'options' => array(
+        'min' => 0,
+        'max' => 2
+      )
+    )
+  ),
   'fields'   => array(
 
     array(

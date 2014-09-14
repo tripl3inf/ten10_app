@@ -32,6 +32,7 @@ if ( ! empty( $settings['mw_upload_media'] ) ) {
 
   $media_meta = wp_prepare_attachment_for_js( $media_ID );
   $img_alt    = $media_meta['alt'];
+
 }
 
 ?>
