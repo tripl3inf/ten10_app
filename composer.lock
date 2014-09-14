@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "d3a11e4afe193edea38d9faa85555b00",
+    "hash": "5a38a01a2c67f18eef5320b6e76f4148",
     "packages": [
         {
             "name": "composer/installers",
@@ -138,6 +138,29 @@
             "time": "2013-03-15 17:51:14"
         },
         {
+            "name": "wpackagist-plugin/admin-management-xtended",
+            "version": "2.3.9.2",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/admin-management-xtended/",
+                "reference": "tags/2.3.9.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/admin-management-xtended.2.3.9.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/admin-management-xtended": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/admin-management-xtended/"
+        },
+        {
             "name": "wpackagist-plugin/clean-and-simple-contact-form-by-meg-nicholas",
             "version": "4.3.4",
             "source": {
@@ -254,15 +277,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-slimstat",
-            "version": "3.7",
+            "version": "3.7.2",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/wp-slimstat/",
-                "reference": "tags/3.7"
+                "reference": "tags/3.7.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/wp-slimstat.3.7.zip",
+                "url": "http://downloads.wordpress.org/plugin/wp-slimstat.3.7.2.zip",
                 "reference": null,
                 "shasum": null
             },

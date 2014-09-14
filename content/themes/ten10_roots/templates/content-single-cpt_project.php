@@ -20,10 +20,10 @@
           </div>";
         }
       ?>
-
       <div class="entry-content">
         <?php echo $project_desc_long; ?>
       </div>
+      <?php dynamic_sidebar('sidebar-content-rail'); ?>
     </div>
 
     <div class="right_rail">
