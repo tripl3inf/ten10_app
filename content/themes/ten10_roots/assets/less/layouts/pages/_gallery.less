@@ -2,15 +2,21 @@
 
 .archive-gallery {
 
+  .entry-content {
+    margin: 10px -15px 0 -15px;
 
     .vid_link_wrap {
       .make-sm-column(3);
       position: relative;
       height: 160px;
       overflow: hidden;
+      margin-bottom: 15px;
 
       > a {
-        position: absolute;
+        position: relative;
+        display: block;
+        overflow: hidden;
+
         img {
           width: 100%;
         }
@@ -36,24 +42,27 @@
         }
       }
 
+    }
+
   }
 
-}
+  .mfp-image-holder {
+    img.mfp-img {
+      max-width: 600px !important;
+    }
+    .btn {
+      position: absolute;
+      bottom: 55px;
+      left: 25px;
+      font-size: 16px;
+      padding: 4px 16px;
+    }
 
-.mfp-container {
-  .mfp-img {
-    max-width: 750px;
-  }
-  .btn {
-    position: absolute;
-    bottom: 55px;
-    left: 25px;
-    font-size: 16px;
-    padding: 4px 16px;
-  }
-
-  .mfp-figure:after {
-    background: none;
-    box-shadow: none;
+    .mfp-figure:after {
+      top: 0;
+      bottom: 0;
+      background: none;
+      box-shadow: none;
+    }
   }
 }

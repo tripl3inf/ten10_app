@@ -112,6 +112,19 @@ piklist( 'field', array(
 ));
 
 
+piklist( 'field', array(
+  'type'        => 'file',
+  'field'       => 'custom_vid_thumb',
+// 'field' => 'my_image',
+  'label'       => 'Upload Video Thumbnail Image',
+  'description' => 'Choose a custom image for the video thumbnail -- default is pulled from youtube.',
+  'columns'     => 12,
+  'options'     => array(
+    'modal_title' => 'Add Video Thumb',
+    'button'      => 'Add Video Thumb',
+  )
+) );
+
 
 // END
 
