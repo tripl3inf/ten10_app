@@ -14,7 +14,7 @@ piklist( 'field', array(
     array(
       'type'    => 'limit',
       'options' => array(
-        'min' => 0,
+        'min' => 2,
         'max' => 4
       )
     )

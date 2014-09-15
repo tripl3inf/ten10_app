@@ -39,9 +39,29 @@
       mainClass: 'mfp-fade',
       removalDelay: 160,
       preloader: false,
-
       fixedContentPos: false
     });
+
+    $('.popup-image-fit-width').magnificPopup({
+      type: 'image',
+      //mainClass: 'mfp-fade',
+      closeOnContentClick: false,
+      closeBtnInside: true,
+      closeOnBgClick: true,
+      image: {
+        verticalFit: false
+      },
+      callbacks: {
+        open: function() {
+          var magnificPopup = $.magnificPopup.instance;
+          var item = magnificPopup.currItem;
+          var permalink = item.el.attr('href');
+          magnificPopup.contentContainer.append('<a class="btn btn-primary" href=" '+ permalink + ' "><i class="fa ' +
+          'fa-caret-right"></i>Go to Movie Page</a>');
+        },
+      }
+    });
+
   });
 </script>
 
