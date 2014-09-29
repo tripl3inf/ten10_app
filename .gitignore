@@ -69,20 +69,16 @@ sql-dump-*.sql
 !.env.example
 
 # Application
-content/plugins/*
-!content/plugins/.gitkeep
-content/mu-plugins/*
-!content/mu-plugins/.gitkeep
-content/upgrade
-content/uploads/*
-!content/uploads/.gitkeep
-!content/mu-plugins/disallow-indexing.php
-!content/mu-plugins/register-theme-directory.php
-!content/mu-plugins/bedrock-autoloader.php
+plugins/*
+mu-plugins/*
+uploads/*
+#!content/uploads/.gitkeep
+#!content/mu-plugins/disallow-indexing.php
+#!content/mu-plugins/register-theme-directory.php
+#!content/mu-plugins/bedrock-autoloader.php
 
 # Vendor (e.g. Composer)
 vendor/*
-!vendor/.gitkeep
 
 # Node Package Manager
 node_modules

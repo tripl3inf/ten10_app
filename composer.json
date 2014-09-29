@@ -39,12 +39,10 @@
 
 
     "extra": {
-        "webroot-dir": "wordpress",
-        "webroot-package": "wordpress",
         "installer-paths": {
-            "content/plugins/{$name}/": ["type:wordpress-plugin"],
-            "content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-            "content/themes/{$name}/": ["type:wordpress-theme"]
+            "./plugins/{$name}/": ["type:wordpress-plugin"],
+            "./mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+            "./themes/{$name}/": ["type:wordpress-theme"]
         }
     }
 
