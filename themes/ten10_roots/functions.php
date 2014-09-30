@@ -23,11 +23,9 @@ $roots_includes = array(
 	'lib/scripts.php',         // Scripts and stylesheets
 	'lib/extras.php',          // Custom functions
 	'lib/custom_meta.php',
-  'lib/custom_post.php',
-  'lib/custom_tax.php',
-	'lib/info_widget.php',
-
-  'lib/DEV_ONLY.php'
+	'lib/custom_post.php',
+  	'lib/custom_tax.php',
+	'lib/DEV_ONLY.php'
 );
 
 

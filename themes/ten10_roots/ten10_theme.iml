@@ -7,7 +7,7 @@
       <excludeFolder url="file://$MODULE_DIR$/node_modules" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="ten10_theme node_modules" level="project" />
+    <orderEntry type="library" name="t3i_theme node_modules" level="project" />
   </component>
 </module>
 

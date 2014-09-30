@@ -240,7 +240,7 @@ msgstr ""
 msgid "Search"
 msgstr ""
 #. Theme Name of the plugin/theme
-msgid "ten10_theme"
+msgid "Roots Starter Theme"
 msgstr ""
 
 #. Theme URI of the plugin/theme
