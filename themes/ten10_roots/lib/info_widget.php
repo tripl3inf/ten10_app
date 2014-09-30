@@ -1,7 +1,6 @@
 <?php
-/**
- * User: tripl3infinity
- * Date: 7/18/14
+/*
+ * Custom Dashboard Creator Widget
  */
 
 

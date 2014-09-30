@@ -1,9 +1,6 @@
 <?php
-/**
+/*
  * Bug testing only. Not to be used on a production site!!
- * User: tripl3inf
- * Date: 8/26/14
- * Time: 9:28 PM
  */
 
 

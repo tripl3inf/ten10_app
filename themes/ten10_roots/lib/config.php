@@ -38,38 +38,11 @@ function posts_custom_columns($column_name, $id){
  */
 define( 'GOOGLE_ANALYTICS_ID', '' ); // UA-XXXXX-Y (Note: Universal Analytics only, not Classic Analytics)
 
-
-//footer nav
-$footer_nav_id                     = wp_create_nav_menu( __( 'Footer Navigation', 'roots' ), array( 'slug' => 'footer_nav' ) );
-$roots_nav_theme_mod['footer_nav'] = $footer_nav_id;
-
-
-$film_nav_id                     = wp_create_nav_menu( __( 'Film Menu', 'roots' ), array( 'slug' => 'film_nav' ) );
-$roots_nav_theme_mod['film_nav'] = $film_nav_id;
-
-
-/**
- * .main classes
- */
-function roots_main_class() {
-  if ( roots_display_sidebar() ) {
-    // Classes on pages with the sidebar
-    $class = 'col-sm-8';
-  } else {
-    // Classes on full width pages
-    $class = 'col-sm-12';
-  }
-
-  //  $class = 'test';
-  //return apply_filters('roots/main_class', $class);
+if (!defined('WP_ENV')) {
+  define('WP_ENV', 'production');  // scripts.php checks for values 'production' or 'development'
 }
 
-/**
- * .sidebar classes
- * function roots_sidebar_class() {
- * return apply_filters('roots/sidebar_class', 'col-sm-4');
- * }
- */
+
 
 
 /**
@@ -81,7 +54,7 @@ function roots_main_class() {
 
 // find custom post types
 function is_cpt_return() {
-  if ( get_post_type() == 'gallery' ) {
+  if ( get_post_type() == 'custom_post_type' ) {
     return true;
   } else {
     return false;
@@ -111,12 +84,11 @@ function roots_display_sidebar() {
      * Any of these page templates that return true won't show the sidebar
      */
     array(
-      'template-custom.php',
-      'templates/template-feature-split.php'
+      'template-custom.php'
     )
   );
 
-  return apply_filters( 'roots/display_sidebar', $sidebar_config->display );
+  return apply_filters('roots/display_sidebar', $sidebar_config->display);
 }
 
 /**
@@ -139,17 +111,15 @@ if ( ! isset( $content_width ) ) {
 function mytheme_admin_bar_render() {
   global $wp_admin_bar;
   $wp_admin_bar->remove_menu( 'comments' );
-
-
 }
 
-add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
+//add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
 
 
 // Use your custom URL logo link
-//function wpc_url_login(){
-//    return "http://t3inf.com/"; // your URL here
-//}
+function wpc_url_login(){
+    return "http://t3inf.com/"; // your URL here
+}
 //add_filter('login_headerurl', 'wpc_url_login');
 
 
@@ -158,7 +128,7 @@ function login_css() {
   wp_enqueue_style( 'login_css', get_template_directory_uri() . '/assets/css/login.css' );
 }
 
-add_action( 'login_head', 'login_css' );
+//add_action( 'login_head', 'login_css' );
 
 
 // Custom WordPress Footer
@@ -193,25 +163,3 @@ function hide_admin_bar_from_front_end() {
 
 
 
-
-
-//function wp_get_attachment( $attachment_id ) {
-//  $attachment = get_post( $attachment_id );
-//  return array(
-//    'alt' => get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true ),
-//    'caption' => $attachment->post_excerpt,
-//    'description' => $attachment->post_content,
-//    'href' => get_permalink( $attachment->ID ),
-//    'src' => $attachment->guid,
-//    'title' => $attachment->post_title
-//  );
-//}
-
-//add_filter('oembed_dataparse','test',10,3);
-//
-//function test($return, $data, $url) {
-//  if ($data->provider_name == 'YouTube') {
-//    return "<img src='{$data->thumbnail_url}'>";
-//  }
-//  else return $return;
-//}
